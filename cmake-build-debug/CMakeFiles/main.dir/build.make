@@ -89,20 +89,80 @@ CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
+CMakeFiles/main.dir/model/MyControlPanel.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/model/MyControlPanel.cpp.o: ../model/MyControlPanel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/model/MyControlPanel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/model/MyControlPanel.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/model/MyControlPanel.cpp
+
+CMakeFiles/main.dir/model/MyControlPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/model/MyControlPanel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/model/MyControlPanel.cpp > CMakeFiles/main.dir/model/MyControlPanel.cpp.i
+
+CMakeFiles/main.dir/model/MyControlPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/model/MyControlPanel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/model/MyControlPanel.cpp -o CMakeFiles/main.dir/model/MyControlPanel.cpp.s
+
+CMakeFiles/main.dir/model/MyApp.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/model/MyApp.cpp.o: ../model/MyApp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/model/MyApp.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/model/MyApp.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/model/MyApp.cpp
+
+CMakeFiles/main.dir/model/MyApp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/model/MyApp.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/model/MyApp.cpp > CMakeFiles/main.dir/model/MyApp.cpp.i
+
+CMakeFiles/main.dir/model/MyApp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/model/MyApp.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/model/MyApp.cpp -o CMakeFiles/main.dir/model/MyApp.cpp.s
+
+CMakeFiles/main.dir/model/MyFrame.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/model/MyFrame.cpp.o: ../model/MyFrame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/model/MyFrame.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/model/MyFrame.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/model/MyFrame.cpp
+
+CMakeFiles/main.dir/model/MyFrame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/model/MyFrame.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/model/MyFrame.cpp > CMakeFiles/main.dir/model/MyFrame.cpp.i
+
+CMakeFiles/main.dir/model/MyFrame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/model/MyFrame.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/model/MyFrame.cpp -o CMakeFiles/main.dir/model/MyFrame.cpp.s
+
+CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o: ../model/MyDrawingPanel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/model/MyDrawingPanel.cpp
+
+CMakeFiles/main.dir/model/MyDrawingPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/model/MyDrawingPanel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/model/MyDrawingPanel.cpp > CMakeFiles/main.dir/model/MyDrawingPanel.cpp.i
+
+CMakeFiles/main.dir/model/MyDrawingPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/model/MyDrawingPanel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/model/MyDrawingPanel.cpp -o CMakeFiles/main.dir/model/MyDrawingPanel.cpp.s
+
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/main.cpp.o"
+"CMakeFiles/main.dir/main.cpp.o" \
+"CMakeFiles/main.dir/model/MyControlPanel.cpp.o" \
+"CMakeFiles/main.dir/model/MyApp.cpp.o" \
+"CMakeFiles/main.dir/model/MyFrame.cpp.o" \
+"CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
+main: CMakeFiles/main.dir/model/MyControlPanel.cpp.o
+main: CMakeFiles/main.dir/model/MyApp.cpp.o
+main: CMakeFiles/main.dir/model/MyFrame.cpp.o
+main: CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: /usr/local/lib/libwx_baseu_net-3.0.a
 main: /usr/local/lib/libwx_gtk3u_core-3.0.a
 main: /usr/local/lib/libwx_baseu-3.0.a
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

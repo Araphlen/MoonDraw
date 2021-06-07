@@ -93,6 +93,36 @@
 		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/main.cpp">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/model/MyApp.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/model/MyControlPanel.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/model/MyDrawingPanel.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/model/MyFrame.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/model/headers/MyApp.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/model/headers/MyControlPanel.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/model/headers/MyDrawingPanel.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/model/headers/MyFrame.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/model/headers/contantes.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/model/headers/enum.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

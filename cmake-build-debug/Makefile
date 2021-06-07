@@ -169,6 +169,114 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+model/MyApp.o: model/MyApp.cpp.o
+
+.PHONY : model/MyApp.o
+
+# target to build an object file
+model/MyApp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyApp.cpp.o
+.PHONY : model/MyApp.cpp.o
+
+model/MyApp.i: model/MyApp.cpp.i
+
+.PHONY : model/MyApp.i
+
+# target to preprocess a source file
+model/MyApp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyApp.cpp.i
+.PHONY : model/MyApp.cpp.i
+
+model/MyApp.s: model/MyApp.cpp.s
+
+.PHONY : model/MyApp.s
+
+# target to generate assembly for a file
+model/MyApp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyApp.cpp.s
+.PHONY : model/MyApp.cpp.s
+
+model/MyControlPanel.o: model/MyControlPanel.cpp.o
+
+.PHONY : model/MyControlPanel.o
+
+# target to build an object file
+model/MyControlPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyControlPanel.cpp.o
+.PHONY : model/MyControlPanel.cpp.o
+
+model/MyControlPanel.i: model/MyControlPanel.cpp.i
+
+.PHONY : model/MyControlPanel.i
+
+# target to preprocess a source file
+model/MyControlPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyControlPanel.cpp.i
+.PHONY : model/MyControlPanel.cpp.i
+
+model/MyControlPanel.s: model/MyControlPanel.cpp.s
+
+.PHONY : model/MyControlPanel.s
+
+# target to generate assembly for a file
+model/MyControlPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyControlPanel.cpp.s
+.PHONY : model/MyControlPanel.cpp.s
+
+model/MyDrawingPanel.o: model/MyDrawingPanel.cpp.o
+
+.PHONY : model/MyDrawingPanel.o
+
+# target to build an object file
+model/MyDrawingPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o
+.PHONY : model/MyDrawingPanel.cpp.o
+
+model/MyDrawingPanel.i: model/MyDrawingPanel.cpp.i
+
+.PHONY : model/MyDrawingPanel.i
+
+# target to preprocess a source file
+model/MyDrawingPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyDrawingPanel.cpp.i
+.PHONY : model/MyDrawingPanel.cpp.i
+
+model/MyDrawingPanel.s: model/MyDrawingPanel.cpp.s
+
+.PHONY : model/MyDrawingPanel.s
+
+# target to generate assembly for a file
+model/MyDrawingPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyDrawingPanel.cpp.s
+.PHONY : model/MyDrawingPanel.cpp.s
+
+model/MyFrame.o: model/MyFrame.cpp.o
+
+.PHONY : model/MyFrame.o
+
+# target to build an object file
+model/MyFrame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyFrame.cpp.o
+.PHONY : model/MyFrame.cpp.o
+
+model/MyFrame.i: model/MyFrame.cpp.i
+
+.PHONY : model/MyFrame.i
+
+# target to preprocess a source file
+model/MyFrame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyFrame.cpp.i
+.PHONY : model/MyFrame.cpp.i
+
+model/MyFrame.s: model/MyFrame.cpp.s
+
+.PHONY : model/MyFrame.s
+
+# target to generate assembly for a file
+model/MyFrame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyFrame.cpp.s
+.PHONY : model/MyFrame.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -181,6 +289,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... model/MyApp.o"
+	@echo "... model/MyApp.i"
+	@echo "... model/MyApp.s"
+	@echo "... model/MyControlPanel.o"
+	@echo "... model/MyControlPanel.i"
+	@echo "... model/MyControlPanel.s"
+	@echo "... model/MyDrawingPanel.o"
+	@echo "... model/MyDrawingPanel.i"
+	@echo "... model/MyDrawingPanel.s"
+	@echo "... model/MyFrame.o"
+	@echo "... model/MyFrame.i"
+	@echo "... model/MyFrame.s"
 .PHONY : help
 
 
