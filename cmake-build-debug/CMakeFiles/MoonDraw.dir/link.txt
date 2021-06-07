@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/MoonDraw.dir/main.cpp.o -o MoonDraw 
