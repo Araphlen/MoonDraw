@@ -18,7 +18,8 @@
 
 
 #define WIDGET_PANEL_WIDTH	200
-
+#define STATUS_DEFAULT 0
+#define STATUS_RETANGLE 1
 //------------------------------------------------------------------------
 class MyDrawingPanel: public wxPanel
 //------------------------------------------------------------------------
@@ -35,6 +36,7 @@ private:
     void OnPaint(wxPaintEvent &event) ;
     wxPoint m_mousePoint ;
     wxPoint m_onePoint ;
+    int m_status;
 };
 
 

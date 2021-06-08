@@ -24,7 +24,8 @@
 enum{
 ID_BUTTON1,
 ID_SLIDER1,
-ID_CHECKBOX1
+ID_CHECKBOX1,
+ID_RECTBUTTON
 };
 //------------------------------------------------------------------------
 class MyControlPanel: public wxPanel
@@ -37,9 +38,11 @@ public:
 
 private:
     void OnButton(wxCommandEvent &event) ;
+    void OnButtonRectangle(wxCommandEvent &event);
     void OnSlider(wxScrollEvent &event) ;
     void OnCheckBox(wxCommandEvent &event) ;
     wxButton* m_button ;
+    wxButton* m_rectbutton;
     wxSlider* m_slider ;
     wxCheckBox* m_checkBox ;
 };

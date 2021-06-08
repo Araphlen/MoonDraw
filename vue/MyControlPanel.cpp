@@ -37,7 +37,8 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
     Bind(wxEVT_CHECKBOX, &MyControlPanel::OnCheckBox, this, ID_CHECKBOX1) ;
 
     y+= WIDGET_Y_STEP;
-
+    m_rectbutton = new wxButton(this, ID_RECTBUTTON, wxT("RECTANGLE"),wxPoint(10,y));
+    Bind(wxEVT_BUTTON,&MyControlPanel::OnButtonRectangle,this,ID_RECTBUTTON);
 }
 
 //------------------------------------------------------------------------
@@ -64,4 +65,8 @@ void MyControlPanel::OnCheckBox(wxCommandEvent &event)
 {
     MyFrame* frame = (MyFrame*)GetParent() ;
     frame->RefreshDrawing() ;	// update the drawing panel
+}
+
+void MyControlPanel::OnButtonRectangle(wxCommandEvent &event) {
+
 }

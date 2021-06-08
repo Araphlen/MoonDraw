@@ -169,32 +169,32 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-model/Dessin.o: model/Dessin.cpp.o
+model/Drawing.o: model/Drawing.cpp.o
 
-.PHONY : model/Dessin.o
+.PHONY : model/Drawing.o
 
 # target to build an object file
-model/Dessin.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Dessin.cpp.o
-.PHONY : model/Dessin.cpp.o
+model/Drawing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Drawing.cpp.o
+.PHONY : model/Drawing.cpp.o
 
-model/Dessin.i: model/Dessin.cpp.i
+model/Drawing.i: model/Drawing.cpp.i
 
-.PHONY : model/Dessin.i
+.PHONY : model/Drawing.i
 
 # target to preprocess a source file
-model/Dessin.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Dessin.cpp.i
-.PHONY : model/Dessin.cpp.i
+model/Drawing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Drawing.cpp.i
+.PHONY : model/Drawing.cpp.i
 
-model/Dessin.s: model/Dessin.cpp.s
+model/Drawing.s: model/Drawing.cpp.s
 
-.PHONY : model/Dessin.s
+.PHONY : model/Drawing.s
 
 # target to generate assembly for a file
-model/Dessin.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Dessin.cpp.s
-.PHONY : model/Dessin.cpp.s
+model/Drawing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Drawing.cpp.s
+.PHONY : model/Drawing.cpp.s
 
 model/Figure.o: model/Figure.cpp.o
 
@@ -222,6 +222,33 @@ model/Figure.s: model/Figure.cpp.s
 model/Figure.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Figure.cpp.s
 .PHONY : model/Figure.cpp.s
+
+model/Point.o: model/Point.cpp.o
+
+.PHONY : model/Point.o
+
+# target to build an object file
+model/Point.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Point.cpp.o
+.PHONY : model/Point.cpp.o
+
+model/Point.i: model/Point.cpp.i
+
+.PHONY : model/Point.i
+
+# target to preprocess a source file
+model/Point.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Point.cpp.i
+.PHONY : model/Point.cpp.i
+
+model/Point.s: model/Point.cpp.s
+
+.PHONY : model/Point.s
+
+# target to generate assembly for a file
+model/Point.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Point.cpp.s
+.PHONY : model/Point.cpp.s
 
 model/Rectangle.o: model/Rectangle.cpp.o
 
@@ -370,12 +397,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... model/Dessin.o"
-	@echo "... model/Dessin.i"
-	@echo "... model/Dessin.s"
+	@echo "... model/Drawing.o"
+	@echo "... model/Drawing.i"
+	@echo "... model/Drawing.s"
 	@echo "... model/Figure.o"
 	@echo "... model/Figure.i"
 	@echo "... model/Figure.s"
+	@echo "... model/Point.o"
+	@echo "... model/Point.i"
+	@echo "... model/Point.s"
 	@echo "... model/Rectangle.o"
 	@echo "... model/Rectangle.i"
 	@echo "... model/Rectangle.s"

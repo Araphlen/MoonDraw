@@ -5,8 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/araphlen/CLionProjects/MoonDraw/main.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/main.cpp.o"
-  "/home/araphlen/CLionProjects/MoonDraw/model/Dessin.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Dessin.cpp.o"
+  "/home/araphlen/CLionProjects/MoonDraw/model/Drawing.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Drawing.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/model/Figure.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Figure.cpp.o"
+  "/home/araphlen/CLionProjects/MoonDraw/model/Point.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Point.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/model/Rectangle.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Rectangle.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/vue/MyApp.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/vue/MyApp.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/vue/MyControlPanel.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/vue/MyControlPanel.cpp.o"

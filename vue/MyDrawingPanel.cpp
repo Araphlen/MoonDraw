@@ -28,6 +28,7 @@ MyDrawingPanel::MyDrawingPanel(wxWindow *parent) : wxPanel(parent)
     m_onePoint.x = (w-WIDGET_PANEL_WIDTH)/2 ;
     m_onePoint.y = h/2 ;
     m_mousePoint = m_onePoint ;
+    m_status = STATUS_DEFAULT;
 }
 
 //------------------------------------------------------------------------
@@ -35,9 +36,17 @@ void MyDrawingPanel::OnMouseMove(wxMouseEvent &event)
 //------------------------------------------------------------------------
 // called when the mouse is moved
 {
-    m_mousePoint.x = event.m_x ;
-    m_mousePoint.y = event.m_y ;
-    Refresh() ;	// send an event that calls the OnPaint method
+    switch (m_status) {
+        case 0:
+            m_mousePoint.x = event.m_x ;
+            m_mousePoint.y = event.m_y ;
+            Refresh() ;	// send an event that calls the OnPaint method
+            break;
+        case 1:
+
+
+    }
+
 }
 
 //------------------------------------------------------------------------
