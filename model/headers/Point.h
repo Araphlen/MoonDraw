@@ -11,9 +11,15 @@
 class Point {
 public:
     Point();
+    Point(int x, int y);
+
+    int getMX() const;
+
+    int getMY() const;
 
 private:
-    wxPoint m_point;
+    int m_x;
+    int m_y;
 };
 
 

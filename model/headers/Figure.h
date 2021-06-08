@@ -11,11 +11,13 @@
 class Figure {
 public:
     Figure();
-    Figure(const std::string& label);
+    Figure(const int shape);
+
+    int getShape();
 
 protected:
     std::string * m_label;
-
+    int m_shape;
 };
 
 

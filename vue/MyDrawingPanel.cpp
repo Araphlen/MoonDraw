@@ -2,9 +2,16 @@
 // Created by araphlen on 07/06/2021.
 //
 
+#include <langinfo.h>
 #include "headers/MyDrawingPanel.h"
 
 #include "headers/MyFrame.h"
+#include <iostream>
+
+#define RECT_SHAPE 1
+#define CIRCLE_SHAPE 2
+
+
 
 //************************************************************************
 //************************************************************************
@@ -29,7 +36,37 @@ MyDrawingPanel::MyDrawingPanel(wxWindow *parent) : wxPanel(parent)
     m_onePoint.y = h/2 ;
     m_mousePoint = m_onePoint ;
     m_status = STATUS_DEFAULT;
+    m_drawing = new Drawing();
+    m_currentIndexRect=0;
+    m_isdrawing =false;
+    }
+
+
+
+//------------------------------------------------------------------------
+void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
+//------------------------------------------------------------------------
+// called when the mouse left button is pressed
+{
+    switch (m_status) {
+        case STATUS_DEFAULT :
+            m_onePoint.x = event.m_x ;
+            m_onePoint.y = event.m_y ;
+            Refresh() ; // send an event that calls the OnPaint method
+            break;
+        case STATUS_RECTANGLE:
+            if (m_isdrawing==false) {
+                m_drawing.addRectangle(Rectangle(Point(event.m_x, event.m_y), 0, 0));
+                m_isdrawing = true;
+                std::cout << "J'ai initilaliser un noveau Rectangle" << std::endl;
+                Refresh();
+            }
+            break;
+    }
 }
+
+
+
 
 //------------------------------------------------------------------------
 void MyDrawingPanel::OnMouseMove(wxMouseEvent &event)
@@ -43,29 +80,39 @@ void MyDrawingPanel::OnMouseMove(wxMouseEvent &event)
             Refresh() ;	// send an event that calls the OnPaint method
             break;
         case 1:
+            if (m_isdrawing) {
+                int h = m_drawing.getRectangle(m_currentIndexRect).getMTopLeft().getMY() - event.m_y;
+                int w = m_drawing.getRectangle(m_currentIndexRect).getMTopLeft().getMX() - event.m_x;
+                m_drawing.setRectangleCourant(m_currentIndexRect, h, w);
 
+                Refresh();
+            }
+            std::cout<<m_isdrawing<<std::endl;
 
+            break;
     }
-
 }
 
-//------------------------------------------------------------------------
-void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
-//------------------------------------------------------------------------
-// called when the mouse left button is pressed
-{
-    m_onePoint.x = event.m_x ;
-    m_onePoint.y = event.m_y ;
-    Refresh() ; // send an event that calls the OnPaint method
-}
 
 //------------------------------------------------------------------------
 void MyDrawingPanel::OnMouseLeftUp(wxMouseEvent &event)
 //------------------------------------------------------------------------
 {
+    switch (m_status) {
+        case STATUS_DEFAULT:
+            Refresh();
+            break;
+        case STATUS_RECTANGLE:
+            std::cout<<"jje suis dans OnMouseLeftUp"<<std::endl;
 
-    Refresh();
+            m_currentIndexRect++;
+            m_isdrawing= false;
+            break;
+    }
 }
+
+
+
 //------------------------------------------------------------------------
 void MyDrawingPanel::OnPaint(wxPaintEvent &event)
 //------------------------------------------------------------------------
@@ -75,21 +122,35 @@ void MyDrawingPanel::OnPaint(wxPaintEvent &event)
 {
     // read the control values
     MyFrame* frame =  (MyFrame*)GetParent() ;
-    int radius = frame->GetControlPanel()->GetSliderValue() ;
-    bool check = frame->GetControlPanel()->GetCheckBoxValue() ;
 
-    // then paint
-    wxPaintDC dc(this);
+//    
+            int radius = frame->GetControlPanel()->GetSliderValue() ;
+            bool check = frame->GetControlPanel()->GetCheckBoxValue() ;
+//
+//            // then paint
+            wxPaintDC dc(this);
+//
+//            dc.DrawLine(m_mousePoint, m_onePoint) ;
+            dc.DrawRectangle(wxPoint(m_onePoint.x, m_onePoint.y), wxSize(100,100)) ;
+            dc.DrawCircle(wxPoint(m_mousePoint), radius/2) ;
+//
+//            if (check)
+//            {
+//                wxString coordinates ;
+//                coordinates.sprintf(wxT("(%d,%d)"), m_mousePoint.x, m_mousePoint.y) ;
+//                dc.DrawText(coordinates, wxPoint(m_mousePoint.x, m_mousePoint.y+20)) ;
+//            }
 
-    dc.DrawLine(m_mousePoint, m_onePoint) ;
-    dc.DrawRectangle(wxPoint(m_onePoint.x-radius/2, m_onePoint.y-radius/2), wxSize(radius,radius)) ;
-    dc.DrawCircle(wxPoint(m_mousePoint), radius/2) ;
 
-    if (check)
-    {
-        wxString coordinates ;
-        coordinates.sprintf(wxT("(%d,%d)"), m_mousePoint.x, m_mousePoint.y) ;
-        dc.DrawText(coordinates, wxPoint(m_mousePoint.x, m_mousePoint.y+20)) ;
+
+    for (int i = 0; i < m_drawing.nbRectangles(); ++i) {
+        Rectangle rectToPaint = m_drawing.getRectangle(i);
+//        std::cout<<"m_x =" << rectToPaint.getMTopLeft().getMX()<<std::endl;
+//        std::cout<<"m_y ="<< rectToPaint.getMTopLeft().getMY()<<std::endl;
+//        std::cout<<"m_h ="<< rectToPaint.getMH()<<std::endl;
+//        std::cout<<"m_w ="<< rectToPaint.getMW()<<std::endl;
+        std::cout<<"size de m_rectangles ="<< m_drawing.nbRectangles()<<std::endl;
+        dc.DrawRectangle(wxCoord(rectToPaint.getMTopLeft().getMX()),wxCoord(rectToPaint.getMTopLeft().getMY()),wxCoord(rectToPaint.getMW()),wxCoord(rectToPaint.getMH()));
     }
 }
 
@@ -120,4 +181,12 @@ void MyDrawingPanel::SaveFile(wxString fileName)
         wxMessageBox(wxT("The file was saved")) ;
         fclose(f) ;
     }
+}
+
+void MyDrawingPanel::setMStatus(int mStatus) {
+    m_status = mStatus;
+}
+
+void MyDrawingPanel::setMCurrentIndexTempsPoint(int mCurrentIndexTempsPoint) {
+    m_currentIndexRect = mCurrentIndexTempsPoint;
 }

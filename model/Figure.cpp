@@ -3,11 +3,15 @@
 //
 
 #include "headers/Figure.h"
-
+#define DEFAULT_SHAPE 0
 Figure::Figure() {
-    m_label = new std::string;
+    m_shape = DEFAULT_SHAPE;
 }
 
-Figure::Figure(const std::string &label) {
-    m_label = new std::string(label);
+Figure::Figure(const int shape) {
+    m_shape = shape;
+}
+
+int Figure::getShape() {
+    return m_shape;
 }

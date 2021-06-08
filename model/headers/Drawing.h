@@ -5,14 +5,25 @@
 #ifndef MOONDRAW_DRAWING_H
 #define MOONDRAW_DRAWING_H
 
+#include <vector>
+#include <wx/dcclient.h>
+#include "Figure.h"
+#include "Rectangle.h"
 
 class Drawing {
 public:
     Drawing();
-//    Open();
-//    Close();
-//    Save();
-//    SaveAndClose();
+    //consrtucteur par copie
+    Drawing(const Drawing *pDrawing);
+
+    //Methode for rectangles
+    void addRectangle(const Rectangle &rect);
+    const int nbRectangles();
+    Rectangle getRectangle(int i);
+    void setRectangleCourant(int i, int h, int w);
+
+private:
+    std::vector<Rectangle> m_rectangles ;
 };
 
 

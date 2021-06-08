@@ -12,12 +12,19 @@
 class Rectangle : public Figure{
 public:
     Rectangle();
-    Rectangle(const Point& topLeft, const Point& bottomRight) ;
+    Rectangle(const Point& topLeft, int h, int w) ;
 
+    const Point &getMTopLeft() const;
+    int getMH() const;
+    int getMW() const;
+
+    void setMH(int mH);
+    void setMW(int mW);
 
 private:
     Point m_topLeft;
-    Point m_bottomRight;
+    int m_h;
+    int m_w;
 
 };
 

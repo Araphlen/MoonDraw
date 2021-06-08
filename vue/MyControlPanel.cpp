@@ -4,7 +4,11 @@
 
 #include "headers/MyControlPanel.h"
 #include "headers/MyFrame.h"
+#include "headers/MyDrawingPanel.h"
 
+
+#define STATUS_DEFAULT 0
+#define STATUS_RECTANGLE 1
 //************************************************************************
 //************************************************************************
 // MyDrawingPanel class (where controls are displayed)
@@ -68,5 +72,6 @@ void MyControlPanel::OnCheckBox(wxCommandEvent &event)
 }
 
 void MyControlPanel::OnButtonRectangle(wxCommandEvent &event) {
-
+    MyFrame* frame = (MyFrame*)GetParent() ;
+    frame->GetDrawingPanel()->setMStatus(STATUS_RECTANGLE);
 }
