@@ -3,12 +3,10 @@
 
 CMakeFiles/main.dir/main.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/main.cpp
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyApp.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyControlPanel.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyDrawingPanel.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyFrame.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/contantes.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/enum.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyApp.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyControlPanel.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyDrawingPanel.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
  /usr/local/include/wx-3.0/wx/accel.h
  /usr/local/include/wx-3.0/wx/access.h
  /usr/local/include/wx-3.0/wx/affinematrix2d.h
@@ -249,14 +247,12 @@ CMakeFiles/main.dir/main.cpp.o
  /usr/local/include/wx-3.0/wx/xtiprop.h
  /usr/local/include/wx-3.0/wx/xtitypes.h
  /usr/local/lib/wx/include/gtk3-unicode-static-3.0/wx/setup.h
-CMakeFiles/main.dir/model/MyApp.cpp.o
- /home/araphlen/CLionProjects/MoonDraw/model/MyApp.cpp
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyApp.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyControlPanel.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyDrawingPanel.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyFrame.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/contantes.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/enum.h
+CMakeFiles/main.dir/vue/MyApp.cpp.o
+ /home/araphlen/CLionProjects/MoonDraw/vue/MyApp.cpp
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyApp.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyControlPanel.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyDrawingPanel.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
  /usr/local/include/wx-3.0/wx/accel.h
  /usr/local/include/wx-3.0/wx/access.h
  /usr/local/include/wx-3.0/wx/affinematrix2d.h
@@ -497,13 +493,11 @@ CMakeFiles/main.dir/model/MyApp.cpp.o
  /usr/local/include/wx-3.0/wx/xtiprop.h
  /usr/local/include/wx-3.0/wx/xtitypes.h
  /usr/local/lib/wx/include/gtk3-unicode-static-3.0/wx/setup.h
-CMakeFiles/main.dir/model/MyControlPanel.cpp.o
- /home/araphlen/CLionProjects/MoonDraw/model/MyControlPanel.cpp
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyControlPanel.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyDrawingPanel.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyFrame.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/contantes.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/enum.h
+CMakeFiles/main.dir/vue/MyControlPanel.cpp.o
+ /home/araphlen/CLionProjects/MoonDraw/vue/MyControlPanel.cpp
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyControlPanel.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyDrawingPanel.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
  /usr/local/include/wx-3.0/wx/accel.h
  /usr/local/include/wx-3.0/wx/access.h
  /usr/local/include/wx-3.0/wx/affinematrix2d.h
@@ -744,13 +738,11 @@ CMakeFiles/main.dir/model/MyControlPanel.cpp.o
  /usr/local/include/wx-3.0/wx/xtiprop.h
  /usr/local/include/wx-3.0/wx/xtitypes.h
  /usr/local/lib/wx/include/gtk3-unicode-static-3.0/wx/setup.h
-CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o
- /home/araphlen/CLionProjects/MoonDraw/model/MyDrawingPanel.cpp
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyControlPanel.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyDrawingPanel.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyFrame.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/contantes.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/enum.h
+CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o
+ /home/araphlen/CLionProjects/MoonDraw/vue/MyDrawingPanel.cpp
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyControlPanel.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyDrawingPanel.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
  /usr/local/include/wx-3.0/wx/accel.h
  /usr/local/include/wx-3.0/wx/access.h
  /usr/local/include/wx-3.0/wx/affinematrix2d.h
@@ -991,13 +983,11 @@ CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o
  /usr/local/include/wx-3.0/wx/xtiprop.h
  /usr/local/include/wx-3.0/wx/xtitypes.h
  /usr/local/lib/wx/include/gtk3-unicode-static-3.0/wx/setup.h
-CMakeFiles/main.dir/model/MyFrame.cpp.o
- /home/araphlen/CLionProjects/MoonDraw/model/MyFrame.cpp
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyControlPanel.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyDrawingPanel.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/MyFrame.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/contantes.h
- /home/araphlen/CLionProjects/MoonDraw/model/headers/enum.h
+CMakeFiles/main.dir/vue/MyFrame.cpp.o
+ /home/araphlen/CLionProjects/MoonDraw/vue/MyFrame.cpp
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyControlPanel.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyDrawingPanel.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
  /usr/local/include/wx-3.0/wx/accel.h
  /usr/local/include/wx-3.0/wx/access.h
  /usr/local/include/wx-3.0/wx/affinematrix2d.h

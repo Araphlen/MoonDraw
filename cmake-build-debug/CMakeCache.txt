@@ -156,7 +156,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=skeleton
+CMAKE_PROJECT_NAME:STATIC=moonDraw
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.0
@@ -246,6 +246,12 @@ ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
+
+//Value Computed by CMake
+moonDraw_BINARY_DIR:STATIC=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug
+
+//Value Computed by CMake
+moonDraw_SOURCE_DIR:STATIC=/home/araphlen/CLionProjects/MoonDraw
 
 //Value Computed by CMake
 skeleton_BINARY_DIR:STATIC=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug

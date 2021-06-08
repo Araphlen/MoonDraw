@@ -89,80 +89,125 @@ CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
-CMakeFiles/main.dir/model/MyControlPanel.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/model/MyControlPanel.cpp.o: ../model/MyControlPanel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/model/MyControlPanel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/model/MyControlPanel.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/model/MyControlPanel.cpp
+CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: ../vue/MyControlPanel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/vue/MyControlPanel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/vue/MyControlPanel.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/vue/MyControlPanel.cpp
 
-CMakeFiles/main.dir/model/MyControlPanel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/model/MyControlPanel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/model/MyControlPanel.cpp > CMakeFiles/main.dir/model/MyControlPanel.cpp.i
+CMakeFiles/main.dir/vue/MyControlPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/vue/MyControlPanel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/vue/MyControlPanel.cpp > CMakeFiles/main.dir/vue/MyControlPanel.cpp.i
 
-CMakeFiles/main.dir/model/MyControlPanel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/model/MyControlPanel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/model/MyControlPanel.cpp -o CMakeFiles/main.dir/model/MyControlPanel.cpp.s
+CMakeFiles/main.dir/vue/MyControlPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/vue/MyControlPanel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/vue/MyControlPanel.cpp -o CMakeFiles/main.dir/vue/MyControlPanel.cpp.s
 
-CMakeFiles/main.dir/model/MyApp.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/model/MyApp.cpp.o: ../model/MyApp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/model/MyApp.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/model/MyApp.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/model/MyApp.cpp
+CMakeFiles/main.dir/vue/MyApp.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/vue/MyApp.cpp.o: ../vue/MyApp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/vue/MyApp.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/vue/MyApp.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/vue/MyApp.cpp
 
-CMakeFiles/main.dir/model/MyApp.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/model/MyApp.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/model/MyApp.cpp > CMakeFiles/main.dir/model/MyApp.cpp.i
+CMakeFiles/main.dir/vue/MyApp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/vue/MyApp.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/vue/MyApp.cpp > CMakeFiles/main.dir/vue/MyApp.cpp.i
 
-CMakeFiles/main.dir/model/MyApp.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/model/MyApp.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/model/MyApp.cpp -o CMakeFiles/main.dir/model/MyApp.cpp.s
+CMakeFiles/main.dir/vue/MyApp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/vue/MyApp.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/vue/MyApp.cpp -o CMakeFiles/main.dir/vue/MyApp.cpp.s
 
-CMakeFiles/main.dir/model/MyFrame.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/model/MyFrame.cpp.o: ../model/MyFrame.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/model/MyFrame.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/model/MyFrame.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/model/MyFrame.cpp
+CMakeFiles/main.dir/vue/MyFrame.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../vue/MyFrame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/vue/MyFrame.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/vue/MyFrame.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/vue/MyFrame.cpp
 
-CMakeFiles/main.dir/model/MyFrame.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/model/MyFrame.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/model/MyFrame.cpp > CMakeFiles/main.dir/model/MyFrame.cpp.i
+CMakeFiles/main.dir/vue/MyFrame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/vue/MyFrame.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/vue/MyFrame.cpp > CMakeFiles/main.dir/vue/MyFrame.cpp.i
 
-CMakeFiles/main.dir/model/MyFrame.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/model/MyFrame.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/model/MyFrame.cpp -o CMakeFiles/main.dir/model/MyFrame.cpp.s
+CMakeFiles/main.dir/vue/MyFrame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/vue/MyFrame.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/vue/MyFrame.cpp -o CMakeFiles/main.dir/vue/MyFrame.cpp.s
 
-CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o: ../model/MyDrawingPanel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/model/MyDrawingPanel.cpp
+CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../vue/MyDrawingPanel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/vue/MyDrawingPanel.cpp
 
-CMakeFiles/main.dir/model/MyDrawingPanel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/model/MyDrawingPanel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/model/MyDrawingPanel.cpp > CMakeFiles/main.dir/model/MyDrawingPanel.cpp.i
+CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/vue/MyDrawingPanel.cpp > CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.i
 
-CMakeFiles/main.dir/model/MyDrawingPanel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/model/MyDrawingPanel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/model/MyDrawingPanel.cpp -o CMakeFiles/main.dir/model/MyDrawingPanel.cpp.s
+CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/vue/MyDrawingPanel.cpp -o CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.s
+
+CMakeFiles/main.dir/model/Rectangle.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/model/Rectangle.cpp.o: ../model/Rectangle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/model/Rectangle.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/model/Rectangle.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/model/Rectangle.cpp
+
+CMakeFiles/main.dir/model/Rectangle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/model/Rectangle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/model/Rectangle.cpp > CMakeFiles/main.dir/model/Rectangle.cpp.i
+
+CMakeFiles/main.dir/model/Rectangle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/model/Rectangle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/model/Rectangle.cpp -o CMakeFiles/main.dir/model/Rectangle.cpp.s
+
+CMakeFiles/main.dir/model/Figure.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/model/Figure.cpp.o: ../model/Figure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/model/Figure.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/model/Figure.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/model/Figure.cpp
+
+CMakeFiles/main.dir/model/Figure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/model/Figure.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/model/Figure.cpp > CMakeFiles/main.dir/model/Figure.cpp.i
+
+CMakeFiles/main.dir/model/Figure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/model/Figure.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/model/Figure.cpp -o CMakeFiles/main.dir/model/Figure.cpp.s
+
+CMakeFiles/main.dir/model/Dessin.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/model/Dessin.cpp.o: ../model/Dessin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/model/Dessin.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/model/Dessin.cpp.o -c /home/araphlen/CLionProjects/MoonDraw/model/Dessin.cpp
+
+CMakeFiles/main.dir/model/Dessin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/model/Dessin.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/araphlen/CLionProjects/MoonDraw/model/Dessin.cpp > CMakeFiles/main.dir/model/Dessin.cpp.i
+
+CMakeFiles/main.dir/model/Dessin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/model/Dessin.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/araphlen/CLionProjects/MoonDraw/model/Dessin.cpp -o CMakeFiles/main.dir/model/Dessin.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
-"CMakeFiles/main.dir/model/MyControlPanel.cpp.o" \
-"CMakeFiles/main.dir/model/MyApp.cpp.o" \
-"CMakeFiles/main.dir/model/MyFrame.cpp.o" \
-"CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o"
+"CMakeFiles/main.dir/vue/MyControlPanel.cpp.o" \
+"CMakeFiles/main.dir/vue/MyApp.cpp.o" \
+"CMakeFiles/main.dir/vue/MyFrame.cpp.o" \
+"CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o" \
+"CMakeFiles/main.dir/model/Rectangle.cpp.o" \
+"CMakeFiles/main.dir/model/Figure.cpp.o" \
+"CMakeFiles/main.dir/model/Dessin.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
-main: CMakeFiles/main.dir/model/MyControlPanel.cpp.o
-main: CMakeFiles/main.dir/model/MyApp.cpp.o
-main: CMakeFiles/main.dir/model/MyFrame.cpp.o
-main: CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o
+main: CMakeFiles/main.dir/vue/MyControlPanel.cpp.o
+main: CMakeFiles/main.dir/vue/MyApp.cpp.o
+main: CMakeFiles/main.dir/vue/MyFrame.cpp.o
+main: CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o
+main: CMakeFiles/main.dir/model/Rectangle.cpp.o
+main: CMakeFiles/main.dir/model/Figure.cpp.o
+main: CMakeFiles/main.dir/model/Dessin.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: /usr/local/lib/libwx_baseu_net-3.0.a
 main: /usr/local/lib/libwx_gtk3u_core-3.0.a
 main: /usr/local/lib/libwx_baseu-3.0.a
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

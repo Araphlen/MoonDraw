@@ -5,10 +5,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/araphlen/CLionProjects/MoonDraw/main.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/main.cpp.o"
-  "/home/araphlen/CLionProjects/MoonDraw/model/MyApp.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/MyApp.cpp.o"
-  "/home/araphlen/CLionProjects/MoonDraw/model/MyControlPanel.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/MyControlPanel.cpp.o"
-  "/home/araphlen/CLionProjects/MoonDraw/model/MyDrawingPanel.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o"
-  "/home/araphlen/CLionProjects/MoonDraw/model/MyFrame.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/MyFrame.cpp.o"
+  "/home/araphlen/CLionProjects/MoonDraw/model/Dessin.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Dessin.cpp.o"
+  "/home/araphlen/CLionProjects/MoonDraw/model/Figure.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Figure.cpp.o"
+  "/home/araphlen/CLionProjects/MoonDraw/model/Rectangle.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Rectangle.cpp.o"
+  "/home/araphlen/CLionProjects/MoonDraw/vue/MyApp.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/vue/MyApp.cpp.o"
+  "/home/araphlen/CLionProjects/MoonDraw/vue/MyControlPanel.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/vue/MyControlPanel.cpp.o"
+  "/home/araphlen/CLionProjects/MoonDraw/vue/MyDrawingPanel.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o"
+  "/home/araphlen/CLionProjects/MoonDraw/vue/MyFrame.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/vue/MyFrame.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

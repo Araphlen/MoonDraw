@@ -169,113 +169,194 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-model/MyApp.o: model/MyApp.cpp.o
+model/Dessin.o: model/Dessin.cpp.o
 
-.PHONY : model/MyApp.o
-
-# target to build an object file
-model/MyApp.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyApp.cpp.o
-.PHONY : model/MyApp.cpp.o
-
-model/MyApp.i: model/MyApp.cpp.i
-
-.PHONY : model/MyApp.i
-
-# target to preprocess a source file
-model/MyApp.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyApp.cpp.i
-.PHONY : model/MyApp.cpp.i
-
-model/MyApp.s: model/MyApp.cpp.s
-
-.PHONY : model/MyApp.s
-
-# target to generate assembly for a file
-model/MyApp.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyApp.cpp.s
-.PHONY : model/MyApp.cpp.s
-
-model/MyControlPanel.o: model/MyControlPanel.cpp.o
-
-.PHONY : model/MyControlPanel.o
+.PHONY : model/Dessin.o
 
 # target to build an object file
-model/MyControlPanel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyControlPanel.cpp.o
-.PHONY : model/MyControlPanel.cpp.o
+model/Dessin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Dessin.cpp.o
+.PHONY : model/Dessin.cpp.o
 
-model/MyControlPanel.i: model/MyControlPanel.cpp.i
+model/Dessin.i: model/Dessin.cpp.i
 
-.PHONY : model/MyControlPanel.i
+.PHONY : model/Dessin.i
 
 # target to preprocess a source file
-model/MyControlPanel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyControlPanel.cpp.i
-.PHONY : model/MyControlPanel.cpp.i
+model/Dessin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Dessin.cpp.i
+.PHONY : model/Dessin.cpp.i
 
-model/MyControlPanel.s: model/MyControlPanel.cpp.s
+model/Dessin.s: model/Dessin.cpp.s
 
-.PHONY : model/MyControlPanel.s
+.PHONY : model/Dessin.s
 
 # target to generate assembly for a file
-model/MyControlPanel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyControlPanel.cpp.s
-.PHONY : model/MyControlPanel.cpp.s
+model/Dessin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Dessin.cpp.s
+.PHONY : model/Dessin.cpp.s
 
-model/MyDrawingPanel.o: model/MyDrawingPanel.cpp.o
+model/Figure.o: model/Figure.cpp.o
 
-.PHONY : model/MyDrawingPanel.o
+.PHONY : model/Figure.o
 
 # target to build an object file
-model/MyDrawingPanel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyDrawingPanel.cpp.o
-.PHONY : model/MyDrawingPanel.cpp.o
+model/Figure.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Figure.cpp.o
+.PHONY : model/Figure.cpp.o
 
-model/MyDrawingPanel.i: model/MyDrawingPanel.cpp.i
+model/Figure.i: model/Figure.cpp.i
 
-.PHONY : model/MyDrawingPanel.i
+.PHONY : model/Figure.i
 
 # target to preprocess a source file
-model/MyDrawingPanel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyDrawingPanel.cpp.i
-.PHONY : model/MyDrawingPanel.cpp.i
+model/Figure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Figure.cpp.i
+.PHONY : model/Figure.cpp.i
 
-model/MyDrawingPanel.s: model/MyDrawingPanel.cpp.s
+model/Figure.s: model/Figure.cpp.s
 
-.PHONY : model/MyDrawingPanel.s
+.PHONY : model/Figure.s
 
 # target to generate assembly for a file
-model/MyDrawingPanel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyDrawingPanel.cpp.s
-.PHONY : model/MyDrawingPanel.cpp.s
+model/Figure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Figure.cpp.s
+.PHONY : model/Figure.cpp.s
 
-model/MyFrame.o: model/MyFrame.cpp.o
+model/Rectangle.o: model/Rectangle.cpp.o
 
-.PHONY : model/MyFrame.o
+.PHONY : model/Rectangle.o
 
 # target to build an object file
-model/MyFrame.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyFrame.cpp.o
-.PHONY : model/MyFrame.cpp.o
+model/Rectangle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Rectangle.cpp.o
+.PHONY : model/Rectangle.cpp.o
 
-model/MyFrame.i: model/MyFrame.cpp.i
+model/Rectangle.i: model/Rectangle.cpp.i
 
-.PHONY : model/MyFrame.i
+.PHONY : model/Rectangle.i
 
 # target to preprocess a source file
-model/MyFrame.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyFrame.cpp.i
-.PHONY : model/MyFrame.cpp.i
+model/Rectangle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Rectangle.cpp.i
+.PHONY : model/Rectangle.cpp.i
 
-model/MyFrame.s: model/MyFrame.cpp.s
+model/Rectangle.s: model/Rectangle.cpp.s
 
-.PHONY : model/MyFrame.s
+.PHONY : model/Rectangle.s
 
 # target to generate assembly for a file
-model/MyFrame.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyFrame.cpp.s
-.PHONY : model/MyFrame.cpp.s
+model/Rectangle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Rectangle.cpp.s
+.PHONY : model/Rectangle.cpp.s
+
+vue/MyApp.o: vue/MyApp.cpp.o
+
+.PHONY : vue/MyApp.o
+
+# target to build an object file
+vue/MyApp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vue/MyApp.cpp.o
+.PHONY : vue/MyApp.cpp.o
+
+vue/MyApp.i: vue/MyApp.cpp.i
+
+.PHONY : vue/MyApp.i
+
+# target to preprocess a source file
+vue/MyApp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vue/MyApp.cpp.i
+.PHONY : vue/MyApp.cpp.i
+
+vue/MyApp.s: vue/MyApp.cpp.s
+
+.PHONY : vue/MyApp.s
+
+# target to generate assembly for a file
+vue/MyApp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vue/MyApp.cpp.s
+.PHONY : vue/MyApp.cpp.s
+
+vue/MyControlPanel.o: vue/MyControlPanel.cpp.o
+
+.PHONY : vue/MyControlPanel.o
+
+# target to build an object file
+vue/MyControlPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vue/MyControlPanel.cpp.o
+.PHONY : vue/MyControlPanel.cpp.o
+
+vue/MyControlPanel.i: vue/MyControlPanel.cpp.i
+
+.PHONY : vue/MyControlPanel.i
+
+# target to preprocess a source file
+vue/MyControlPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vue/MyControlPanel.cpp.i
+.PHONY : vue/MyControlPanel.cpp.i
+
+vue/MyControlPanel.s: vue/MyControlPanel.cpp.s
+
+.PHONY : vue/MyControlPanel.s
+
+# target to generate assembly for a file
+vue/MyControlPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vue/MyControlPanel.cpp.s
+.PHONY : vue/MyControlPanel.cpp.s
+
+vue/MyDrawingPanel.o: vue/MyDrawingPanel.cpp.o
+
+.PHONY : vue/MyDrawingPanel.o
+
+# target to build an object file
+vue/MyDrawingPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o
+.PHONY : vue/MyDrawingPanel.cpp.o
+
+vue/MyDrawingPanel.i: vue/MyDrawingPanel.cpp.i
+
+.PHONY : vue/MyDrawingPanel.i
+
+# target to preprocess a source file
+vue/MyDrawingPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.i
+.PHONY : vue/MyDrawingPanel.cpp.i
+
+vue/MyDrawingPanel.s: vue/MyDrawingPanel.cpp.s
+
+.PHONY : vue/MyDrawingPanel.s
+
+# target to generate assembly for a file
+vue/MyDrawingPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.s
+.PHONY : vue/MyDrawingPanel.cpp.s
+
+vue/MyFrame.o: vue/MyFrame.cpp.o
+
+.PHONY : vue/MyFrame.o
+
+# target to build an object file
+vue/MyFrame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vue/MyFrame.cpp.o
+.PHONY : vue/MyFrame.cpp.o
+
+vue/MyFrame.i: vue/MyFrame.cpp.i
+
+.PHONY : vue/MyFrame.i
+
+# target to preprocess a source file
+vue/MyFrame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vue/MyFrame.cpp.i
+.PHONY : vue/MyFrame.cpp.i
+
+vue/MyFrame.s: vue/MyFrame.cpp.s
+
+.PHONY : vue/MyFrame.s
+
+# target to generate assembly for a file
+vue/MyFrame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/vue/MyFrame.cpp.s
+.PHONY : vue/MyFrame.cpp.s
 
 # Help Target
 help:
@@ -289,18 +370,27 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... model/MyApp.o"
-	@echo "... model/MyApp.i"
-	@echo "... model/MyApp.s"
-	@echo "... model/MyControlPanel.o"
-	@echo "... model/MyControlPanel.i"
-	@echo "... model/MyControlPanel.s"
-	@echo "... model/MyDrawingPanel.o"
-	@echo "... model/MyDrawingPanel.i"
-	@echo "... model/MyDrawingPanel.s"
-	@echo "... model/MyFrame.o"
-	@echo "... model/MyFrame.i"
-	@echo "... model/MyFrame.s"
+	@echo "... model/Dessin.o"
+	@echo "... model/Dessin.i"
+	@echo "... model/Dessin.s"
+	@echo "... model/Figure.o"
+	@echo "... model/Figure.i"
+	@echo "... model/Figure.s"
+	@echo "... model/Rectangle.o"
+	@echo "... model/Rectangle.i"
+	@echo "... model/Rectangle.s"
+	@echo "... vue/MyApp.o"
+	@echo "... vue/MyApp.i"
+	@echo "... vue/MyApp.s"
+	@echo "... vue/MyControlPanel.o"
+	@echo "... vue/MyControlPanel.i"
+	@echo "... vue/MyControlPanel.s"
+	@echo "... vue/MyDrawingPanel.o"
+	@echo "... vue/MyDrawingPanel.i"
+	@echo "... vue/MyDrawingPanel.s"
+	@echo "... vue/MyFrame.o"
+	@echo "... vue/MyFrame.i"
+	@echo "... vue/MyFrame.s"
 .PHONY : help
 
 

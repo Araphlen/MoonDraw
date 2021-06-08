@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(skeleton VERSION 1.0)
+project(moonDraw VERSION 1.0)
 
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 11)
@@ -10,5 +10,5 @@ find_package(wxWidgets REQUIRED COMPONENTS net core base)
 include(${wxWidgets_USE_FILE})
 
 # add the executable
-add_executable(main main.cpp model/MyControlPanel.cpp model/headers/MyControlPanel.h model/MyApp.cpp model/headers/MyApp.h model/MyFrame.cpp model/headers/MyFrame.h model/headers/contantes.h model/headers/enum.h model/MyDrawingPanel.cpp model/headers/MyDrawingPanel.h)
+add_executable(main main.cpp vue/MyControlPanel.cpp vue/headers/MyControlPanel.h vue/MyApp.cpp vue/headers/MyApp.h vue/MyFrame.cpp vue/headers/MyFrame.h vue/MyDrawingPanel.cpp vue/headers/MyDrawingPanel.h model/Rectangle.cpp model/Rectangle.h model/Figure.cpp model/Figure.h model/Dessin.cpp model/Dessin.h)
 target_link_libraries(main ${wxWidgets_LIBRARIES})
