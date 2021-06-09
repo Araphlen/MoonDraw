@@ -15,17 +15,17 @@ public:
     Rectangle(const Point& topLeft, int h, int w) ;
     Rectangle(const Point& topLeft, const Point& bottomRight);
 
-    const Point &getMTopLeft() const;
-    const Point &getMBottomRight() const;
+    const Point &getTopLeft() const;
+    const Point &getBottomRight() const;
 
-    void setMTopLeft(int x, int y);
-    void setMBottomRight(int x,int y);
+    void setTopLeft(int x, int y);
+    void setBottomRight(int x, int y);
 
-    int getMH() const;
-    int getMW() const;
+    int getH() const;
+    int getW() const;
 
-    void setMH(int mH);
-    void setMW(int mW);
+    void setH(int h);
+    void setW(int w);
 
 private:
     Point m_topLeft;

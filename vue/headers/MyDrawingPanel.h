@@ -9,7 +9,6 @@
 
 #ifndef WX_PRECOMP
 #include "wx/wx.h"
-
 #endif
 
 #include<wx/filedlg.h>
@@ -24,6 +23,7 @@
 #define WIDGET_PANEL_WIDTH	200
 #define STATUS_DEFAULT 0
 #define STATUS_RECTANGLE 1
+#define STATUS_CIRCLE 2
 //------------------------------------------------------------------------
 class MyDrawingPanel: public wxPanel
 //------------------------------------------------------------------------
@@ -32,7 +32,7 @@ public:
     MyDrawingPanel( wxWindow *parent ) ;
     void OpenFile(wxString fileName) ;
     void SaveFile(wxString fileName) ;
-    void setMStatus(int mStatus);
+    void setStatus(int mStatus);
 
     void setMCurrentIndexTempsPoint(int mCurrentIndexTempsPoint);
 
@@ -47,6 +47,7 @@ private:
     Drawing m_drawing;
     std::vector<Point> m_tempPoints;
     int m_currentIndexRect;
+    int m_currentIndexCircle;
     bool m_isdrawing;
 };
 

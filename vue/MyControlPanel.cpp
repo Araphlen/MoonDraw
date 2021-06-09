@@ -9,6 +9,7 @@
 
 #define STATUS_DEFAULT 0
 #define STATUS_RECTANGLE 1
+#define STATUS_CIRCLE 2
 //************************************************************************
 //************************************************************************
 // MyDrawingPanel class (where controls are displayed)
@@ -41,8 +42,12 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
     Bind(wxEVT_CHECKBOX, &MyControlPanel::OnCheckBox, this, ID_CHECKBOX1) ;
 
     y+= WIDGET_Y_STEP;
-    m_rectbutton = new wxButton(this, ID_RECTBUTTON, wxT("RECTANGLE"),wxPoint(10,y));
+    m_rectButton = new wxButton(this, ID_RECTBUTTON, wxT("RECTANGLE"), wxPoint(10, y));
     Bind(wxEVT_BUTTON,&MyControlPanel::OnButtonRectangle,this,ID_RECTBUTTON);
+
+    y+= WIDGET_Y_STEP;
+    m_circleButton = new wxButton(this,ID_CIRCLEBUTTON, wxT("CERCLE"),wxPoint(10,y));
+    Bind(wxEVT_BUTTON, &MyControlPanel::OnButtonCircle,this,ID_CIRCLEBUTTON);
 }
 
 //------------------------------------------------------------------------
@@ -73,5 +78,10 @@ void MyControlPanel::OnCheckBox(wxCommandEvent &event)
 
 void MyControlPanel::OnButtonRectangle(wxCommandEvent &event) {
     MyFrame* frame = (MyFrame*)GetParent() ;
-    frame->GetDrawingPanel()->setMStatus(STATUS_RECTANGLE);
+    frame->GetDrawingPanel()->setStatus(STATUS_RECTANGLE);
+}
+
+void MyControlPanel::OnButtonCircle(wxCommandEvent &event) {
+    MyFrame* frame = (MyFrame*)GetParent();
+    frame->GetDrawingPanel()->setStatus(STATUS_CIRCLE);
 }

@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.cpp.o"
+  "CMakeFiles/main.dir/model/Circle.cpp.o"
   "CMakeFiles/main.dir/model/Drawing.cpp.o"
   "CMakeFiles/main.dir/model/Figure.cpp.o"
   "CMakeFiles/main.dir/model/Point.cpp.o"
   "CMakeFiles/main.dir/model/Rectangle.cpp.o"
+  "CMakeFiles/main.dir/model/Square.cpp.o"
   "CMakeFiles/main.dir/vue/MyApp.cpp.o"
   "CMakeFiles/main.dir/vue/MyControlPanel.cpp.o"
   "CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o"

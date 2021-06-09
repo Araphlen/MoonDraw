@@ -169,6 +169,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+model/Circle.o: model/Circle.cpp.o
+
+.PHONY : model/Circle.o
+
+# target to build an object file
+model/Circle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Circle.cpp.o
+.PHONY : model/Circle.cpp.o
+
+model/Circle.i: model/Circle.cpp.i
+
+.PHONY : model/Circle.i
+
+# target to preprocess a source file
+model/Circle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Circle.cpp.i
+.PHONY : model/Circle.cpp.i
+
+model/Circle.s: model/Circle.cpp.s
+
+.PHONY : model/Circle.s
+
+# target to generate assembly for a file
+model/Circle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Circle.cpp.s
+.PHONY : model/Circle.cpp.s
+
 model/Drawing.o: model/Drawing.cpp.o
 
 .PHONY : model/Drawing.o
@@ -276,6 +303,33 @@ model/Rectangle.s: model/Rectangle.cpp.s
 model/Rectangle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Rectangle.cpp.s
 .PHONY : model/Rectangle.cpp.s
+
+model/Square.o: model/Square.cpp.o
+
+.PHONY : model/Square.o
+
+# target to build an object file
+model/Square.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Square.cpp.o
+.PHONY : model/Square.cpp.o
+
+model/Square.i: model/Square.cpp.i
+
+.PHONY : model/Square.i
+
+# target to preprocess a source file
+model/Square.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Square.cpp.i
+.PHONY : model/Square.cpp.i
+
+model/Square.s: model/Square.cpp.s
+
+.PHONY : model/Square.s
+
+# target to generate assembly for a file
+model/Square.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Square.cpp.s
+.PHONY : model/Square.cpp.s
 
 vue/MyApp.o: vue/MyApp.cpp.o
 
@@ -397,6 +451,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... model/Circle.o"
+	@echo "... model/Circle.i"
+	@echo "... model/Circle.s"
 	@echo "... model/Drawing.o"
 	@echo "... model/Drawing.i"
 	@echo "... model/Drawing.s"
@@ -409,6 +466,9 @@ help:
 	@echo "... model/Rectangle.o"
 	@echo "... model/Rectangle.i"
 	@echo "... model/Rectangle.s"
+	@echo "... model/Square.o"
+	@echo "... model/Square.i"
+	@echo "... model/Square.s"
 	@echo "... vue/MyApp.o"
 	@echo "... vue/MyApp.i"
 	@echo "... vue/MyApp.s"

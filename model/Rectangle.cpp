@@ -10,65 +10,62 @@ Rectangle::Rectangle() :Figure(RECT_SHAPE) {
     m_topLeft = Point(0,0);
     m_h=10;
     m_w=20;
-    m_bottomRight = Point(m_w+m_topLeft.getMX(),m_h+m_topLeft.getMY());
+    m_bottomRight = Point(m_w+ m_topLeft.getX(), m_h + m_topLeft.getY());
 }
 
-Rectangle::Rectangle(const Point &topLeft, int h, int w) {
+Rectangle::Rectangle(const Point &topLeft, int h, int w) :Figure(RECT_SHAPE) {
     m_topLeft = topLeft;
     m_h = h;
     m_w = w;
-    m_bottomRight = Point(m_w+m_topLeft.getMX(),m_h+m_topLeft.getMY());
+    m_bottomRight = Point(m_w+ m_topLeft.getX(), m_h + m_topLeft.getY());
 }
-Rectangle::Rectangle(const Point &topLeft, const Point &bottomRight) {
+Rectangle::Rectangle(const Point &topLeft, const Point &bottomRight) :Figure(RECT_SHAPE) {
     m_topLeft = topLeft;
     m_bottomRight =bottomRight;
-    m_h = m_bottomRight.getMY() - m_topLeft.getMY();
-    m_w = m_bottomRight.getMX() - m_topLeft.getMX();
+    m_h = m_bottomRight.getY() - m_topLeft.getY();
+    m_w = m_bottomRight.getX() - m_topLeft.getX();
 
 }
 
-const Point &Rectangle::getMTopLeft() const {
+const Point &Rectangle::getTopLeft() const {
     return m_topLeft;
 }
 
-const Point &Rectangle::getMBottomRight() const {
+const Point &Rectangle::getBottomRight() const {
     return m_bottomRight;
 }
 
-int Rectangle::getMH() const {
+int Rectangle::getH() const {
     return m_h;
 }
 
-int Rectangle::getMW() const {
+int Rectangle::getW() const {
     return m_w;
 }
 
-void Rectangle::setMH(int mH) {
-//    std::cout<<"m_h="<<m_h<<std::endl;
-    m_h = mH;
-//    std::cout<<"m_h="<<m_h<<std::endl;
+void Rectangle::setH(int h) {
+    m_h = h;
+    m_bottomRight.setY(m_topLeft.getY()+m_h);
+}
+
+void Rectangle::setW(int w) {
+    m_w = w;
+    m_bottomRight.setX(m_topLeft.getX()+m_w);
 
 }
 
-void Rectangle::setMW(int mW) {
-//    std::cout<<"m_w="<<m_w<<std::endl;
-    m_w = mW;
-//    std::cout<<"m_w="<<m_w<<std::endl;
+void Rectangle::setTopLeft(int x, int y) {
+    m_topLeft.setX(x);
+    m_topLeft.setY(y);
+    m_h = m_bottomRight.getY() - m_topLeft.getY();
+    m_w = m_bottomRight.getX() - m_topLeft.getX();
 }
 
-void Rectangle::setMTopLeft(int x, int y) {
-    m_topLeft.setMX(x);
-    m_topLeft.setMY(y);
-}
-
-void Rectangle::setMBottomRight(int x,int y) {
-    std::cout << "Pour l'instant le point est à "<<this->getMBottomRight().getMX()<<" "<<this->getMBottomRight().getMY() << std::endl;
-    std::cout << "et on veut le mettre à  "<<x<<" "<<y << std::endl;
-
-    m_bottomRight.setMX(x);
-    m_bottomRight.setMY(y);
-    std::cout << "le point a bien été redefinit a "<<this->getMBottomRight().getMX()<<" "<<this->getMBottomRight().getMY() << std::endl;
-
+void Rectangle::setBottomRight(int x, int y) {
+    m_bottomRight.setX(x);
+    m_bottomRight.setY(y);
+    m_h = m_bottomRight.getY() - m_topLeft.getY();
+    m_w = m_bottomRight.getX() - m_topLeft.getX();
 }
 
 

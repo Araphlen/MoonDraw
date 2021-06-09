@@ -12,18 +12,18 @@ Point::Point(int x, int y) {
     m_y=y;
 }
 
-int Point::getMX() const {
+int Point::getX() const {
     return m_x;
 }
 
-int Point::getMY() const {
+int Point::getY() const {
     return m_y;
 }
 
-void Point::setMX(int mX) {
+void Point::setX(int mX) {
     m_x = mX;
 }
 
-void Point::setMY(int mY) {
+void Point::setY(int mY) {
     m_y = mY;
 }

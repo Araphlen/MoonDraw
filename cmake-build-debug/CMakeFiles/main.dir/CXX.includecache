@@ -6,27 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/araphlen/CLionProjects/MoonDraw/main.cpp
-wx/wxprec.h
-/home/araphlen/CLionProjects/MoonDraw/wx/wxprec.h
-wx/wx.h
-/home/araphlen/CLionProjects/MoonDraw/wx/wx.h
-wx/filedlg.h
--
-wx/image.h
--
-wx/file.h
--
-wx/bitmap.h
--
-vue/headers/MyApp.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyApp.h
-
-/home/araphlen/CLionProjects/MoonDraw/model/Drawing.cpp
-iostream
--
-headers/Drawing.h
-/home/araphlen/CLionProjects/MoonDraw/model/headers/Drawing.h
+/home/araphlen/CLionProjects/MoonDraw/model/headers/Circle.h
+Figure.h
+/home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+Point.h
+/home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
 
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Drawing.h
 vector
@@ -37,6 +21,8 @@ Figure.h
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
 Rectangle.h
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Rectangle.h
+Circle.h
+/home/araphlen/CLionProjects/MoonDraw/model/headers/Circle.h
 
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
 string
@@ -52,18 +38,6 @@ Figure.h
 Point.h
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
 
-/home/araphlen/CLionProjects/MoonDraw/vue/MyApp.cpp
-headers/MyApp.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyApp.h
-
-/home/araphlen/CLionProjects/MoonDraw/vue/MyControlPanel.cpp
-headers/MyControlPanel.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyControlPanel.h
-headers/MyFrame.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
-headers/MyDrawingPanel.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyDrawingPanel.h
-
 /home/araphlen/CLionProjects/MoonDraw/vue/MyDrawingPanel.cpp
 langinfo.h
 -
@@ -73,26 +47,6 @@ headers/MyFrame.h
 /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
 iostream
 -
-
-/home/araphlen/CLionProjects/MoonDraw/vue/MyFrame.cpp
-headers/MyFrame.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
-
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyApp.h
-wx/wxprec.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/wx/wxprec.h
-wx/wx.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/wx/wx.h
-wx/filedlg.h
--
-wx/image.h
--
-wx/file.h
--
-wx/bitmap.h
--
-MyFrame.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
 
 /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyControlPanel.h
 wx/wxprec.h
