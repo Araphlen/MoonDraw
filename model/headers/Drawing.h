@@ -15,24 +15,20 @@ class Drawing {
 public:
     Drawing();
 
+    const int nbFormes();
+
+    Figure* operator[](int i) const;
     //Methode for rectangles
-    void addRectangle(const Rectangle &rect);
-    const int nbRectangles();
-    Rectangle& accessRectangle(int i);
-    void setRectangleCourant(int i, int x_br, int y_br);
+    void addRectangle(Rectangle *rect);
+    void setCurrentRectangle(int i, int x_br, int y_br);
 
     //methode for Circles
-    int nbCircles();
 
-    Circle &accessCircle(int i);
-
-    void addCircle(const Circle &circle);
-
+    void addFigure(Figure *figure);
     void setCircleCourant(int i, wxCoord i1, wxCoord i2);
 
 private:
-    std::vector<Rectangle> m_rectangles ;
-    std::vector<Circle> m_circles;
+    std::vector<Figure*> m_figures ;
 };
 
 

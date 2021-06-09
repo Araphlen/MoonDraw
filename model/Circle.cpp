@@ -22,7 +22,7 @@ void Circle::setRay(int pointerX, int pointerY){
     m_ray= (int) sqrt((centerX-pointerX)*(centerX-pointerX)+(centerY-pointerY)*(centerY-pointerY));
 }
 
-const Point &Circle::getCenter() const {
+ Point Circle::getCenter() const {
     return m_center;
 }
 

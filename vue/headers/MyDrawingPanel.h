@@ -24,6 +24,9 @@
 #define STATUS_DEFAULT 0
 #define STATUS_RECTANGLE 1
 #define STATUS_CIRCLE 2
+#define STATUS_SQUARE 3
+#define STATUS_ELIPSE 4
+
 //------------------------------------------------------------------------
 class MyDrawingPanel: public wxPanel
 //------------------------------------------------------------------------
@@ -46,8 +49,8 @@ private:
     int m_status;
     Drawing m_drawing;
     std::vector<Point> m_tempPoints;
-    int m_currentIndexRect;
-    int m_currentIndexCircle;
+    int m_currentIndexFigure;
+    Figure* m_currentFigure;
     bool m_isdrawing;
 };
 

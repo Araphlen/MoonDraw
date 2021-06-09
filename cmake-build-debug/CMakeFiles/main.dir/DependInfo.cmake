@@ -10,7 +10,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/araphlen/CLionProjects/MoonDraw/model/Figure.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Figure.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/model/Point.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Point.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/model/Rectangle.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Rectangle.cpp.o"
-  "/home/araphlen/CLionProjects/MoonDraw/model/Square.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Square.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/vue/MyApp.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/vue/MyApp.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/vue/MyControlPanel.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/vue/MyControlPanel.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/vue/MyDrawingPanel.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o"

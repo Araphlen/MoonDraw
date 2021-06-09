@@ -27,11 +27,11 @@ Rectangle::Rectangle(const Point &topLeft, const Point &bottomRight) :Figure(REC
 
 }
 
-const Point &Rectangle::getTopLeft() const {
+ Point Rectangle::getTopLeft() const {
     return m_topLeft;
 }
 
-const Point &Rectangle::getBottomRight() const {
+ Point Rectangle::getBottomRight() const {
     return m_bottomRight;
 }
 

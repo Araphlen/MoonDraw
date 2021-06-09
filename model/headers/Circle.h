@@ -13,10 +13,10 @@ public:
     Circle();
     Circle(const Point &center, int ray);
 
-    const Point &getCenter() const;
-    void setRay(int pointerX, int pointerY);
+    Point getCenter() const override;
+    void setRay(int pointerX, int pointerY) override;
 
-    int getRay() const;
+    int getRay() const override;
 
 private:
     Point m_center;

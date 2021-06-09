@@ -26,7 +26,9 @@ ID_BUTTON1,
 ID_SLIDER1,
 ID_CHECKBOX1,
 ID_RECTBUTTON,
-ID_CIRCLEBUTTON
+ID_CIRCLEBUTTON,
+ID_SQUAREBUTTON,
+ID_ELIPSEBUTTON
 };
 //------------------------------------------------------------------------
 class MyControlPanel: public wxPanel
@@ -41,13 +43,18 @@ private:
     void OnButton(wxCommandEvent &event) ;
     void OnButtonRectangle(wxCommandEvent &event);
     void OnButtonCircle(wxCommandEvent &event);
+    void OnButtonSquare(wxCommandEvent &event);
+    void OnButtonElipse(wxCommandEvent &event);
     void OnSlider(wxScrollEvent &event) ;
     void OnCheckBox(wxCommandEvent &event) ;
     wxButton* m_button ;
     wxButton* m_rectButton;
     wxButton* m_circleButton;
+    wxButton* m_squareButton;
+    wxButton* m_elipseButton;
     wxSlider* m_slider ;
     wxCheckBox* m_checkBox ;
+
 };
 
 

@@ -15,17 +15,17 @@ public:
     Rectangle(const Point& topLeft, int h, int w) ;
     Rectangle(const Point& topLeft, const Point& bottomRight);
 
-    const Point &getTopLeft() const;
-    const Point &getBottomRight() const;
+     Point getTopLeft() const override;
+     Point getBottomRight() const override;
 
-    void setTopLeft(int x, int y);
-    void setBottomRight(int x, int y);
+    void setTopLeft(int x, int y) override;
+    void setBottomRight(int x, int y) override;
 
-    int getH() const;
-    int getW() const;
+    int getH() const override;
+    int getW() const override;
 
-    void setH(int h);
-    void setW(int w);
+    void setH(int h) override;
+    void setW(int w) override;
 
 private:
     Point m_topLeft;

@@ -10,6 +10,8 @@
 #define STATUS_DEFAULT 0
 #define STATUS_RECTANGLE 1
 #define STATUS_CIRCLE 2
+#define STATUS_SQUARE 3
+#define STATUS_ELIPSE 4
 //************************************************************************
 //************************************************************************
 // MyDrawingPanel class (where controls are displayed)
@@ -48,6 +50,14 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
     y+= WIDGET_Y_STEP;
     m_circleButton = new wxButton(this,ID_CIRCLEBUTTON, wxT("CERCLE"),wxPoint(10,y));
     Bind(wxEVT_BUTTON, &MyControlPanel::OnButtonCircle,this,ID_CIRCLEBUTTON);
+
+    y+= WIDGET_Y_STEP;
+    m_squareButton = new wxButton(this,ID_SQUAREBUTTON, wxT("CARRE"),wxPoint(10,y));
+    Bind(wxEVT_BUTTON, &MyControlPanel::OnButtonSquare,this,ID_SQUAREBUTTON);
+
+    y+= WIDGET_Y_STEP;
+    m_elipseButton = new wxButton(this, ID_ELIPSEBUTTON, wxT("Elipse"), wxPoint(10, y));
+    Bind(wxEVT_BUTTON, &MyControlPanel::OnButtonElipse,this,ID_ELIPSEBUTTON);
 }
 
 //------------------------------------------------------------------------
@@ -84,4 +94,14 @@ void MyControlPanel::OnButtonRectangle(wxCommandEvent &event) {
 void MyControlPanel::OnButtonCircle(wxCommandEvent &event) {
     MyFrame* frame = (MyFrame*)GetParent();
     frame->GetDrawingPanel()->setStatus(STATUS_CIRCLE);
+}
+
+void MyControlPanel::OnButtonSquare(wxCommandEvent &event) {
+    MyFrame* frame = (MyFrame*)GetParent();
+    frame->GetDrawingPanel()->setStatus(STATUS_SQUARE);
+}
+
+void MyControlPanel::OnButtonElipse(wxCommandEvent &event) {
+    MyFrame* frame = (MyFrame*)GetParent();
+    frame->GetDrawingPanel()->setStatus(STATUS_ELIPSE);
 }

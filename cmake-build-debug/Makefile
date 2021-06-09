@@ -304,33 +304,6 @@ model/Rectangle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Rectangle.cpp.s
 .PHONY : model/Rectangle.cpp.s
 
-model/Square.o: model/Square.cpp.o
-
-.PHONY : model/Square.o
-
-# target to build an object file
-model/Square.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Square.cpp.o
-.PHONY : model/Square.cpp.o
-
-model/Square.i: model/Square.cpp.i
-
-.PHONY : model/Square.i
-
-# target to preprocess a source file
-model/Square.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Square.cpp.i
-.PHONY : model/Square.cpp.i
-
-model/Square.s: model/Square.cpp.s
-
-.PHONY : model/Square.s
-
-# target to generate assembly for a file
-model/Square.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Square.cpp.s
-.PHONY : model/Square.cpp.s
-
 vue/MyApp.o: vue/MyApp.cpp.o
 
 .PHONY : vue/MyApp.o
@@ -466,9 +439,6 @@ help:
 	@echo "... model/Rectangle.o"
 	@echo "... model/Rectangle.i"
 	@echo "... model/Rectangle.s"
-	@echo "... model/Square.o"
-	@echo "... model/Square.i"
-	@echo "... model/Square.s"
 	@echo "... vue/MyApp.o"
 	@echo "... vue/MyApp.i"
 	@echo "... vue/MyApp.s"

@@ -7,11 +7,11 @@
 
 #include "headers/MyFrame.h"
 #include <iostream>
+#include <expat.h>
 
 #define RECT_SHAPE 1
 #define CIRCLE_SHAPE 2
-#define SQUARE_SHAPE 3
-
+#define ELIPSE_SHAPE 3
 
 
 //************************************************************************
@@ -38,8 +38,8 @@ MyDrawingPanel::MyDrawingPanel(wxWindow *parent) : wxPanel(parent)
     m_mousePoint = m_onePoint ;
     m_status = STATUS_DEFAULT;
     m_drawing = Drawing();
-    m_currentIndexRect=0;
-    m_currentIndexCircle=0;
+    m_currentIndexFigure=0;
+
     m_isdrawing =false;
     }
 
@@ -58,16 +58,34 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
             break;
         case STATUS_RECTANGLE:
             if (m_isdrawing==false) {
-                m_drawing.addRectangle(Rectangle(Point(event.m_x, event.m_y), 0, 0));
+                m_drawing.addRectangle(new Rectangle(Point(event.m_x, event.m_y), 0, 0));
                 m_isdrawing = true;
 //                std::cout << "J'ai initilaliser un noveau Rectangle a "<<event.m_x << " " << event.m_y << std::endl;
+                m_currentFigure = m_drawing[m_currentIndexFigure];
                 Refresh();
             }
             break;
         case STATUS_CIRCLE:
             if (m_isdrawing== false){
-                m_drawing.addCircle(Circle(Point(event.m_x,event.m_y),0));
+                m_drawing.addFigure(new Circle(Point(event.m_x, event.m_y), 0));
                 m_isdrawing =true;
+                m_currentFigure = m_drawing[m_currentIndexFigure];
+                Refresh();
+            }
+            break;
+        case STATUS_SQUARE:
+            if (m_isdrawing== false){
+                m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0,0));
+                m_isdrawing =true;
+                m_currentFigure = m_drawing[m_currentIndexFigure];
+                Refresh();
+            }
+            break;
+        case STATUS_ELIPSE:
+            if (m_isdrawing== false){
+                m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0,0));
+                m_isdrawing =true;
+                m_currentFigure = m_drawing[m_currentIndexFigure];
                 Refresh();
             }
             break;
@@ -91,16 +109,39 @@ void MyDrawingPanel::OnMouseMove(wxMouseEvent &event)
         case STATUS_RECTANGLE:
             if (m_isdrawing) {
 //                std::cout << "JE DESSINE UN RECTANGLE" << std::endl;
-                m_drawing.setRectangleCourant(m_currentIndexRect, event.m_x,event.m_y);
+                m_drawing.setCurrentRectangle(m_currentIndexFigure, event.m_x, event.m_y);
                 Refresh();
             }
 //            std::cout<<m_isdrawing<<std::endl;
             break;
         case STATUS_CIRCLE:
             if (m_isdrawing){
-                m_drawing.setCircleCourant(m_currentIndexCircle,event.m_x,event.m_y);
+                m_drawing.setCircleCourant(m_currentIndexFigure,event.m_x,event.m_y);
                 Refresh();
             }
+            break;
+        case STATUS_SQUARE:
+            if (m_isdrawing){
+            int pointerX = event.m_x;
+            int pointerY = event.m_y;
+            m_drawing.setCurrentRectangle(m_currentIndexFigure, pointerX, pointerY);
+            int currentH = m_currentFigure->getH();
+            int currentW = m_currentFigure->getW();
+            if (currentH>currentW){
+                m_currentFigure->setW(currentH);
+            }else{
+                m_currentFigure->setH(currentW);
+            }
+            }
+            Refresh();
+            break;
+        case STATUS_ELIPSE:
+            if (m_isdrawing) {
+//                std::cout << "JE DESSINE UN RECTANGLE" << std::endl;
+                m_drawing.setCurrentRectangle(m_currentIndexFigure, event.m_x, event.m_y);
+                Refresh();
+            }
+//            std::cout<<m_isdrawing<<std::endl;
             break;
     }
 }
@@ -110,20 +151,9 @@ void MyDrawingPanel::OnMouseMove(wxMouseEvent &event)
 void MyDrawingPanel::OnMouseLeftUp(wxMouseEvent &event)
 //------------------------------------------------------------------------
 {
-    switch (m_status) {
-        case STATUS_DEFAULT:
-            Refresh();
-            break;
-        case STATUS_RECTANGLE:
-//            std::cout<<"je suis dans OnMouseLeftUp"<<std::endl;
-            m_currentIndexRect++;
+            m_currentIndexFigure++;
+            m_currentFigure = m_drawing[m_currentIndexFigure];
             m_isdrawing= false;
-            break;
-        case STATUS_CIRCLE:
-            m_currentIndexCircle++;
-            m_isdrawing= false;
-            break;
-    }
 }
 
 
@@ -158,26 +188,35 @@ void MyDrawingPanel::OnPaint(wxPaintEvent &event)
 
 
 
-    for (int i = 0; i < m_drawing.nbRectangles(); ++i) {
-        Rectangle rectToPaint = m_drawing.accessRectangle(i);
+    for (int i = 0; i < m_drawing.nbFormes(); ++i) {
+        Figure *figToPaint = m_drawing[i];
 /*        std::cout<<"---------------------------------------------------------------------------"<<std::endl;
-//        std::cout << "m_xtl =" << rectToPaint.getTopLeft().getX() << std::endl;
-//        std::cout << "m_ytl =" << rectToPaint.getTopLeft().getY() << std::endl;
+//        std::cout << "m_xtl =" << figToPaint.getTopLeft().getX() << std::endl;
+//        std::cout << "m_ytl =" << figToPaint.getTopLeft().getY() << std::endl;
 //        std::cout<<"---------------------------------------------------------------------------"<<std::endl;
-//        std::cout << "m_xbr =" << rectToPaint.getBottomRight().getX() << std::endl;
-//        std::cout << "m_ybr =" << rectToPaint.getBottomRight().getY() << std::endl;
+//        std::cout << "m_xbr =" << figToPaint.getBottomRight().getX() << std::endl;
+//        std::cout << "m_ybr =" << figToPaint.getBottomRight().getY() << std::endl;
 //        std::cout<<"---------------------------------------------------------------------------"<<std::endl;
-//        std::cout << "m_h =" << rectToPaint.getH() << std::endl;
-//        std::cout << "m_w =" << rectToPaint.getW() << std::endl;
+//        std::cout << "m_h =" << figToPaint.getH() << std::endl;
+//        std::cout << "m_w =" << figToPaint.getW() << std::endl;
 //        std::cout<<"---------------------------------------------------------------------------"<<std::endl;
 //        std::cout<<"size de m_rectangles ="<< m_drawing.nbRectangles()<<std::endl;*/
-        dc.DrawRectangle(wxRect(wxPoint(rectToPaint.getTopLeft().getX(), rectToPaint.getTopLeft().getY()), wxPoint(
-                rectToPaint.getBottomRight().getX(),
-                rectToPaint.getBottomRight().getY())));
-    }
-    for (int i = 0; i < m_drawing.nbCircles(); ++i) {
-        Circle circleToPaint = m_drawing.accessCircle(i);
-        dc.DrawCircle(wxPoint(circleToPaint.getCenter().getX(),circleToPaint.getCenter().getY()),wxCoord(circleToPaint.getRay()));
+        switch (figToPaint->getShape()) {
+            case RECT_SHAPE:
+                dc.DrawRectangle(wxRect(wxPoint(figToPaint->getTopLeft().getX(), figToPaint->getTopLeft().getY()), wxPoint(
+                        figToPaint->getBottomRight().getX(),
+                        figToPaint->getBottomRight().getY())));
+                break;
+            case CIRCLE_SHAPE:
+                dc.DrawCircle(wxPoint(figToPaint->getCenter().getX(), figToPaint->getCenter().getY()),
+                              wxCoord(figToPaint->getRay()));
+                break;
+            case ELIPSE_SHAPE:
+                dc.DrawEllipse(wxRect(wxPoint(figToPaint->getTopLeft().getX(), figToPaint->getTopLeft().getY()), wxPoint(
+                        figToPaint->getBottomRight().getX(),
+                        figToPaint->getBottomRight().getY())));
+                break;
+        }
     }
 }
 
@@ -215,5 +254,5 @@ void MyDrawingPanel::setStatus(int mStatus) {
 }
 
 void MyDrawingPanel::setMCurrentIndexTempsPoint(int mCurrentIndexTempsPoint) {
-    m_currentIndexRect = mCurrentIndexTempsPoint;
+    m_currentIndexFigure = mCurrentIndexTempsPoint;
 }
