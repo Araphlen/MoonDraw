@@ -36,7 +36,7 @@ MyDrawingPanel::MyDrawingPanel(wxWindow *parent) : wxPanel(parent)
     m_onePoint.y = h/2 ;
     m_mousePoint = m_onePoint ;
     m_status = STATUS_DEFAULT;
-    m_drawing = new Drawing();
+    m_drawing = Drawing();
     m_currentIndexRect=0;
     m_isdrawing =false;
     }
@@ -56,9 +56,9 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
             break;
         case STATUS_RECTANGLE:
             if (m_isdrawing==false) {
-                m_drawing.addRectangle(Rectangle(Point(event.m_x, event.m_y), 0, 0));
+                m_drawing.addRectangle(Rectangle(Point(event.m_x, event.m_y), 100, 200));
                 m_isdrawing = true;
-                std::cout << "J'ai initilaliser un noveau Rectangle" << std::endl;
+                std::cout << "J'ai initilaliser un noveau Rectangle a "<<event.m_x << " " << event.m_y << std::endl;
                 Refresh();
             }
             break;
@@ -81,10 +81,8 @@ void MyDrawingPanel::OnMouseMove(wxMouseEvent &event)
             break;
         case 1:
             if (m_isdrawing) {
-                int h = m_drawing.getRectangle(m_currentIndexRect).getMTopLeft().getMY() - event.m_y;
-                int w = m_drawing.getRectangle(m_currentIndexRect).getMTopLeft().getMX() - event.m_x;
-                m_drawing.setRectangleCourant(m_currentIndexRect, h, w);
-
+                std::cout << "JE DESSINE UN RECTANGLE" << std::endl;
+                m_drawing.setRectangleCourant(m_currentIndexRect, event.m_x,event.m_y);
                 Refresh();
             }
             std::cout<<m_isdrawing<<std::endl;
@@ -103,7 +101,7 @@ void MyDrawingPanel::OnMouseLeftUp(wxMouseEvent &event)
             Refresh();
             break;
         case STATUS_RECTANGLE:
-            std::cout<<"jje suis dans OnMouseLeftUp"<<std::endl;
+            std::cout<<"je suis dans OnMouseLeftUp"<<std::endl;
 
             m_currentIndexRect++;
             m_isdrawing= false;
@@ -134,23 +132,29 @@ void MyDrawingPanel::OnPaint(wxPaintEvent &event)
             dc.DrawRectangle(wxPoint(m_onePoint.x, m_onePoint.y), wxSize(100,100)) ;
             dc.DrawCircle(wxPoint(m_mousePoint), radius/2) ;
 //
-//            if (check)
-//            {
-//                wxString coordinates ;
-//                coordinates.sprintf(wxT("(%d,%d)"), m_mousePoint.x, m_mousePoint.y) ;
-//                dc.DrawText(coordinates, wxPoint(m_mousePoint.x, m_mousePoint.y+20)) ;
-//            }
+            if (check)
+            {
+                wxString coordinates ;
+                coordinates.sprintf(wxT("(%d,%d)"), m_mousePoint.x, m_mousePoint.y) ;
+                dc.DrawText(coordinates, wxPoint(m_mousePoint.x, m_mousePoint.y+20)) ;
+            }
 
 
 
     for (int i = 0; i < m_drawing.nbRectangles(); ++i) {
         Rectangle rectToPaint = m_drawing.getRectangle(i);
-//        std::cout<<"m_x =" << rectToPaint.getMTopLeft().getMX()<<std::endl;
-//        std::cout<<"m_y ="<< rectToPaint.getMTopLeft().getMY()<<std::endl;
-//        std::cout<<"m_h ="<< rectToPaint.getMH()<<std::endl;
-//        std::cout<<"m_w ="<< rectToPaint.getMW()<<std::endl;
+        std::cout<<"---------------------------------------------------------------------------"<<std::endl;
+        std::cout<<"m_xtl ="<< rectToPaint.getMTopLeft().getMX()<<std::endl;
+        std::cout<<"m_ytl ="<< rectToPaint.getMTopLeft().getMY()<<std::endl;
+        std::cout<<"---------------------------------------------------------------------------"<<std::endl;
+        std::cout<<"m_xbr ="<< rectToPaint.getMBottomRight().getMX()<<std::endl;
+        std::cout<<"m_ybr ="<< rectToPaint.getMBottomRight().getMY()<<std::endl;
+        std::cout<<"---------------------------------------------------------------------------"<<std::endl;
+        std::cout<<"m_h ="<< rectToPaint.getMH()<<std::endl;
+        std::cout<<"m_w ="<< rectToPaint.getMW()<<std::endl;
+        std::cout<<"---------------------------------------------------------------------------"<<std::endl;
         std::cout<<"size de m_rectangles ="<< m_drawing.nbRectangles()<<std::endl;
-        dc.DrawRectangle(wxCoord(rectToPaint.getMTopLeft().getMX()),wxCoord(rectToPaint.getMTopLeft().getMY()),wxCoord(rectToPaint.getMW()),wxCoord(rectToPaint.getMH()));
+        dc.DrawRectangle(wxRect(wxPoint(rectToPaint.getMTopLeft().getMX(),rectToPaint.getMTopLeft().getMY()),wxPoint(rectToPaint.getMBottomRight().getMX(),rectToPaint.getMBottomRight().getMY())));
     }
 }
 

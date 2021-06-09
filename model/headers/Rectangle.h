@@ -13,8 +13,14 @@ class Rectangle : public Figure{
 public:
     Rectangle();
     Rectangle(const Point& topLeft, int h, int w) ;
+    Rectangle(const Point& topLeft, const Point& bottomRight);
 
     const Point &getMTopLeft() const;
+    const Point &getMBottomRight() const;
+
+    void setMTopLeft(int x, int y);
+    void setMBottomRight(int x,int y);
+
     int getMH() const;
     int getMW() const;
 
@@ -23,6 +29,7 @@ public:
 
 private:
     Point m_topLeft;
+    Point m_bottomRight;
     int m_h;
     int m_w;
 

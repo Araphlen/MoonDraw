@@ -19,3 +19,11 @@ int Point::getMX() const {
 int Point::getMY() const {
     return m_y;
 }
+
+void Point::setMX(int mX) {
+    m_x = mX;
+}
+
+void Point::setMY(int mY) {
+    m_y = mY;
+}

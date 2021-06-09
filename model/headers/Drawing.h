@@ -14,13 +14,13 @@ class Drawing {
 public:
     Drawing();
     //consrtucteur par copie
-    Drawing(const Drawing *pDrawing);
+//    Drawing(const Drawing *pDrawing);
 
     //Methode for rectangles
     void addRectangle(const Rectangle &rect);
     const int nbRectangles();
-    Rectangle getRectangle(int i);
-    void setRectangleCourant(int i, int h, int w);
+    Rectangle& getRectangle(int i);
+    void setRectangleCourant(int i, int x_br, int y_br);
 
 private:
     std::vector<Rectangle> m_rectangles ;

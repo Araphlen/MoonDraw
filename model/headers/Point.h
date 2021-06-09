@@ -14,8 +14,11 @@ public:
     Point(int x, int y);
 
     int getMX() const;
-
     int getMY() const;
+
+    void setMX(int mX);
+
+    void setMY(int mY);
 
 private:
     int m_x;
