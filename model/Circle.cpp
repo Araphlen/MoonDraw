@@ -6,12 +6,12 @@
 #include <cmath>
 #define CIRCLE_SHAPE 2
 
-Circle::Circle():Figure(CIRCLE_SHAPE) {
+Circle::Circle():Figure(CIRCLE_SHAPE,"#000000","#FFFFFF") {
     m_center = Point(0,0);
     m_ray = 0;
 }
 
-Circle::Circle(const Point &center, int ray):Figure(CIRCLE_SHAPE)  {
+Circle::Circle(const Point &center, int ray,const std::string& penColor,const std::string& brushColor):Figure(CIRCLE_SHAPE,penColor,brushColor)  {
     m_center= center;
     m_ray=ray;
 }
