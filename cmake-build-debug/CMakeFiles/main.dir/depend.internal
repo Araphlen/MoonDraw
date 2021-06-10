@@ -38,6 +38,7 @@ CMakeFiles/main.dir/main.cpp.o
  /usr/local/include/wx-3.0/wx/choicdlg.h
  /usr/local/include/wx-3.0/wx/choice.h
  /usr/local/include/wx-3.0/wx/clntdata.h
+ /usr/local/include/wx-3.0/wx/clrpicker.h
  /usr/local/include/wx-3.0/wx/cmdargs.h
  /usr/local/include/wx-3.0/wx/colour.h
  /usr/local/include/wx-3.0/wx/combobox.h
@@ -102,6 +103,7 @@ CMakeFiles/main.dir/main.cpp.o
  /usr/local/include/wx-3.0/wx/gtk/checklst.h
  /usr/local/include/wx-3.0/wx/gtk/chkconf.h
  /usr/local/include/wx-3.0/wx/gtk/choice.h
+ /usr/local/include/wx-3.0/wx/gtk/clrpicker.h
  /usr/local/include/wx-3.0/wx/gtk/colour.h
  /usr/local/include/wx-3.0/wx/gtk/combobox.h
  /usr/local/include/wx-3.0/wx/gtk/control.h
@@ -187,6 +189,7 @@ CMakeFiles/main.dir/main.cpp.o
  /usr/local/include/wx-3.0/wx/palette.h
  /usr/local/include/wx-3.0/wx/panel.h
  /usr/local/include/wx-3.0/wx/pen.h
+ /usr/local/include/wx-3.0/wx/pickerbase.h
  /usr/local/include/wx-3.0/wx/platform.h
  /usr/local/include/wx-3.0/wx/platinfo.h
  /usr/local/include/wx-3.0/wx/radiobox.h
@@ -430,6 +433,79 @@ CMakeFiles/main.dir/model/Drawing.cpp.o
  /usr/local/include/wx-3.0/wx/vector.h
  /usr/local/include/wx-3.0/wx/version.h
  /usr/local/include/wx-3.0/wx/versioninfo.h
+ /usr/local/include/wx-3.0/wx/windowid.h
+ /usr/local/include/wx-3.0/wx/wxcrt.h
+ /usr/local/include/wx-3.0/wx/wxcrtbase.h
+ /usr/local/include/wx-3.0/wx/wxcrtvararg.h
+ /usr/local/include/wx-3.0/wx/xti.h
+ /usr/local/include/wx-3.0/wx/xti2.h
+ /usr/local/include/wx-3.0/wx/xtictor.h
+ /usr/local/include/wx-3.0/wx/xtihandler.h
+ /usr/local/include/wx-3.0/wx/xtiprop.h
+ /usr/local/include/wx-3.0/wx/xtitypes.h
+ /usr/local/lib/wx/include/gtk3-unicode-static-3.0/wx/setup.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o
+ /home/araphlen/CLionProjects/MoonDraw/model/Ellipse.cpp
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/Ellipse.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
+ /usr/local/include/wx-3.0/wx/afterstd.h
+ /usr/local/include/wx-3.0/wx/any.h
+ /usr/local/include/wx-3.0/wx/anystr.h
+ /usr/local/include/wx-3.0/wx/arrstr.h
+ /usr/local/include/wx-3.0/wx/beforestd.h
+ /usr/local/include/wx-3.0/wx/buffer.h
+ /usr/local/include/wx-3.0/wx/chartype.h
+ /usr/local/include/wx-3.0/wx/checkeddelete.h
+ /usr/local/include/wx-3.0/wx/chkconf.h
+ /usr/local/include/wx-3.0/wx/compiler.h
+ /usr/local/include/wx-3.0/wx/cpp.h
+ /usr/local/include/wx-3.0/wx/crt.h
+ /usr/local/include/wx-3.0/wx/datetime.h
+ /usr/local/include/wx-3.0/wx/debug.h
+ /usr/local/include/wx-3.0/wx/defs.h
+ /usr/local/include/wx-3.0/wx/dlimpexp.h
+ /usr/local/include/wx-3.0/wx/dynarray.h
+ /usr/local/include/wx-3.0/wx/except.h
+ /usr/local/include/wx-3.0/wx/features.h
+ /usr/local/include/wx-3.0/wx/flags.h
+ /usr/local/include/wx-3.0/wx/fontenc.h
+ /usr/local/include/wx-3.0/wx/gdicmn.h
+ /usr/local/include/wx-3.0/wx/generic/logg.h
+ /usr/local/include/wx-3.0/wx/gtk/chkconf.h
+ /usr/local/include/wx-3.0/wx/hashmap.h
+ /usr/local/include/wx-3.0/wx/intl.h
+ /usr/local/include/wx-3.0/wx/iosfwrap.h
+ /usr/local/include/wx-3.0/wx/language.h
+ /usr/local/include/wx-3.0/wx/list.h
+ /usr/local/include/wx-3.0/wx/log.h
+ /usr/local/include/wx-3.0/wx/longlong.h
+ /usr/local/include/wx-3.0/wx/math.h
+ /usr/local/include/wx-3.0/wx/memory.h
+ /usr/local/include/wx-3.0/wx/meta/if.h
+ /usr/local/include/wx-3.0/wx/meta/movable.h
+ /usr/local/include/wx-3.0/wx/meta/pod.h
+ /usr/local/include/wx-3.0/wx/msgout.h
+ /usr/local/include/wx-3.0/wx/object.h
+ /usr/local/include/wx-3.0/wx/platform.h
+ /usr/local/include/wx-3.0/wx/rtti.h
+ /usr/local/include/wx-3.0/wx/scopedptr.h
+ /usr/local/include/wx-3.0/wx/scopeguard.h
+ /usr/local/include/wx-3.0/wx/strconv.h
+ /usr/local/include/wx-3.0/wx/string.h
+ /usr/local/include/wx-3.0/wx/stringimpl.h
+ /usr/local/include/wx-3.0/wx/stringops.h
+ /usr/local/include/wx-3.0/wx/strvararg.h
+ /usr/local/include/wx-3.0/wx/thread.h
+ /usr/local/include/wx-3.0/wx/tls.h
+ /usr/local/include/wx-3.0/wx/translation.h
+ /usr/local/include/wx-3.0/wx/typeinfo.h
+ /usr/local/include/wx-3.0/wx/unichar.h
+ /usr/local/include/wx-3.0/wx/unix/chkconf.h
+ /usr/local/include/wx-3.0/wx/unix/tls.h
+ /usr/local/include/wx-3.0/wx/variant.h
+ /usr/local/include/wx-3.0/wx/vector.h
+ /usr/local/include/wx-3.0/wx/version.h
  /usr/local/include/wx-3.0/wx/windowid.h
  /usr/local/include/wx-3.0/wx/wxcrt.h
  /usr/local/include/wx-3.0/wx/wxcrtbase.h
@@ -694,6 +770,7 @@ CMakeFiles/main.dir/vue/MyApp.cpp.o
  /usr/local/include/wx-3.0/wx/choicdlg.h
  /usr/local/include/wx-3.0/wx/choice.h
  /usr/local/include/wx-3.0/wx/clntdata.h
+ /usr/local/include/wx-3.0/wx/clrpicker.h
  /usr/local/include/wx-3.0/wx/cmdargs.h
  /usr/local/include/wx-3.0/wx/colour.h
  /usr/local/include/wx-3.0/wx/combobox.h
@@ -758,6 +835,7 @@ CMakeFiles/main.dir/vue/MyApp.cpp.o
  /usr/local/include/wx-3.0/wx/gtk/checklst.h
  /usr/local/include/wx-3.0/wx/gtk/chkconf.h
  /usr/local/include/wx-3.0/wx/gtk/choice.h
+ /usr/local/include/wx-3.0/wx/gtk/clrpicker.h
  /usr/local/include/wx-3.0/wx/gtk/colour.h
  /usr/local/include/wx-3.0/wx/gtk/combobox.h
  /usr/local/include/wx-3.0/wx/gtk/control.h
@@ -843,6 +921,7 @@ CMakeFiles/main.dir/vue/MyApp.cpp.o
  /usr/local/include/wx-3.0/wx/palette.h
  /usr/local/include/wx-3.0/wx/panel.h
  /usr/local/include/wx-3.0/wx/pen.h
+ /usr/local/include/wx-3.0/wx/pickerbase.h
  /usr/local/include/wx-3.0/wx/platform.h
  /usr/local/include/wx-3.0/wx/platinfo.h
  /usr/local/include/wx-3.0/wx/radiobox.h
@@ -944,6 +1023,7 @@ CMakeFiles/main.dir/vue/MyControlPanel.cpp.o
  /usr/local/include/wx-3.0/wx/choicdlg.h
  /usr/local/include/wx-3.0/wx/choice.h
  /usr/local/include/wx-3.0/wx/clntdata.h
+ /usr/local/include/wx-3.0/wx/clrpicker.h
  /usr/local/include/wx-3.0/wx/cmdargs.h
  /usr/local/include/wx-3.0/wx/colour.h
  /usr/local/include/wx-3.0/wx/combobox.h
@@ -1008,6 +1088,7 @@ CMakeFiles/main.dir/vue/MyControlPanel.cpp.o
  /usr/local/include/wx-3.0/wx/gtk/checklst.h
  /usr/local/include/wx-3.0/wx/gtk/chkconf.h
  /usr/local/include/wx-3.0/wx/gtk/choice.h
+ /usr/local/include/wx-3.0/wx/gtk/clrpicker.h
  /usr/local/include/wx-3.0/wx/gtk/colour.h
  /usr/local/include/wx-3.0/wx/gtk/combobox.h
  /usr/local/include/wx-3.0/wx/gtk/control.h
@@ -1093,6 +1174,7 @@ CMakeFiles/main.dir/vue/MyControlPanel.cpp.o
  /usr/local/include/wx-3.0/wx/palette.h
  /usr/local/include/wx-3.0/wx/panel.h
  /usr/local/include/wx-3.0/wx/pen.h
+ /usr/local/include/wx-3.0/wx/pickerbase.h
  /usr/local/include/wx-3.0/wx/platform.h
  /usr/local/include/wx-3.0/wx/platinfo.h
  /usr/local/include/wx-3.0/wx/radiobox.h
@@ -1161,6 +1243,7 @@ CMakeFiles/main.dir/vue/MyControlPanel.cpp.o
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Circle.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Drawing.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/Ellipse.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Rectangle.h
@@ -1194,6 +1277,7 @@ CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o
  /usr/local/include/wx-3.0/wx/choicdlg.h
  /usr/local/include/wx-3.0/wx/choice.h
  /usr/local/include/wx-3.0/wx/clntdata.h
+ /usr/local/include/wx-3.0/wx/clrpicker.h
  /usr/local/include/wx-3.0/wx/cmdargs.h
  /usr/local/include/wx-3.0/wx/colour.h
  /usr/local/include/wx-3.0/wx/combobox.h
@@ -1258,6 +1342,7 @@ CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o
  /usr/local/include/wx-3.0/wx/gtk/checklst.h
  /usr/local/include/wx-3.0/wx/gtk/chkconf.h
  /usr/local/include/wx-3.0/wx/gtk/choice.h
+ /usr/local/include/wx-3.0/wx/gtk/clrpicker.h
  /usr/local/include/wx-3.0/wx/gtk/colour.h
  /usr/local/include/wx-3.0/wx/gtk/combobox.h
  /usr/local/include/wx-3.0/wx/gtk/control.h
@@ -1343,6 +1428,7 @@ CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o
  /usr/local/include/wx-3.0/wx/palette.h
  /usr/local/include/wx-3.0/wx/panel.h
  /usr/local/include/wx-3.0/wx/pen.h
+ /usr/local/include/wx-3.0/wx/pickerbase.h
  /usr/local/include/wx-3.0/wx/platform.h
  /usr/local/include/wx-3.0/wx/platinfo.h
  /usr/local/include/wx-3.0/wx/radiobox.h
@@ -1444,6 +1530,7 @@ CMakeFiles/main.dir/vue/MyFrame.cpp.o
  /usr/local/include/wx-3.0/wx/choicdlg.h
  /usr/local/include/wx-3.0/wx/choice.h
  /usr/local/include/wx-3.0/wx/clntdata.h
+ /usr/local/include/wx-3.0/wx/clrpicker.h
  /usr/local/include/wx-3.0/wx/cmdargs.h
  /usr/local/include/wx-3.0/wx/colour.h
  /usr/local/include/wx-3.0/wx/combobox.h
@@ -1508,6 +1595,7 @@ CMakeFiles/main.dir/vue/MyFrame.cpp.o
  /usr/local/include/wx-3.0/wx/gtk/checklst.h
  /usr/local/include/wx-3.0/wx/gtk/chkconf.h
  /usr/local/include/wx-3.0/wx/gtk/choice.h
+ /usr/local/include/wx-3.0/wx/gtk/clrpicker.h
  /usr/local/include/wx-3.0/wx/gtk/colour.h
  /usr/local/include/wx-3.0/wx/gtk/combobox.h
  /usr/local/include/wx-3.0/wx/gtk/control.h
@@ -1593,6 +1681,7 @@ CMakeFiles/main.dir/vue/MyFrame.cpp.o
  /usr/local/include/wx-3.0/wx/palette.h
  /usr/local/include/wx-3.0/wx/panel.h
  /usr/local/include/wx-3.0/wx/pen.h
+ /usr/local/include/wx-3.0/wx/pickerbase.h
  /usr/local/include/wx-3.0/wx/platform.h
  /usr/local/include/wx-3.0/wx/platinfo.h
  /usr/local/include/wx-3.0/wx/radiobox.h

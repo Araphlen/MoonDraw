@@ -15,7 +15,7 @@
 #include <wx/image.h>
 #include <wx/file.h>
 #include <wx/bitmap.h>
-
+#include <wx/clrpicker.h>
 #include <vector>
 #include "../../model/headers/Drawing.h"
 #include "../../model/headers/Point.h"
@@ -25,7 +25,7 @@
 #define STATUS_RECTANGLE 1
 #define STATUS_CIRCLE 2
 #define STATUS_SQUARE 3
-#define STATUS_ELIPSE 4
+#define STATUS_ELLIPSE 4
 
 //------------------------------------------------------------------------
 class MyDrawingPanel: public wxPanel
@@ -36,7 +36,6 @@ public:
     void OpenFile(wxString fileName) ;
     void SaveFile(wxString fileName) ;
     void setStatus(int mStatus);
-
     void setMCurrentIndexTempsPoint(int mCurrentIndexTempsPoint);
 
 private:

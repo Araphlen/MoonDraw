@@ -12,8 +12,8 @@
 class Rectangle : public Figure{
 public:
     Rectangle();
-    Rectangle(const Point& topLeft, int h, int w) ;
-    Rectangle(const Point& topLeft, const Point& bottomRight);
+    Rectangle(const Point& topLeft, int h, int w,const std::string& penColor,const std::string& brushColor) ;
+    Rectangle(const Point& topLeft, const Point& bottomRight,const std::string& penColor,const std::string& brushColor);
 
      Point getTopLeft() const override;
      Point getBottomRight() const override;

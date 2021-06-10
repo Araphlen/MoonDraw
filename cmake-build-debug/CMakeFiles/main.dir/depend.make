@@ -37,6 +37,7 @@ CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/chkconf.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/choicdlg.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/choice.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/clntdata.h
+CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/clrpicker.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/cmdargs.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/colour.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/combobox.h
@@ -101,6 +102,7 @@ CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/gtk/checkbox.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/gtk/checklst.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/gtk/chkconf.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/gtk/choice.h
+CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/gtk/clrpicker.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/gtk/colour.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/gtk/combobox.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/gtk/control.h
@@ -186,6 +188,7 @@ CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/object.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/palette.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/panel.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/pen.h
+CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/pickerbase.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/platform.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/platinfo.h
 CMakeFiles/main.dir/main.cpp.o: /usr/local/include/wx-3.0/wx/radiobox.h
@@ -441,6 +444,79 @@ CMakeFiles/main.dir/model/Drawing.cpp.o: /usr/local/include/wx-3.0/wx/xtiprop.h
 CMakeFiles/main.dir/model/Drawing.cpp.o: /usr/local/include/wx-3.0/wx/xtitypes.h
 CMakeFiles/main.dir/model/Drawing.cpp.o: /usr/local/lib/wx/include/gtk3-unicode-static-3.0/wx/setup.h
 
+CMakeFiles/main.dir/model/Ellipse.cpp.o: ../model/Ellipse.cpp
+CMakeFiles/main.dir/model/Ellipse.cpp.o: ../model/headers/Ellipse.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: ../model/headers/Figure.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: ../model/headers/Point.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/afterstd.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/any.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/anystr.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/arrstr.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/beforestd.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/buffer.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/chartype.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/checkeddelete.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/chkconf.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/compiler.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/cpp.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/crt.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/datetime.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/debug.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/defs.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/dlimpexp.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/dynarray.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/except.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/features.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/flags.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/fontenc.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/gdicmn.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/generic/logg.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/gtk/chkconf.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/hashmap.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/intl.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/iosfwrap.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/language.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/list.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/log.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/longlong.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/math.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/memory.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/meta/if.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/meta/movable.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/meta/pod.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/msgout.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/object.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/platform.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/rtti.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/scopedptr.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/scopeguard.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/strconv.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/string.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/stringimpl.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/stringops.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/strvararg.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/thread.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/tls.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/translation.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/typeinfo.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/unichar.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/unix/chkconf.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/unix/tls.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/variant.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/vector.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/version.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/windowid.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/wxcrt.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/wxcrtbase.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/wxcrtvararg.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/xti.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/xti2.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/xtictor.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/xtihandler.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/xtiprop.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/xtitypes.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/lib/wx/include/gtk3-unicode-static-3.0/wx/setup.h
+
 CMakeFiles/main.dir/model/Figure.cpp.o: ../model/Figure.cpp
 CMakeFiles/main.dir/model/Figure.cpp.o: ../model/headers/Figure.h
 CMakeFiles/main.dir/model/Figure.cpp.o: ../model/headers/Point.h
@@ -693,6 +769,7 @@ CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/chkconf.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/choicdlg.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/choice.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/clntdata.h
+CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/clrpicker.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/cmdargs.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/colour.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/combobox.h
@@ -757,6 +834,7 @@ CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/gtk/checkbox.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/gtk/checklst.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/gtk/chkconf.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/gtk/choice.h
+CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/gtk/clrpicker.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/gtk/colour.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/gtk/combobox.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/gtk/control.h
@@ -842,6 +920,7 @@ CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/object.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/palette.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/panel.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/pen.h
+CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/pickerbase.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/platform.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/platinfo.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/include/wx-3.0/wx/radiobox.h
@@ -943,6 +1022,7 @@ CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/chkco
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/choicdlg.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/choice.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/clntdata.h
+CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/clrpicker.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/cmdargs.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/colour.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/combobox.h
@@ -1007,6 +1087,7 @@ CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/c
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/checklst.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/chkconf.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/choice.h
+CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/clrpicker.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/colour.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/combobox.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/control.h
@@ -1092,6 +1173,7 @@ CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/objec
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/palette.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/panel.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/pen.h
+CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/pickerbase.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/platform.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/platinfo.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/include/wx-3.0/wx/radiobox.h
@@ -1160,6 +1242,7 @@ CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: /usr/local/lib/wx/include/gtk3-uni
 
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Circle.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Drawing.h
+CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Ellipse.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Figure.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Point.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Rectangle.h
@@ -1193,6 +1276,7 @@ CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/chkco
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/choicdlg.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/choice.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/clntdata.h
+CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/clrpicker.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/cmdargs.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/colour.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/combobox.h
@@ -1257,6 +1341,7 @@ CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/c
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/checklst.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/chkconf.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/choice.h
+CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/clrpicker.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/colour.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/combobox.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/gtk/control.h
@@ -1342,6 +1427,7 @@ CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/objec
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/palette.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/panel.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/pen.h
+CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/pickerbase.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/platform.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/platinfo.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/include/wx-3.0/wx/radiobox.h
@@ -1443,6 +1529,7 @@ CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/chkconf.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/choicdlg.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/choice.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/clntdata.h
+CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/clrpicker.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/cmdargs.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/colour.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/combobox.h
@@ -1507,6 +1594,7 @@ CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/gtk/checkbox
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/gtk/checklst.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/gtk/chkconf.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/gtk/choice.h
+CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/gtk/clrpicker.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/gtk/colour.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/gtk/combobox.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/gtk/control.h
@@ -1592,6 +1680,7 @@ CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/object.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/palette.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/panel.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/pen.h
+CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/pickerbase.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/platform.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/platinfo.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/radiobox.h

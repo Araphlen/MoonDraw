@@ -15,7 +15,7 @@
 #include <wx/image.h>
 #include <wx/file.h>
 #include <wx/bitmap.h>
-
+//#include <wx/clrpicker.h>
 #include "MyControlPanel.h"
 #include "MyDrawingPanel.h"
 

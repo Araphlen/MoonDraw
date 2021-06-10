@@ -6,20 +6,20 @@
 #include "headers/Rectangle.h"
 #define RECT_SHAPE 1
 
-Rectangle::Rectangle() :Figure(RECT_SHAPE) {
+Rectangle::Rectangle() :Figure(RECT_SHAPE,"#000000","#FFFFFF") {
     m_topLeft = Point(0,0);
     m_h=10;
     m_w=20;
     m_bottomRight = Point(m_w+ m_topLeft.getX(), m_h + m_topLeft.getY());
 }
 
-Rectangle::Rectangle(const Point &topLeft, int h, int w) :Figure(RECT_SHAPE) {
+Rectangle::Rectangle(const Point &topLeft, int h, int w,const std::string& penColor,const std::string& brushColor) :Figure(RECT_SHAPE,penColor,brushColor) {
     m_topLeft = topLeft;
     m_h = h;
     m_w = w;
     m_bottomRight = Point(m_w+ m_topLeft.getX(), m_h + m_topLeft.getY());
 }
-Rectangle::Rectangle(const Point &topLeft, const Point &bottomRight) :Figure(RECT_SHAPE) {
+Rectangle::Rectangle(const Point &topLeft, const Point &bottomRight,const std::string& penColor,const std::string& brushColor) :Figure(RECT_SHAPE,penColor,brushColor) {
     m_topLeft = topLeft;
     m_bottomRight =bottomRight;
     m_h = m_bottomRight.getY() - m_topLeft.getY();

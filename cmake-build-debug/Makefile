@@ -223,6 +223,33 @@ model/Drawing.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Drawing.cpp.s
 .PHONY : model/Drawing.cpp.s
 
+model/Ellipse.o: model/Ellipse.cpp.o
+
+.PHONY : model/Ellipse.o
+
+# target to build an object file
+model/Ellipse.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Ellipse.cpp.o
+.PHONY : model/Ellipse.cpp.o
+
+model/Ellipse.i: model/Ellipse.cpp.i
+
+.PHONY : model/Ellipse.i
+
+# target to preprocess a source file
+model/Ellipse.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Ellipse.cpp.i
+.PHONY : model/Ellipse.cpp.i
+
+model/Ellipse.s: model/Ellipse.cpp.s
+
+.PHONY : model/Ellipse.s
+
+# target to generate assembly for a file
+model/Ellipse.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Ellipse.cpp.s
+.PHONY : model/Ellipse.cpp.s
+
 model/Figure.o: model/Figure.cpp.o
 
 .PHONY : model/Figure.o
@@ -430,6 +457,9 @@ help:
 	@echo "... model/Drawing.o"
 	@echo "... model/Drawing.i"
 	@echo "... model/Drawing.s"
+	@echo "... model/Ellipse.o"
+	@echo "... model/Ellipse.i"
+	@echo "... model/Ellipse.s"
 	@echo "... model/Figure.o"
 	@echo "... model/Figure.i"
 	@echo "... model/Figure.s"

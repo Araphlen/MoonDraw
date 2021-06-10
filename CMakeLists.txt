@@ -10,5 +10,5 @@ find_package(wxWidgets REQUIRED COMPONENTS net core base)
 include(${wxWidgets_USE_FILE})
 
 # add the executable
-add_executable(main main.cpp vue/MyControlPanel.cpp vue/headers/MyControlPanel.h vue/MyApp.cpp vue/headers/MyApp.h vue/MyFrame.cpp vue/headers/MyFrame.h vue/MyDrawingPanel.cpp vue/headers/MyDrawingPanel.h model/Rectangle.cpp model/headers/Rectangle.h model/Figure.cpp model/headers/Figure.h model/Drawing.cpp model/headers/Drawing.h model/Point.cpp model/headers/Point.h model/Circle.cpp model/headers/Circle.h)
+add_executable(main main.cpp vue/MyControlPanel.cpp vue/headers/MyControlPanel.h vue/MyApp.cpp vue/headers/MyApp.h vue/MyFrame.cpp vue/headers/MyFrame.h vue/MyDrawingPanel.cpp vue/headers/MyDrawingPanel.h model/Rectangle.cpp model/headers/Rectangle.h model/Figure.cpp model/headers/Figure.h model/Drawing.cpp model/headers/Drawing.h model/Point.cpp model/headers/Point.h model/Circle.cpp model/headers/Circle.h model/Ellipse.cpp model/headers/Ellipse.h)
 target_link_libraries(main ${wxWidgets_LIBRARIES})

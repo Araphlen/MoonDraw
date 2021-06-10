@@ -12,7 +12,7 @@
 class Figure {
 public:
     Figure();
-    Figure(const int shape);
+    Figure(const int shape,const std::string& penColor,const std::string& brushColor);
 
     int getShape();
 
@@ -37,9 +37,18 @@ public:
 
     virtual int getRay() const {return 0;};
 
+    void setShape(int mShape);
+    void SetBorderColor(const std::string &color);
+    void SetFillColor(const std::string &fillColor);
+
+    std::string GetBorderColor() const;
+    std::string GetFillColor() const ;
+
 protected:
     std::string * m_label;
     int m_shape;
+    std::string * m_borderColor;
+    std::string * m_fillColor;
 };
 
 

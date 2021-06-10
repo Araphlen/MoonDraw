@@ -2,6 +2,7 @@
 // Created by araphlen on 07/06/2021.
 //
 
+#include <langinfo.h>
 #include "headers/MyControlPanel.h"
 #include "headers/MyFrame.h"
 #include "headers/MyDrawingPanel.h"
@@ -12,6 +13,7 @@
 #define STATUS_CIRCLE 2
 #define STATUS_SQUARE 3
 #define STATUS_ELIPSE 4
+
 //************************************************************************
 //************************************************************************
 // MyDrawingPanel class (where controls are displayed)
@@ -58,6 +60,17 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
     y+= WIDGET_Y_STEP;
     m_elipseButton = new wxButton(this, ID_ELIPSEBUTTON, wxT("Elipse"), wxPoint(10, y));
     Bind(wxEVT_BUTTON, &MyControlPanel::OnButtonElipse,this,ID_ELIPSEBUTTON);
+
+    y+= WIDGET_Y_STEP;
+    m_penlegend = new wxStaticText(this, ID_PENLEGEND, "Pen : ", wxPoint(10, y + 10));
+    m_penColourPicker = new wxColourPickerCtrl(this, ID_PENCOLORPICKER, wxColor(0, 0, 0), wxPoint(100, y));
+    Bind(wxEVT_COLOURPICKER_CHANGED, &MyControlPanel::OnPenColorPicker, this, ID_PENCOLORPICKER);
+
+    y+= WIDGET_Y_STEP;
+    m_brushLegend = new wxStaticText(this, ID_BRUSHLEGEND, "Brush : ", wxPoint(10, y + 10));
+    m_brushColourPicker = new wxColourPickerCtrl(this, ID_BRUSHCOLORPICKER, wxColor(255, 255, 255), wxPoint(100, y));
+    Bind(wxEVT_COLOURPICKER_CHANGED, &MyControlPanel::OnBrushColorPicker, this, ID_BRUSHCOLORPICKER);
+
 }
 
 //------------------------------------------------------------------------
@@ -103,5 +116,14 @@ void MyControlPanel::OnButtonSquare(wxCommandEvent &event) {
 
 void MyControlPanel::OnButtonElipse(wxCommandEvent &event) {
     MyFrame* frame = (MyFrame*)GetParent();
-    frame->GetDrawingPanel()->setStatus(STATUS_ELIPSE);
+    frame->GetDrawingPanel()->setStatus(STATUS_ELLIPSE);
+}
+
+void MyControlPanel::OnBrushColorPicker(wxColourPickerEvent &event) {
+    MyFrame* frame = (MyFrame*)GetParent();
+    frame->RefreshDrawing();
+}
+void MyControlPanel::OnPenColorPicker(wxColourPickerEvent &event) {
+    MyFrame* frame = (MyFrame*)GetParent();
+    frame->RefreshDrawing();
 }
