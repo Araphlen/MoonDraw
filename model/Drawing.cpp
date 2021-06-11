@@ -51,5 +51,9 @@ void Drawing::reDrawFig() {
     m_tempRemovedFigures.pop_back();
 }
 
-//}
-
+void Drawing::unSelectAll() {
+    //if we dclick outside any figure a
+    for (int i = 0; i < this->nbFigures(); ++i) {
+        m_figures[i]->setSelect(false);
+    }
+}

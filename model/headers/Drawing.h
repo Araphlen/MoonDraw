@@ -33,7 +33,7 @@ public:
     bool isTempFigEmpty();
 
     void reDrawFig();
-
+    void unSelectAll();
 private:
     std::vector<Figure*> m_figures ;
     std::vector<Figure*> m_tempRemovedFigures; //vector which contain figure that we undo if we want to redo it

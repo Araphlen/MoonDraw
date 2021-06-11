@@ -8,12 +8,14 @@
 #include "headers/MyDrawingPanel.h"
 
 
-#define STATUS_EDIT 0
+#define STATUS_SELECT 0
 #define STATUS_RECTANGLE 1
 #define STATUS_CIRCLE 2
 #define STATUS_SQUARE 3
 #define STATUS_ELLIPSE 4
 #define STATUS_POLYGON 5
+#define EDIT_STATUS 99
+
 //************************************************************************
 //************************************************************************
 // MyDrawingPanel class (where controls are displayed)
@@ -48,8 +50,8 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
     Bind(wxEVT_CHECKBOX, &MyControlPanel::OnCheckBox, this, ID_CHECKBOX1) ;
 
     y+= WIDGET_Y_STEP;
-    m_editionButton = new wxButton(this, ID_EDITBUTTON, wxT("EDITION"), wxPoint(10, y));
-    Bind(wxEVT_BUTTON,&MyControlPanel::OnButtonEdition,this,ID_EDITBUTTON);
+    m_selectButton = new wxButton(this, ID_SELECTBUTTON, wxT("SELECT"), wxPoint(10, y));
+    Bind(wxEVT_BUTTON, &MyControlPanel::OnButtonSelect, this, ID_SELECTBUTTON);
 
     y+= WIDGET_Y_STEP;
     m_rectButton = new wxButton(this, ID_RECTBUTTON, wxT("RECTANGLE"), wxPoint(10, y));
@@ -162,9 +164,9 @@ void MyControlPanel::OnPenColorPicker(wxColourPickerEvent &event) {
     frame->RefreshDrawing();
 }
 
-void MyControlPanel::OnButtonEdition(wxCommandEvent &event) {
+void MyControlPanel::OnButtonSelect(wxCommandEvent &event) {
     MyFrame* frame = (MyFrame*)GetParent();
-    frame->GetDrawingPanel()->setStatus(STATUS_EDIT);
+    frame->GetDrawingPanel()->setStatus(MODE_SELECT);
 }
 
 

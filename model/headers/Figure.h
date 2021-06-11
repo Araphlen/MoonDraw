@@ -61,6 +61,9 @@ public:
 
     void setIsTransparent(bool mIsTransparent);
 
+    virtual bool selection(int x , int y) const {return false;};
+    void setSelect(bool isSelected);
+
 protected:
     std::string * m_label;
     int m_shape;
@@ -68,6 +71,7 @@ protected:
     MyRgb m_fillColor;
     int m_penSize;
     bool m_isTransparent;
+    bool m_isSelected;
 };
 
 

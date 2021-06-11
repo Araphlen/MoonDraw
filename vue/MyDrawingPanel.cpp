@@ -18,6 +18,7 @@
 #define POLYGONE_SHAPE 4
 
 
+
 //************************************************************************
 //************************************************************************
 // MyDrawingPanel class (where drawings are displayed)
@@ -41,10 +42,11 @@ MyDrawingPanel::MyDrawingPanel(wxWindow *parent) : wxPanel(parent)
     m_onePoint.x = (w-WIDGET_PANEL_WIDTH)/2 ;
     m_onePoint.y = h/2 ;
     m_mousePoint = m_onePoint ;
-    m_status = STATUS_EDIT;
+    m_status = STATUS_RECTANGLE;
     m_drawing = Drawing();
     m_currentIndexFigure=0;
     m_isdrawing =false;
+    m_mode=MODE_SELECT;
     }
 
 
@@ -55,6 +57,20 @@ void MyDrawingPanel::OnMouseLeftDClick(wxMouseEvent &event) {
                 m_currentIndexFigure++;
                 m_isdrawing = false;
                 Refresh();
+            }
+        case MODE_SELECT:
+            int figindex = m_drawing.nbFigures();
+            Figure* figure = m_drawing[figindex];
+            while (figindex>=0 && figure->selection(event.m_x,event.m_y)){
+                --figindex;
+                figure = m_drawing[figindex];
+            }
+            if (figindex>=0){
+                this->setStatus(MODE_EDIT);
+                figure->setSelect(true);
+            }
+            else{
+                m_drawing.unSelectAll();
             }
             break;
     }
@@ -75,53 +91,63 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
 
     wxColour wxBrushColour= frame->GetControlPanel()->GetBrushColour();
     MyRgb brushColor=MyRgb(wxBrushColour.Red(),wxBrushColour.Green(),wxBrushColour.Blue()) ;
+    switch (m_mode) {
+        case MODE_DRAW:
+            switch (m_status) {
+                case STATUS_RECTANGLE:
+                    if (m_isdrawing == false) {
+                        m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0, 0, penColor, brushColor, penSize,
+                                                          isTransparent));
+                        m_isdrawing = true;
+                        m_currentFigure = m_drawing[m_currentIndexFigure];
+                        Refresh();
+                    }
+                    break;
+                case STATUS_CIRCLE:
+                    if (m_isdrawing == false) {
+                        m_drawing.addFigure(
+                                new Circle(Point(event.m_x, event.m_y), 0, penColor, brushColor, penSize, isTransparent));
+                        m_isdrawing = true;
+                        m_currentFigure = m_drawing[m_currentIndexFigure];
+                        Refresh();
+                    }
+                    break;
+                case STATUS_SQUARE:
+                    if (m_isdrawing == false) {
+                        m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0, 0, penColor, brushColor, penSize,
+                                                          isTransparent));
+                        m_isdrawing = true;
+                        m_currentFigure = m_drawing[m_currentIndexFigure];
+                        Refresh();
+                    }
+                    break;
+                case STATUS_ELLIPSE:
+                    if (m_isdrawing == false) {
+                        m_drawing.addFigure(new Ellipse(Point(event.m_x, event.m_y), 0, 0, penColor, brushColor, penSize,
+                                                        isTransparent));
+                        m_isdrawing = true;
+                        m_currentFigure = m_drawing[m_currentIndexFigure];
+                        Refresh();
+                    }
+                    break;
+                case STATUS_POLYGON:
+                    if (m_isdrawing == false) {
+                        m_drawing.addFigure(
+                                new Polygon(Point(event.m_x, event.m_y), penColor, brushColor, penSize, isTransparent));
+                        m_isdrawing = true;
+                        m_currentFigure = m_drawing[m_currentIndexFigure];
+                        Refresh();
+                    } else {
+                        m_currentFigure->addPoint(event.m_x, event.m_y);
 
-    switch (m_status) {
-        case STATUS_EDIT :
-
-            Refresh() ; // send an event that calls the OnPaint method
-            break;
-        case STATUS_RECTANGLE:
-            if (m_isdrawing==false) {
-                m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0, 0, penColor, brushColor, penSize,isTransparent));
-                m_isdrawing = true;
-                m_currentFigure = m_drawing[m_currentIndexFigure];
-                Refresh();
+                        Refresh();
+                    }
+                    break;
             }
             break;
-        case STATUS_CIRCLE:
-            if (m_isdrawing== false){
-                m_drawing.addFigure(new Circle(Point(event.m_x, event.m_y), 0, penColor, brushColor, penSize,isTransparent));
-                m_isdrawing =true;
-                m_currentFigure = m_drawing[m_currentIndexFigure];
-                Refresh();
-            }
-            break;
-        case STATUS_SQUARE:
-            if (m_isdrawing== false){
-                m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0, 0, penColor, brushColor, penSize,isTransparent));
-                m_isdrawing =true;
-                m_currentFigure = m_drawing[m_currentIndexFigure];
-                Refresh();
-            }
-            break;
-        case STATUS_ELLIPSE:
-            if (m_isdrawing== false){
-                m_drawing.addFigure(new Ellipse(Point(event.m_x, event.m_y), 0, 0, penColor, brushColor, penSize,isTransparent));
-                m_isdrawing =true;
-                m_currentFigure = m_drawing[m_currentIndexFigure];
-                Refresh();
-            }
-            break;
-        case STATUS_POLYGON:
-            if (m_isdrawing==false){
-                m_drawing.addFigure(new Polygon(Point(event.m_x, event.m_y), penColor, brushColor, penSize,isTransparent));
-                m_isdrawing =true;
-                m_currentFigure = m_drawing[m_currentIndexFigure];
-                Refresh();
-            } else{
-                m_currentFigure->addPoint(event.m_x, event.m_y);
-                Refresh();
+        case MODE_SELECT:
+            switch (m_status) {
+                
             }
             break;
     }
@@ -136,7 +162,7 @@ void MyDrawingPanel::OnMouseMove(wxMouseEvent &event)
 // called when the mouse is moved
 {
     switch (m_status) {
-        case STATUS_EDIT:
+        case MODE_SELECT:
             //parcourir la liste des vecteurs en sens inverse et afficher les point qui permettent
 
             Refresh() ;	// send an event that calls the OnPaint method
