@@ -15,20 +15,28 @@ class Drawing {
 public:
     Drawing();
 
-    const int nbFormes();
+    const int nbFigures();
+
+    void addFigure(Figure *figure);
 
     Figure* operator[](int i) const;
+
     //Methode for rectangles
-    void addRectangle(Rectangle *rect);
     void setCurrentRectangle(int i, int x_br, int y_br);
 
     //methode for Circles
-
-    void addFigure(Figure *figure);
     void setCircleCourant(int i, wxCoord i1, wxCoord i2);
+
+    bool isEmpty();
+    void tempRemoveCurrentFig();
+
+    bool isTempFigEmpty();
+
+    void reDrawFig();
 
 private:
     std::vector<Figure*> m_figures ;
+    std::vector<Figure*> m_tempRemovedFigures; //vector which contain figure that we undo if we want to redo it
 };
 
 

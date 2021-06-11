@@ -2,6 +2,7 @@
 // Created by araphlen on 08/06/2021.
 //
 
+#include <iostream>
 #include "headers/Point.h"
 
 Point::Point() {

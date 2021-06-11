@@ -7,20 +7,20 @@
 
 #define ELLIPSE_SHAPE 3
 
-Ellipse::Ellipse() :Figure(ELLIPSE_SHAPE,"#000000","#FFFFFF") {
+Ellipse::Ellipse() :Figure(ELLIPSE_SHAPE,"#000000","#FFFFFF",1) {
     m_topLeft = Point(0,0);
     m_h=10;
     m_w=20;
     m_bottomRight = Point(m_w+ m_topLeft.getX(), m_h + m_topLeft.getY());
 }
 
-Ellipse::Ellipse(const Point &topLeft, int h, int w,const std::string& penColor,const std::string& brushColor) :Figure(ELLIPSE_SHAPE,penColor,brushColor) {
+Ellipse::Ellipse(const Point &topLeft, int h, int w,const std::string& penColor,const std::string& brushColor,int penSize) :Figure(ELLIPSE_SHAPE,penColor,brushColor,penSize) {
     m_topLeft = topLeft;
     m_h = h;
     m_w = w;
     m_bottomRight = Point(m_w+ m_topLeft.getX(), m_h + m_topLeft.getY());
 }
-Ellipse::Ellipse(const Point &topLeft, const Point &bottomRight,const std::string& penColor,const std::string& brushColor) :Figure(ELLIPSE_SHAPE,penColor,brushColor) {
+Ellipse::Ellipse(const Point &topLeft, const Point &bottomRight,const std::string& penColor,const std::string& brushColor,int penSize) :Figure(ELLIPSE_SHAPE,penColor,brushColor,penSize) {
     m_topLeft = topLeft;
     m_bottomRight =bottomRight;
     m_h = m_bottomRight.getY() - m_topLeft.getY();

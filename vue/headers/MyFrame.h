@@ -36,6 +36,7 @@ public:
     MyControlPanel* GetControlPanel(){return m_controlPanel ;} ;
     MyDrawingPanel* GetDrawingPanel(){return m_drawingPanel ;} ;
     void RefreshDrawing(){m_drawingPanel->Refresh() ;} ;
+    void RefreshControl(){m_controlPanel->Refresh() ;} ;
 
 protected:
     void OnQuit(wxCommandEvent& event);

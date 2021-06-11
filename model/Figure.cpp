@@ -9,13 +9,15 @@ Figure::Figure() {
     m_shape = DEFAULT_SHAPE;
     m_borderColor = new std::string("#000000");
     m_fillColor= new std::string("#FFFFFF");
-
+    m_penSize=1;
 }
 
-Figure::Figure(const int shape,const std::string& penColor,const std::string& brushColor) {
+Figure::Figure(const int shape,const std::string& penColor,const std::string& brushColor,int penSize) {
     m_shape = shape;
     m_borderColor = new std::string(penColor);
     m_fillColor= new std::string(brushColor);
+    m_penSize= penSize;
+
 }
 
 int Figure::getShape() {
@@ -39,4 +41,8 @@ std::string Figure::GetBorderColor() const {
 }
 std::string Figure::GetFillColor() const {
     return *(m_fillColor);
+}
+
+int Figure::getPenSize() const {
+    return m_penSize;
 }

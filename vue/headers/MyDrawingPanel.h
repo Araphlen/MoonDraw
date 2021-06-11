@@ -26,7 +26,7 @@
 #define STATUS_CIRCLE 2
 #define STATUS_SQUARE 3
 #define STATUS_ELLIPSE 4
-
+#define STATUS_POLYGON 5
 //------------------------------------------------------------------------
 class MyDrawingPanel: public wxPanel
 //------------------------------------------------------------------------
@@ -36,10 +36,13 @@ public:
     void OpenFile(wxString fileName) ;
     void SaveFile(wxString fileName) ;
     void setStatus(int mStatus);
-    void setMCurrentIndexTempsPoint(int mCurrentIndexTempsPoint);
+    void setCurrentIndexTempsPoint(int mCurrentIndexTempsPoint);
+    void undo();
+    void redo();
 
 private:
     void OnMouseMove(wxMouseEvent &event) ;
+    void OnMouseLeftDClick(wxMouseEvent &event);
     void OnMouseLeftDown(wxMouseEvent &event) ;
     void OnMouseLeftUp(wxMouseEvent &event);
     void OnPaint(wxPaintEvent &event) ;

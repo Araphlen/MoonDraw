@@ -12,8 +12,8 @@
 #define STATUS_RECTANGLE 1
 #define STATUS_CIRCLE 2
 #define STATUS_SQUARE 3
-#define STATUS_ELIPSE 4
-
+#define STATUS_ELLIPSE 4
+#define STATUS_POLYGON 5
 //************************************************************************
 //************************************************************************
 // MyDrawingPanel class (where controls are displayed)
@@ -31,19 +31,21 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
     SetBackgroundColour(*wxLIGHT_GREY) ;
 
     y = WIDGET_Y0 ;
-    m_button = new wxButton(this, ID_BUTTON1, wxT("Yo brudah"), wxPoint(10, y) ) ;
-    Bind(wxEVT_BUTTON, &MyControlPanel::OnButton, this, ID_BUTTON1) ;
+    m_buttonUndo = new wxButton(this, ID_BUTTONUNDO, wxT("<-"), wxPoint(10, y) ) ;
+    Bind(wxEVT_BUTTON, &MyControlPanel::OnButtonUndo, this, ID_BUTTONUNDO) ;
+
+    m_buttonRedo = new wxButton(this, ID_BUTTONREDO, wxT("->"), wxPoint(100, y) ) ;
+    Bind(wxEVT_BUTTON, &MyControlPanel::OnButtonRedo, this, ID_BUTTONREDO) ;
 
     y+= WIDGET_Y_STEP ;
-    wxStaticText* text1 = new wxStaticText(this, wxID_ANY, wxT("Radius"), wxPoint(10, y)) ;
+    m_penSizeLegend = new wxStaticText(this, wxID_ANY, wxT("Pen size : "), wxPoint(10, y)) ;
+    m_penSizeSlider = new wxSlider(this, ID_PENSIZESLIDER, 10, 0, 100, wxPoint(100, y), wxSize(100, 20)) ;
+    Bind(wxEVT_SCROLL_THUMBTRACK, &MyControlPanel::OnPenSizeSlider, this, ID_PENSIZESLIDER) ;
+    m_penSizeLegend->SetLabel(wxString("Pen size : "+ std::to_string(m_penSizeSlider->GetValue()) ));
 
-    y+= 20 ;
-    m_slider = new wxSlider(this, ID_SLIDER1, 10, 2, 100, wxPoint(10, y), wxSize(100,20)) ;
-    Bind(wxEVT_SCROLL_THUMBTRACK, &MyControlPanel::OnSlider, this, ID_SLIDER1) ;
-
-    y+= WIDGET_Y_STEP ;
-    m_checkBox = new wxCheckBox(this, ID_CHECKBOX1, "Show (x,y)", wxPoint(10, y), wxSize(150,30)) ;
-    Bind(wxEVT_CHECKBOX, &MyControlPanel::OnCheckBox, this, ID_CHECKBOX1) ;
+//    y+= WIDGET_Y_STEP ;
+//    m_checkBox = new wxCheckBox(this, ID_CHECKBOX1, "Show (x,y)", wxPoint(10, y), wxSize(150,30)) ;
+//    Bind(wxEVT_CHECKBOX, &MyControlPanel::OnCheckBox, this, ID_CHECKBOX1) ;
 
     y+= WIDGET_Y_STEP;
     m_rectButton = new wxButton(this, ID_RECTBUTTON, wxT("RECTANGLE"), wxPoint(10, y));
@@ -56,6 +58,10 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
     y+= WIDGET_Y_STEP;
     m_squareButton = new wxButton(this,ID_SQUAREBUTTON, wxT("CARRE"),wxPoint(10,y));
     Bind(wxEVT_BUTTON, &MyControlPanel::OnButtonSquare,this,ID_SQUAREBUTTON);
+
+    y+= WIDGET_Y_STEP;
+    m_polygonButton = new wxButton(this,ID_POLYGONBUTTON, wxT("POLYGON"),wxPoint(10,y));
+    Bind(wxEVT_BUTTON, &MyControlPanel::OnButtonPolygon,this,ID_POLYGONBUTTON);
 
     y+= WIDGET_Y_STEP;
     m_elipseButton = new wxButton(this, ID_ELIPSEBUTTON, wxT("Elipse"), wxPoint(10, y));
@@ -74,21 +80,26 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
 }
 
 //------------------------------------------------------------------------
-void MyControlPanel::OnButton(wxCommandEvent &event)
+void MyControlPanel::OnButtonUndo(wxCommandEvent &event)
 //------------------------------------------------------------------------
 {
-//	char* s = GetCString() ;
-//	wxMessageBox(wxString::FromAscii(s)) ; // call a C function located in the sample.cp module
-//	free(s) ;
-    wxMessageBox(wxT("You just pressed the button!")) ;
+    MyFrame* frame = (MyFrame*)GetParent() ;
+    frame->GetDrawingPanel()->undo();
+}
+
+void MyControlPanel::OnButtonRedo(wxCommandEvent &event) {
+    MyFrame* frame = (MyFrame*)GetParent() ;
+    frame->GetDrawingPanel()->redo();
 }
 
 //------------------------------------------------------------------------
-void MyControlPanel::OnSlider(wxScrollEvent &event)
+void MyControlPanel::OnPenSizeSlider(wxScrollEvent &event)
 //------------------------------------------------------------------------
 {
     MyFrame* frame = (MyFrame*)GetParent() ;
     frame->RefreshDrawing() ;	// update the drawing panel
+    m_penSizeLegend->SetLabel(wxString("Pen size : "+ std::to_string(m_penSizeSlider->GetValue()) ));
+
 }
 
 //------------------------------------------------------------------------
@@ -98,32 +109,53 @@ void MyControlPanel::OnCheckBox(wxCommandEvent &event)
     MyFrame* frame = (MyFrame*)GetParent() ;
     frame->RefreshDrawing() ;	// update the drawing panel
 }
-
+//------------------------------------------------------------------------
 void MyControlPanel::OnButtonRectangle(wxCommandEvent &event) {
+//------------------------------------------------------------------------
     MyFrame* frame = (MyFrame*)GetParent() ;
     frame->GetDrawingPanel()->setStatus(STATUS_RECTANGLE);
 }
-
+//------------------------------------------------------------------------
 void MyControlPanel::OnButtonCircle(wxCommandEvent &event) {
+//------------------------------------------------------------------------
     MyFrame* frame = (MyFrame*)GetParent();
     frame->GetDrawingPanel()->setStatus(STATUS_CIRCLE);
 }
 
+//------------------------------------------------------------------------
 void MyControlPanel::OnButtonSquare(wxCommandEvent &event) {
+//------------------------------------------------------------------------
     MyFrame* frame = (MyFrame*)GetParent();
     frame->GetDrawingPanel()->setStatus(STATUS_SQUARE);
 }
 
+//------------------------------------------------------------------------
 void MyControlPanel::OnButtonElipse(wxCommandEvent &event) {
+//------------------------------------------------------------------------
     MyFrame* frame = (MyFrame*)GetParent();
     frame->GetDrawingPanel()->setStatus(STATUS_ELLIPSE);
 }
 
+//------------------------------------------------------------------------
+void MyControlPanel::OnButtonPolygon(wxCommandEvent &event) {
+//------------------------------------------------------------------------
+    MyFrame* frame = (MyFrame*)GetParent();
+    frame->GetDrawingPanel()->setStatus(STATUS_POLYGON);
+
+}
+
+//------------------------------------------------------------------------
 void MyControlPanel::OnBrushColorPicker(wxColourPickerEvent &event) {
+//------------------------------------------------------------------------
     MyFrame* frame = (MyFrame*)GetParent();
     frame->RefreshDrawing();
 }
+//------------------------------------------------------------------------
 void MyControlPanel::OnPenColorPicker(wxColourPickerEvent &event) {
+//------------------------------------------------------------------------
     MyFrame* frame = (MyFrame*)GetParent();
     frame->RefreshDrawing();
 }
+
+
+

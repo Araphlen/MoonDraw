@@ -12,8 +12,8 @@
 class Ellipse : public Figure{
 public:
     Ellipse();
-    Ellipse(const Point& topLeft, int h, int w,const std::string& penColor,const std::string& brushColor) ;
-    Ellipse(const Point& topLeft, const Point& bottomRight,const std::string& penColor,const std::string& brushColor);
+    Ellipse(const Point& topLeft, int h, int w,const std::string& penColor,const std::string& brushColor,int penSize) ;
+    Ellipse(const Point& topLeft, const Point& bottomRight,const std::string& penColor,const std::string& brushColor,int penSize);
 
     Point getTopLeft() const override;
     Point getBottomRight() const override;

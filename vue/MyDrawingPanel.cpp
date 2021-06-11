@@ -7,12 +7,14 @@
 
 #include "headers/MyFrame.h"
 #include "../model/headers/Ellipse.h"
+#include "../model/headers/Polygon.h"
 #include <iostream>
 #include <expat.h>
 
 #define RECT_SHAPE 1
 #define CIRCLE_SHAPE 2
 #define ELLIPSE_SHAPE 3
+#define POLYGONE_SHAPE 4
 
 
 //************************************************************************
@@ -32,6 +34,7 @@ MyDrawingPanel::MyDrawingPanel(wxWindow *parent) : wxPanel(parent)
     SetBackgroundColour(wxColour(0xFF,0xFF,0xFF)) ;
     Bind(wxEVT_MOTION, &MyDrawingPanel::OnMouseMove, this);
     Bind(wxEVT_LEFT_DOWN, &MyDrawingPanel::OnMouseLeftDown, this);
+    Bind(wxEVT_LEFT_DCLICK, &MyDrawingPanel::OnMouseLeftDClick,this);
     Bind(wxEVT_LEFT_UP, &MyDrawingPanel::OnMouseLeftUp,this);
     Bind(wxEVT_PAINT, &MyDrawingPanel::OnPaint, this) ;
     m_onePoint.x = (w-WIDGET_PANEL_WIDTH)/2 ;
@@ -44,6 +47,17 @@ MyDrawingPanel::MyDrawingPanel(wxWindow *parent) : wxPanel(parent)
     }
 
 
+void MyDrawingPanel::OnMouseLeftDClick(wxMouseEvent &event) {
+    switch (m_status) {
+        case STATUS_POLYGON:
+            if (m_isdrawing) {
+                m_currentIndexFigure++;
+                m_isdrawing = false;
+                Refresh();
+            }
+            break;
+    }
+}
 
 //------------------------------------------------------------------------
 void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
@@ -56,6 +70,8 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
 
     wxString brushColorWxString=frame->GetControlPanel()->GetBrushColour().GetAsString(wxC2S_HTML_SYNTAX);
     std::string brushColorStr= brushColorWxString.ToStdString();
+    unsigned char penSize = frame->GetControlPanel()->GetPenSliderValue();
+
     switch (m_status) {
         case STATUS_DEFAULT :
             m_onePoint.x = event.m_x ;
@@ -64,16 +80,15 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
             break;
         case STATUS_RECTANGLE:
             if (m_isdrawing==false) {
-                m_drawing.addRectangle(new Rectangle(Point(event.m_x, event.m_y), 0, 0,penColorStr,brushColorStr));
+                m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0, 0,penColorStr,brushColorStr,penSize));
                 m_isdrawing = true;
-//                std::cout << "J'ai initilaliser un noveau Rectangle a "<<event.m_x << " " << event.m_y << std::endl;
                 m_currentFigure = m_drawing[m_currentIndexFigure];
                 Refresh();
             }
             break;
         case STATUS_CIRCLE:
             if (m_isdrawing== false){
-                m_drawing.addFigure(new Circle(Point(event.m_x, event.m_y), 0,penColorStr,brushColorStr));
+                m_drawing.addFigure(new Circle(Point(event.m_x, event.m_y), 0,penColorStr,brushColorStr,penSize));
                 m_isdrawing =true;
                 m_currentFigure = m_drawing[m_currentIndexFigure];
                 Refresh();
@@ -81,7 +96,7 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
             break;
         case STATUS_SQUARE:
             if (m_isdrawing== false){
-                m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0,0,penColorStr,brushColorStr));
+                m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0,0,penColorStr,brushColorStr,penSize));
                 m_isdrawing =true;
                 m_currentFigure = m_drawing[m_currentIndexFigure];
                 Refresh();
@@ -89,9 +104,20 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
             break;
         case STATUS_ELLIPSE:
             if (m_isdrawing== false){
-                m_drawing.addFigure(new Ellipse(Point(event.m_x, event.m_y), 0,0,penColorStr,brushColorStr));
+                m_drawing.addFigure(new Ellipse(Point(event.m_x, event.m_y), 0,0,penColorStr,brushColorStr,penSize));
                 m_isdrawing =true;
                 m_currentFigure = m_drawing[m_currentIndexFigure];
+                Refresh();
+            }
+            break;
+        case STATUS_POLYGON:
+            if (m_isdrawing==false){
+                m_drawing.addFigure(new Polygon(Point(event.m_x, event.m_y),penColorStr,brushColorStr,penSize));
+                m_isdrawing =true;
+                m_currentFigure = m_drawing[m_currentIndexFigure];
+                Refresh();
+            } else{
+                m_currentFigure->addPoint(event.m_x, event.m_y);
                 Refresh();
             }
             break;
@@ -114,11 +140,9 @@ void MyDrawingPanel::OnMouseMove(wxMouseEvent &event)
             break;
         case STATUS_RECTANGLE:
             if (m_isdrawing) {
-//                std::cout << "JE DESSINE UN RECTANGLE" << std::endl;
                 m_drawing.setCurrentRectangle(m_currentIndexFigure, event.m_x, event.m_y);
                 Refresh();
             }
-//            std::cout<<m_isdrawing<<std::endl;
             break;
         case STATUS_CIRCLE:
             if (m_isdrawing){
@@ -143,11 +167,9 @@ void MyDrawingPanel::OnMouseMove(wxMouseEvent &event)
             break;
         case STATUS_ELLIPSE:
             if (m_isdrawing) {
-//                std::cout << "JE DESSINE UN RECTANGLE" << std::endl;
                 m_drawing.setCurrentRectangle(m_currentIndexFigure, event.m_x, event.m_y);
                 Refresh();
             }
-//            std::cout<<m_isdrawing<<std::endl;
             break;
     }
 }
@@ -157,10 +179,12 @@ void MyDrawingPanel::OnMouseMove(wxMouseEvent &event)
 void MyDrawingPanel::OnMouseLeftUp(wxMouseEvent &event)
 //------------------------------------------------------------------------
 {
-    if (m_isdrawing) {
-        m_currentIndexFigure++;
-        m_currentFigure = m_drawing[m_currentIndexFigure];
-        m_isdrawing = false;
+    if (m_status!=STATUS_POLYGON) {
+        if (m_isdrawing) {
+            m_currentIndexFigure++;
+            m_isdrawing = false;
+            Refresh();
+        }
     }
 }
 
@@ -175,27 +199,24 @@ void MyDrawingPanel::OnPaint(wxPaintEvent &event)
 {
     // read the control values
     MyFrame* frame =  (MyFrame*)GetParent() ;
-//    
-            int penwidth = frame->GetControlPanel()->GetSliderValue() ;
-            bool check = frame->GetControlPanel()->GetCheckBoxValue() ;
-
+//     bool check = frame->GetControlPanel()->GetCheckBoxValue() ;
 //            // then paint
             wxPaintDC dc(this);
 
-            if (check)
-            {
-                wxString coordinates ;
-                coordinates.sprintf(wxT("(%d,%d)"), m_mousePoint.x, m_mousePoint.y) ;
-                dc.DrawText(coordinates, wxPoint(m_mousePoint.x, m_mousePoint.y+20)) ;
-            }
+  //          if (check)
+   //         {
+   //             wxString coordinates ;
+    //            coordinates.sprintf(wxT("(%d,%d)"), m_mousePoint.x, m_mousePoint.y) ;
+     //           dc.DrawText(coordinates, wxPoint(m_mousePoint.x, m_mousePoint.y+20)) ;
+      //      }
 
 
 
-    for (int i = 0; i < m_drawing.nbFormes(); ++i) {
+    for (int i = 0; i < m_drawing.nbFigures(); ++i) {
         Figure *figToPaint = m_drawing[i];
 
         wxColour penColor = static_cast<const wxString &>(figToPaint->GetBorderColor());
-        dc.SetPen(wxPen(penColor,frame->GetControlPanel()->GetSliderValue()));
+        dc.SetPen(wxPen(penColor,figToPaint->getPenSize() ));
 
         wxColour brushColor = static_cast<const wxString &>(figToPaint->GetFillColor());
         dc.SetBrush(wxBrush(brushColor));
@@ -211,10 +232,17 @@ void MyDrawingPanel::OnPaint(wxPaintEvent &event)
                               wxCoord(figToPaint->getRay()));
                 break;
             case ELLIPSE_SHAPE:
-                std::cout<<"tamer"<<std::endl;
                 dc.DrawEllipse(wxRect(wxPoint(figToPaint->getTopLeft().getX(), figToPaint->getTopLeft().getY()), wxPoint(
                         figToPaint->getBottomRight().getX(),
                         figToPaint->getBottomRight().getY())));
+                break;
+            case POLYGONE_SHAPE:
+                if (figToPaint->getNbPoints()>1) {
+                    for (int p = 1; p < figToPaint->getNbPoints(); ++p) {
+                         dc.DrawLine(wxPoint(figToPaint->getPoint(p-1).getX(), figToPaint->getPoint(p-1).getY()),wxPoint(figToPaint->getPoint(p).getX(), figToPaint->getPoint(p).getY()));
+                    }
+                    dc.DrawLine(wxPoint(figToPaint->getPoint(0).getX(), figToPaint->getPoint(0).getY()),wxPoint(figToPaint->getPoint(figToPaint->getNbPoints()-1).getX(), figToPaint->getPoint(figToPaint->getNbPoints()-1).getY()));
+                }
                 break;
         }
     }
@@ -253,6 +281,27 @@ void MyDrawingPanel::setStatus(int mStatus) {
     m_status = mStatus;
 }
 
-void MyDrawingPanel::setMCurrentIndexTempsPoint(int mCurrentIndexTempsPoint) {
+void MyDrawingPanel::setCurrentIndexTempsPoint(int mCurrentIndexTempsPoint) {
     m_currentIndexFigure = mCurrentIndexTempsPoint;
 }
+
+void MyDrawingPanel::undo() {
+    if (!m_drawing.isEmpty()) {
+        m_drawing.tempRemoveCurrentFig();
+        --m_currentIndexFigure;
+    } else{
+        wxMessageBox(wxT("you can't go back further !"));
+    }
+    Refresh();
+}
+
+void MyDrawingPanel::redo() {
+    if (!m_drawing.isTempFigEmpty()) {
+        m_drawing.reDrawFig();
+        ++m_currentIndexFigure;
+    } else{
+        wxMessageBox(wxT("you don't have anything to redo anymore !"));
+    }
+    Refresh();
+}
+

@@ -304,6 +304,33 @@ model/Point.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Point.cpp.s
 .PHONY : model/Point.cpp.s
 
+model/Polygon.o: model/Polygon.cpp.o
+
+.PHONY : model/Polygon.o
+
+# target to build an object file
+model/Polygon.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Polygon.cpp.o
+.PHONY : model/Polygon.cpp.o
+
+model/Polygon.i: model/Polygon.cpp.i
+
+.PHONY : model/Polygon.i
+
+# target to preprocess a source file
+model/Polygon.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Polygon.cpp.i
+.PHONY : model/Polygon.cpp.i
+
+model/Polygon.s: model/Polygon.cpp.s
+
+.PHONY : model/Polygon.s
+
+# target to generate assembly for a file
+model/Polygon.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Polygon.cpp.s
+.PHONY : model/Polygon.cpp.s
+
 model/Rectangle.o: model/Rectangle.cpp.o
 
 .PHONY : model/Rectangle.o
@@ -466,6 +493,9 @@ help:
 	@echo "... model/Point.o"
 	@echo "... model/Point.i"
 	@echo "... model/Point.s"
+	@echo "... model/Polygon.o"
+	@echo "... model/Polygon.i"
+	@echo "... model/Polygon.s"
 	@echo "... model/Rectangle.o"
 	@echo "... model/Rectangle.i"
 	@echo "... model/Rectangle.s"

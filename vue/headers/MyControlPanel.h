@@ -22,13 +22,15 @@
 #define WIDGET_PANEL_WIDTH	200
 
 enum{
-ID_BUTTON1,
-ID_SLIDER1,
+ID_BUTTONUNDO,
+ID_BUTTONREDO,
+ID_PENSIZESLIDER,
 ID_CHECKBOX1,
 ID_RECTBUTTON,
 ID_CIRCLEBUTTON,
 ID_SQUAREBUTTON,
 ID_ELIPSEBUTTON,
+ID_POLYGONBUTTON,
 ID_BRUSHCOLORPICKER,
 ID_PENLEGEND,
 ID_BRUSHLEGEND,
@@ -41,31 +43,38 @@ class MyControlPanel: public wxPanel
 {
 public:
     MyControlPanel( wxWindow *parent ) ;
-    int GetSliderValue() {return m_slider->GetValue() ;} ;
+    int GetPenSliderValue() {return m_penSizeSlider->GetValue() ;} ;
     bool GetCheckBoxValue() {return m_checkBox->GetValue() ;} ;
     wxColour GetPenColour() {return m_penColourPicker->GetColour();};
     wxColour GetBrushColour() {return m_brushColourPicker->GetColour();};
 
 private:
-    void OnButton(wxCommandEvent &event) ;
+    void OnButtonUndo(wxCommandEvent &event) ;
+    void OnButtonRedo(wxCommandEvent &event);
+    void OnPenSizeSlider(wxScrollEvent &event) ;
     void OnButtonRectangle(wxCommandEvent &event);
     void OnButtonCircle(wxCommandEvent &event);
     void OnButtonSquare(wxCommandEvent &event);
     void OnButtonElipse(wxCommandEvent &event);
-    void OnSlider(wxScrollEvent &event) ;
+    void OnButtonPolygon(wxCommandEvent &event);
     void OnCheckBox(wxCommandEvent &event) ;
     void OnPenColorPicker(wxColourPickerEvent &event);
     void OnBrushColorPicker(wxColourPickerEvent& event);
-    wxButton* m_button ;
+
+
+    wxButton* m_buttonUndo ;
+    wxButton* m_buttonRedo ;
     wxButton* m_rectButton;
     wxButton* m_circleButton;
     wxButton* m_squareButton;
     wxButton* m_elipseButton;
+    wxButton* m_polygonButton;
     wxStaticText* m_penlegend;
     wxColourPickerCtrl* m_penColourPicker;
     wxStaticText* m_brushLegend;
     wxColourPickerCtrl* m_brushColourPicker;
-    wxSlider* m_slider ;
+    wxStaticText* m_penSizeLegend;
+    wxSlider* m_penSizeSlider ;
     wxCheckBox* m_checkBox ;
 
 };
