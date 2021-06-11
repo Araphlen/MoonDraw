@@ -40,7 +40,7 @@ MyDrawingPanel::MyDrawingPanel(wxWindow *parent) : wxPanel(parent)
     m_onePoint.x = (w-WIDGET_PANEL_WIDTH)/2 ;
     m_onePoint.y = h/2 ;
     m_mousePoint = m_onePoint ;
-    m_status = STATUS_DEFAULT;
+    m_status = STATUS_EDIT;
     m_drawing = Drawing();
     m_currentIndexFigure=0;
     m_isdrawing =false;
@@ -65,17 +65,25 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
 // called when the mouse left button is pressed
 {
     MyFrame* frame = (MyFrame*)GetParent();
+
     wxString penColorWxString=frame->GetControlPanel()->GetPenColour().GetAsString(wxC2S_HTML_SYNTAX);
     std::string penColorStr= penColorWxString.ToStdString();
-
-    wxString brushColorWxString=frame->GetControlPanel()->GetBrushColour().GetAsString(wxC2S_HTML_SYNTAX);
-    std::string brushColorStr= brushColorWxString.ToStdString();
     unsigned char penSize = frame->GetControlPanel()->GetPenSliderValue();
 
+    bool isTransparent = frame->GetControlPanel()->GetCheckBoxValue() ;
+
+    wxString brushColorWxString;
+    if (isTransparent)
+    {
+        brushColorWxString=wxTRANSPARENT_BRUSH->GetColour().GetAsString(wxC2S_HTML_SYNTAX);
+    } else{
+        brushColorWxString=frame->GetControlPanel()->GetBrushColour().GetAsString(wxC2S_HTML_SYNTAX);
+    }
+    std::string brushColorStr= brushColorWxString.ToStdString();
+
+
     switch (m_status) {
-        case STATUS_DEFAULT :
-            m_onePoint.x = event.m_x ;
-            m_onePoint.y = event.m_y ;
+        case STATUS_EDIT :
             Refresh() ; // send an event that calls the OnPaint method
             break;
         case STATUS_RECTANGLE:
@@ -133,9 +141,9 @@ void MyDrawingPanel::OnMouseMove(wxMouseEvent &event)
 // called when the mouse is moved
 {
     switch (m_status) {
-        case STATUS_DEFAULT:
-            m_mousePoint.x = event.m_x ;
-            m_mousePoint.y = event.m_y ;
+        case STATUS_EDIT:
+            //parcourir la liste des vecteurs en sens inverse et afficher les point qui permettent
+
             Refresh() ;	// send an event that calls the OnPaint method
             break;
         case STATUS_RECTANGLE:
@@ -199,19 +207,8 @@ void MyDrawingPanel::OnPaint(wxPaintEvent &event)
 {
     // read the control values
     MyFrame* frame =  (MyFrame*)GetParent() ;
-//     bool check = frame->GetControlPanel()->GetCheckBoxValue() ;
-//            // then paint
-            wxPaintDC dc(this);
-
-  //          if (check)
-   //         {
-   //             wxString coordinates ;
-    //            coordinates.sprintf(wxT("(%d,%d)"), m_mousePoint.x, m_mousePoint.y) ;
-     //           dc.DrawText(coordinates, wxPoint(m_mousePoint.x, m_mousePoint.y+20)) ;
-      //      }
-
-
-
+    // then paint
+    wxPaintDC dc(this);
     for (int i = 0; i < m_drawing.nbFigures(); ++i) {
         Figure *figToPaint = m_drawing[i];
 

@@ -8,7 +8,7 @@
 #include "headers/MyDrawingPanel.h"
 
 
-#define STATUS_DEFAULT 0
+#define STATUS_EDIT 0
 #define STATUS_RECTANGLE 1
 #define STATUS_CIRCLE 2
 #define STATUS_SQUARE 3
@@ -43,13 +43,18 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
     Bind(wxEVT_SCROLL_THUMBTRACK, &MyControlPanel::OnPenSizeSlider, this, ID_PENSIZESLIDER) ;
     m_penSizeLegend->SetLabel(wxString("Pen size : "+ std::to_string(m_penSizeSlider->GetValue()) ));
 
-//    y+= WIDGET_Y_STEP ;
-//    m_checkBox = new wxCheckBox(this, ID_CHECKBOX1, "Show (x,y)", wxPoint(10, y), wxSize(150,30)) ;
-//    Bind(wxEVT_CHECKBOX, &MyControlPanel::OnCheckBox, this, ID_CHECKBOX1) ;
+    y+= WIDGET_Y_STEP ;
+    m_checkBox = new wxCheckBox(this, ID_CHECKBOX1, "Transparent", wxPoint(10, y), wxSize(150,30)) ;
+    Bind(wxEVT_CHECKBOX, &MyControlPanel::OnCheckBox, this, ID_CHECKBOX1) ;
+
+    y+= WIDGET_Y_STEP;
+    m_editionButton = new wxButton(this, ID_EDITBUTTON, wxT("EDITION"), wxPoint(10, y));
+    Bind(wxEVT_BUTTON,&MyControlPanel::OnButtonEdition,this,ID_EDITBUTTON);
 
     y+= WIDGET_Y_STEP;
     m_rectButton = new wxButton(this, ID_RECTBUTTON, wxT("RECTANGLE"), wxPoint(10, y));
     Bind(wxEVT_BUTTON,&MyControlPanel::OnButtonRectangle,this,ID_RECTBUTTON);
+
 
     y+= WIDGET_Y_STEP;
     m_circleButton = new wxButton(this,ID_CIRCLEBUTTON, wxT("CERCLE"),wxPoint(10,y));
@@ -155,6 +160,11 @@ void MyControlPanel::OnPenColorPicker(wxColourPickerEvent &event) {
 //------------------------------------------------------------------------
     MyFrame* frame = (MyFrame*)GetParent();
     frame->RefreshDrawing();
+}
+
+void MyControlPanel::OnButtonEdition(wxCommandEvent &event) {
+    MyFrame* frame = (MyFrame*)GetParent();
+    frame->GetDrawingPanel()->setStatus(STATUS_EDIT);
 }
 
 

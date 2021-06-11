@@ -26,6 +26,7 @@ ID_BUTTONUNDO,
 ID_BUTTONREDO,
 ID_PENSIZESLIDER,
 ID_CHECKBOX1,
+ID_EDITBUTTON,
 ID_RECTBUTTON,
 ID_CIRCLEBUTTON,
 ID_SQUAREBUTTON,
@@ -52,6 +53,7 @@ private:
     void OnButtonUndo(wxCommandEvent &event) ;
     void OnButtonRedo(wxCommandEvent &event);
     void OnPenSizeSlider(wxScrollEvent &event) ;
+    void OnButtonEdition(wxCommandEvent &event);
     void OnButtonRectangle(wxCommandEvent &event);
     void OnButtonCircle(wxCommandEvent &event);
     void OnButtonSquare(wxCommandEvent &event);
@@ -64,6 +66,9 @@ private:
 
     wxButton* m_buttonUndo ;
     wxButton* m_buttonRedo ;
+    wxStaticText* m_penSizeLegend;
+    wxSlider* m_penSizeSlider ;
+    wxButton* m_editionButton;
     wxButton* m_rectButton;
     wxButton* m_circleButton;
     wxButton* m_squareButton;
@@ -73,8 +78,6 @@ private:
     wxColourPickerCtrl* m_penColourPicker;
     wxStaticText* m_brushLegend;
     wxColourPickerCtrl* m_brushColourPicker;
-    wxStaticText* m_penSizeLegend;
-    wxSlider* m_penSizeSlider ;
     wxCheckBox* m_checkBox ;
 
 };

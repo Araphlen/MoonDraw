@@ -21,7 +21,7 @@
 #include "../../model/headers/Point.h"
 
 #define WIDGET_PANEL_WIDTH	200
-#define STATUS_DEFAULT 0
+#define STATUS_EDIT 0
 #define STATUS_RECTANGLE 1
 #define STATUS_CIRCLE 2
 #define STATUS_SQUARE 3
