@@ -68,6 +68,26 @@ void Rectangle::setBottomRight(int x, int y) {
     m_w = m_bottomRight.getX() - m_topLeft.getX();
 }
 
+bool Rectangle::areCoorInFigure(int mousex, int mousey) const {
+    return m_topLeft.getX()<mousex && mousex<m_bottomRight.getX() && m_topLeft.getY()<mousey && mousey<m_bottomRight.getY();
+}
+
+void Rectangle::setEditBottomRight(bool isEditable) {
+    m_TLEditable = isEditable;
+}
+
+void Rectangle::setEditTopLeft(bool isEditable) {
+    m_BREditable = isEditable;
+}
+
+bool Rectangle::isBottomRightEditable(){
+    return m_BREditable;
+}
+
+bool Rectangle::isTopLeftEditable() {
+    return m_TLEditable;
+}
+
 
 
 

@@ -22,21 +22,24 @@ public:
     Figure* operator[](int i) const;
 
     //Methode for rectangles
-    void setCurrentRectangle(int i, int x_br, int y_br);
+    void setCurrentRectangleBR(int i, int x_br, int y_br);
+    void setCurrentRectangleTL(int i, int x_tl, int y_tl);
 
-    //methode for Circles
     void setCircleCourant(int i, wxCoord i1, wxCoord i2);
 
     bool isEmpty();
     void tempRemoveCurrentFig();
 
     bool isTempFigEmpty();
+    void clearTmpFigures();
 
     void reDrawFig();
     void unSelectAll();
+
 private:
     std::vector<Figure*> m_figures ;
     std::vector<Figure*> m_tempRemovedFigures; //vector which contain figure that we undo if we want to redo it
+
 };
 
 

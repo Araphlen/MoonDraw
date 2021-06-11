@@ -29,5 +29,7 @@ void Circle::setRay(int pointerX, int pointerY){
 int Circle::getRay() const {
     return m_ray;
 }
-
+Point Circle::getPointCircle() const{
+    return m_pointCercle;
+}
 

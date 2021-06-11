@@ -6,6 +6,8 @@
 #include "headers/Point.h"
 
 Point::Point() {
+    m_x=-1;
+    m_y=-1;
 }
 
 Point::Point(int x, int y) {

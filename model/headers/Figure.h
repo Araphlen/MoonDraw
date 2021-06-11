@@ -21,10 +21,7 @@ public:
 
     int getShape();
 
-    virtual Point getTopLeft() const {
-        return Point();
-    };
-
+    virtual Point getTopLeft() const { return Point(); };
     virtual Point getBottomRight() const{return Point();};
 
     virtual void setTopLeft(int x, int y){};
@@ -39,6 +36,7 @@ public:
     //virtual methode for circles
     virtual Point getCenter() const {return Point();};
     virtual void setRay(int pointerX, int pointerY){};
+    virtual Point getPointCircle() const{return Point();};
 
     virtual int getRay() const {return 0;};
 
@@ -61,8 +59,19 @@ public:
 
     void setIsTransparent(bool mIsTransparent);
 
-    virtual bool selection(int x , int y) const {return false;};
+    virtual bool areCoorInFigure(int mousex , int mousey) const {return false;};
+
     void setSelect(bool isSelected);
+
+    bool isSelected(){return m_isSelected;};
+
+    virtual void setEditTopLeft(bool isEditable){};
+    virtual void setEditBottomRight(bool isEditable){};
+
+    virtual bool isBottomRightEditable(){return false;};
+    virtual bool isTopLeftEditable(){return false;};
+
+
 
 protected:
     std::string * m_label;

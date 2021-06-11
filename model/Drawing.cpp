@@ -9,11 +9,15 @@ Drawing::Drawing() {
 
 }
 
-void Drawing::setCurrentRectangle(int i, int x_br, int y_br) {
+void Drawing::setCurrentRectangleBR(int i, int x_br, int y_br) {
 //    std::cout << "je redefini le point bottomRight a "<<x_br<<" "<<y_br << std::endl;
     this->operator[](i)->setBottomRight(x_br, y_br);
 //    std::cout << "(Dans drawing)on vérifie si le point  a bien été redefinit a " << this->accessRectangle(i).getBottomRight().getX() << " " << this->accessRectangle(i).getBottomRight().getY() << std::endl;
-
+}
+void Drawing::setCurrentRectangleTL(int i, int x_tl, int y_tl) {
+//    std::cout << "je redefini le point bottomRight a "<<x_br<<" "<<y_br << std::endl;
+    this->operator[](i)->setTopLeft(x_tl, y_tl);
+//    std::cout << "(Dans drawing)on vérifie si le point  a bien été redefinit a " << this->accessRectangle(i).getBottomRight().getX() << " " << this->accessRectangle(i).getBottomRight().getY() << std::endl;
 }
 
 //add a figure to the current drawing
@@ -53,7 +57,13 @@ void Drawing::reDrawFig() {
 
 void Drawing::unSelectAll() {
     //if we dclick outside any figure a
-    for (int i = 0; i < this->nbFigures(); ++i) {
-        m_figures[i]->setSelect(false);
+    if (!m_figures.empty()) {
+        for (int i = 0; i < this->nbFigures(); ++i) {
+            m_figures[i]->setSelect(false);
+        }
     }
+}
+
+void Drawing::clearTmpFigures() {
+    m_tempRemovedFigures.clear();
 }

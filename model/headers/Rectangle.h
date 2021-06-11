@@ -26,12 +26,20 @@ public:
 
     void setH(int h) override;
     void setW(int w) override;
+    bool areCoorInFigure(int mousex , int mousey) const;
 
+    void setEditTopLeft(bool isEditable);
+    void setEditBottomRight(bool isEditable);
+
+    bool isBottomRightEditable();
+    bool isTopLeftEditable();
 private:
     Point m_topLeft;
     Point m_bottomRight;
     int m_h;
     int m_w;
+    bool m_TLEditable;
+    bool m_BREditable;
 
 };
 

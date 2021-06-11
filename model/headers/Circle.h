@@ -17,10 +17,12 @@ public:
     void setRay(int pointerX, int pointerY) override;
 
     int getRay() const override;
-
+    Point getPointCircle() const;
 private:
     Point m_center;
+    Point m_pointCercle;
     int m_ray;
+
 };
 
 

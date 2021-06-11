@@ -39,9 +39,11 @@ public:
     void OpenFile(wxString fileName) ;
     void SaveFile(wxString fileName) ;
     void setStatus(int mStatus);
+    void setMode(int mMode);
     void setCurrentIndexTempsPoint(int mCurrentIndexTempsPoint);
     void undo();
     void redo();
+    std::string getModeSTR();
 
 private:
     void OnMouseMove(wxMouseEvent &event) ;

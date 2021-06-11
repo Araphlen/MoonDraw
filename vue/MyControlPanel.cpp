@@ -40,7 +40,7 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
     Bind(wxEVT_BUTTON, &MyControlPanel::OnButtonRedo, this, ID_BUTTONREDO) ;
 
     y+= WIDGET_Y_STEP ;
-    m_penSizeLegend = new wxStaticText(this, wxID_ANY, wxT("Pen size : "), wxPoint(10, y)) ;
+    m_penSizeLegend = new wxStaticText(this, ID_PENLEGEND, wxT("Pen size : "), wxPoint(10, y)) ;
     m_penSizeSlider = new wxSlider(this, ID_PENSIZESLIDER, 10, 0, 70, wxPoint(110, y), wxSize(70, 20)) ;
     Bind(wxEVT_SCROLL_THUMBTRACK, &MyControlPanel::OnPenSizeSlider, this, ID_PENSIZESLIDER) ;
     m_penSizeLegend->SetLabel(wxString("Pen size : "+ std::to_string(m_penSizeSlider->GetValue()) ));
@@ -84,6 +84,8 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
     m_brushColourPicker = new wxColourPickerCtrl(this, ID_BRUSHCOLORPICKER, wxColor(255, 255, 255), wxPoint(100, y));
     Bind(wxEVT_COLOURPICKER_CHANGED, &MyControlPanel::OnBrushColorPicker, this, ID_BRUSHCOLORPICKER);
 
+    y+= WIDGET_Y_STEP;
+    m_currentMode = new wxStaticText(this,ID_CURRENTMODE, wxT("Mode : ") ,wxPoint(10,y));
 }
 
 //------------------------------------------------------------------------
@@ -166,7 +168,11 @@ void MyControlPanel::OnPenColorPicker(wxColourPickerEvent &event) {
 
 void MyControlPanel::OnButtonSelect(wxCommandEvent &event) {
     MyFrame* frame = (MyFrame*)GetParent();
-    frame->GetDrawingPanel()->setStatus(MODE_SELECT);
+    frame->GetDrawingPanel()->setMode(MODE_SELECT);
+}
+
+void MyControlPanel::SetModeLabel(std::string modestr) {
+    m_currentMode->SetLabel(wxString("Mode : "+modestr));
 }
 
 

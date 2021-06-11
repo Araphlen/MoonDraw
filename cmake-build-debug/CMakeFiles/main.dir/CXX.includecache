@@ -58,16 +58,6 @@ Figure.h
 Point.h
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
 
-/home/araphlen/CLionProjects/MoonDraw/vue/MyControlPanel.cpp
-langinfo.h
--
-headers/MyControlPanel.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyControlPanel.h
-headers/MyFrame.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
-headers/MyDrawingPanel.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyDrawingPanel.h
-
 /home/araphlen/CLionProjects/MoonDraw/vue/MyDrawingPanel.cpp
 langinfo.h
 -
