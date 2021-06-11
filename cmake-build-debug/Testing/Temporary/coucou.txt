@@ -1,0 +1,1 @@
+S1102 software can create and write a file
