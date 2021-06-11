@@ -11,7 +11,7 @@
 class Circle : public Figure{
 public:
     Circle();
-    Circle(const Point &center, int ray,const std::string& penColor,const std::string& brushColor,int penSize);
+    Circle(const Point &center, int ray,const MyRgb &penColor, const MyRgb &brushColor,int penSize,bool isTransparent);
 
     Point getCenter() const override;
     void setRay(int pointerX, int pointerY) override;

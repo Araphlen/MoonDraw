@@ -10,6 +10,7 @@
 #include "../model/headers/Polygon.h"
 #include <iostream>
 #include <expat.h>
+#include <search.h>
 
 #define RECT_SHAPE 1
 #define CIRCLE_SHAPE 2
@@ -65,30 +66,24 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
 // called when the mouse left button is pressed
 {
     MyFrame* frame = (MyFrame*)GetParent();
+    wxColour wxPenColour= frame->GetControlPanel()->GetPenColour();
+    MyRgb penColor=MyRgb(wxPenColour.Red(),wxPenColour.Green(),wxPenColour.Blue()) ;
 
-    wxString penColorWxString=frame->GetControlPanel()->GetPenColour().GetAsString(wxC2S_HTML_SYNTAX);
-    std::string penColorStr= penColorWxString.ToStdString();
     unsigned char penSize = frame->GetControlPanel()->GetPenSliderValue();
 
     bool isTransparent = frame->GetControlPanel()->GetCheckBoxValue() ;
 
-    wxString brushColorWxString;
-    if (isTransparent)
-    {
-        brushColorWxString=wxTRANSPARENT_BRUSH->GetColour().GetAsString(wxC2S_HTML_SYNTAX);
-    } else{
-        brushColorWxString=frame->GetControlPanel()->GetBrushColour().GetAsString(wxC2S_HTML_SYNTAX);
-    }
-    std::string brushColorStr= brushColorWxString.ToStdString();
-
+    wxColour wxBrushColour= frame->GetControlPanel()->GetBrushColour();
+    MyRgb brushColor=MyRgb(wxBrushColour.Red(),wxBrushColour.Green(),wxBrushColour.Blue()) ;
 
     switch (m_status) {
         case STATUS_EDIT :
+
             Refresh() ; // send an event that calls the OnPaint method
             break;
         case STATUS_RECTANGLE:
             if (m_isdrawing==false) {
-                m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0, 0,penColorStr,brushColorStr,penSize));
+                m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0, 0, penColor, brushColor, penSize,isTransparent));
                 m_isdrawing = true;
                 m_currentFigure = m_drawing[m_currentIndexFigure];
                 Refresh();
@@ -96,7 +91,7 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
             break;
         case STATUS_CIRCLE:
             if (m_isdrawing== false){
-                m_drawing.addFigure(new Circle(Point(event.m_x, event.m_y), 0,penColorStr,brushColorStr,penSize));
+                m_drawing.addFigure(new Circle(Point(event.m_x, event.m_y), 0, penColor, brushColor, penSize,isTransparent));
                 m_isdrawing =true;
                 m_currentFigure = m_drawing[m_currentIndexFigure];
                 Refresh();
@@ -104,7 +99,7 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
             break;
         case STATUS_SQUARE:
             if (m_isdrawing== false){
-                m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0,0,penColorStr,brushColorStr,penSize));
+                m_drawing.addFigure(new Rectangle(Point(event.m_x, event.m_y), 0, 0, penColor, brushColor, penSize,isTransparent));
                 m_isdrawing =true;
                 m_currentFigure = m_drawing[m_currentIndexFigure];
                 Refresh();
@@ -112,7 +107,7 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
             break;
         case STATUS_ELLIPSE:
             if (m_isdrawing== false){
-                m_drawing.addFigure(new Ellipse(Point(event.m_x, event.m_y), 0,0,penColorStr,brushColorStr,penSize));
+                m_drawing.addFigure(new Ellipse(Point(event.m_x, event.m_y), 0, 0, penColor, brushColor, penSize,isTransparent));
                 m_isdrawing =true;
                 m_currentFigure = m_drawing[m_currentIndexFigure];
                 Refresh();
@@ -120,7 +115,7 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
             break;
         case STATUS_POLYGON:
             if (m_isdrawing==false){
-                m_drawing.addFigure(new Polygon(Point(event.m_x, event.m_y),penColorStr,brushColorStr,penSize));
+                m_drawing.addFigure(new Polygon(Point(event.m_x, event.m_y), penColor, brushColor, penSize,isTransparent));
                 m_isdrawing =true;
                 m_currentFigure = m_drawing[m_currentIndexFigure];
                 Refresh();
@@ -212,11 +207,16 @@ void MyDrawingPanel::OnPaint(wxPaintEvent &event)
     for (int i = 0; i < m_drawing.nbFigures(); ++i) {
         Figure *figToPaint = m_drawing[i];
 
-        wxColour penColor = static_cast<const wxString &>(figToPaint->GetBorderColor());
+        wxColour penColor = wxColour(figToPaint->getBorderColor().getR(),figToPaint->getBorderColor().getG(),figToPaint->getBorderColor().getB());
         dc.SetPen(wxPen(penColor,figToPaint->getPenSize() ));
 
-        wxColour brushColor = static_cast<const wxString &>(figToPaint->GetFillColor());
-        dc.SetBrush(wxBrush(brushColor));
+        wxColour brushColor;
+        if (figToPaint->isTransparent()){
+            dc.SetBrush(*wxTRANSPARENT_BRUSH);
+        } else{
+            brushColor = wxColour(figToPaint->getFillColor().getR(),figToPaint->getFillColor().getG(),figToPaint->getFillColor().getB());
+            dc.SetBrush(wxBrush(brushColor));
+        }
 
         switch (figToPaint->getShape()) {
             case RECT_SHAPE:

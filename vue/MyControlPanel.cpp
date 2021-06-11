@@ -39,7 +39,7 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
 
     y+= WIDGET_Y_STEP ;
     m_penSizeLegend = new wxStaticText(this, wxID_ANY, wxT("Pen size : "), wxPoint(10, y)) ;
-    m_penSizeSlider = new wxSlider(this, ID_PENSIZESLIDER, 10, 0, 100, wxPoint(100, y), wxSize(100, 20)) ;
+    m_penSizeSlider = new wxSlider(this, ID_PENSIZESLIDER, 10, 0, 70, wxPoint(110, y), wxSize(70, 20)) ;
     Bind(wxEVT_SCROLL_THUMBTRACK, &MyControlPanel::OnPenSizeSlider, this, ID_PENSIZESLIDER) ;
     m_penSizeLegend->SetLabel(wxString("Pen size : "+ std::to_string(m_penSizeSlider->GetValue()) ));
 

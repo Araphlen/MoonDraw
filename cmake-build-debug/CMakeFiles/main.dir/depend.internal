@@ -6,6 +6,7 @@ CMakeFiles/main.dir/main.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Circle.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Drawing.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Rectangle.h
  /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyApp.h
@@ -259,6 +260,7 @@ CMakeFiles/main.dir/model/Circle.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/Circle.cpp
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Circle.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
  /usr/local/include/wx-3.0/wx/afterstd.h
  /usr/local/include/wx-3.0/wx/any.h
@@ -333,6 +335,7 @@ CMakeFiles/main.dir/model/Drawing.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Circle.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Drawing.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Rectangle.h
  /usr/local/include/wx-3.0/wx/affinematrix2d.h
@@ -448,6 +451,7 @@ CMakeFiles/main.dir/model/Ellipse.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/Ellipse.cpp
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Ellipse.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
  /usr/local/include/wx-3.0/wx/afterstd.h
  /usr/local/include/wx-3.0/wx/any.h
@@ -520,6 +524,7 @@ CMakeFiles/main.dir/model/Ellipse.cpp.o
 CMakeFiles/main.dir/model/Figure.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/Figure.cpp
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
  /usr/local/include/wx-3.0/wx/afterstd.h
  /usr/local/include/wx-3.0/wx/any.h
@@ -589,6 +594,9 @@ CMakeFiles/main.dir/model/Figure.cpp.o
  /usr/local/include/wx-3.0/wx/xtiprop.h
  /usr/local/include/wx-3.0/wx/xtitypes.h
  /usr/local/lib/wx/include/gtk3-unicode-static-3.0/wx/setup.h
+CMakeFiles/main.dir/model/MyRgb.cpp.o
+ /home/araphlen/CLionProjects/MoonDraw/model/MyRgb.cpp
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
 CMakeFiles/main.dir/model/Point.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/Point.cpp
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
@@ -663,6 +671,7 @@ CMakeFiles/main.dir/model/Point.cpp.o
 CMakeFiles/main.dir/model/Polygon.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/Polygon.cpp
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Polygon.h
  /usr/local/include/wx-3.0/wx/afterstd.h
@@ -736,6 +745,7 @@ CMakeFiles/main.dir/model/Polygon.cpp.o
 CMakeFiles/main.dir/model/Rectangle.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/Rectangle.cpp
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Rectangle.h
  /usr/local/include/wx-3.0/wx/afterstd.h
@@ -810,6 +820,7 @@ CMakeFiles/main.dir/vue/MyApp.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Circle.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Drawing.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Rectangle.h
  /home/araphlen/CLionProjects/MoonDraw/vue/MyApp.cpp
@@ -1064,6 +1075,7 @@ CMakeFiles/main.dir/vue/MyControlPanel.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Circle.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Drawing.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Rectangle.h
  /home/araphlen/CLionProjects/MoonDraw/vue/MyControlPanel.cpp
@@ -1318,6 +1330,7 @@ CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Drawing.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Ellipse.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Polygon.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Rectangle.h
@@ -1572,6 +1585,7 @@ CMakeFiles/main.dir/vue/MyFrame.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Circle.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Drawing.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+ /home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
  /home/araphlen/CLionProjects/MoonDraw/model/headers/Rectangle.h
  /home/araphlen/CLionProjects/MoonDraw/vue/MyFrame.cpp

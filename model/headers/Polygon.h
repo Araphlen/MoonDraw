@@ -12,7 +12,7 @@
 
 class Polygon : public Figure{
 public:
-    Polygon(const Point& p1,const std::string& penColor,const std::string& brushColor,int penSize);
+    Polygon(const Point& p1,const MyRgb &penColor, const MyRgb &brushColor,int penSize,bool isTransparent);
     void addPoint(int x , int y);
     int getNbPoints();
     Point getPoint(int p);

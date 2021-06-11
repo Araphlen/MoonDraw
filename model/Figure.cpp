@@ -3,22 +3,27 @@
 //
 
 #include "headers/Figure.h"
-#define DEFAULT_SHAPE 0
+#define EDIT_SHAPE 0
 
-Figure::Figure() {
-    m_shape = DEFAULT_SHAPE;
-    m_borderColor = new std::string("#000000");
-    m_fillColor= new std::string("#FFFFFF");
-    m_penSize=1;
-}
+//Figure::Figure() {
+//    m_shape = EDIT_SHAPE;
+//    m_borderColor = MyRgb(0,0,0);
+//    m_fillColor= MyRgb(255,255,255);
+//    m_penSize=1;
+//}
 
-Figure::Figure(const int shape,const std::string& penColor,const std::string& brushColor,int penSize) {
-    m_shape = shape;
-    m_borderColor = new std::string(penColor);
-    m_fillColor= new std::string(brushColor);
-    m_penSize= penSize;
-
-}
+//Figure::Figure(const int shape,const MyRgb penColor,const MyRgb brushColor,int penSize) {
+//    m_shape = shape;
+//    m_borderColor = penColor;
+//    m_fillColor= brushColor;
+//    m_penSize= penSize;
+//
+//}
+Figure::Figure(int mShape, const MyRgb &mBorderColor, const MyRgb &mFillColor, int mPenSize,bool isTransparent) : m_shape(mShape),
+                                                                                               m_borderColor(mBorderColor),
+                                                                                               m_fillColor(mFillColor),
+                                                                                               m_penSize(mPenSize),
+                                                                                               m_isTransparent(isTransparent){}
 
 int Figure::getShape() {
     return m_shape;
@@ -28,21 +33,31 @@ void Figure::setShape(int mShape) {
     m_shape = mShape;
 }
 
-void Figure::SetBorderColor(const std::string &color) {
-
-    *m_borderColor= color;
-}
-void Figure::SetFillColor(const std::string &fillColor) {
-    *m_fillColor= fillColor;
-}
-
-std::string Figure::GetBorderColor() const {
-    return *(m_borderColor);
-}
-std::string Figure::GetFillColor() const {
-    return *(m_fillColor);
-}
-
 int Figure::getPenSize() const {
     return m_penSize;
 }
+
+const MyRgb &Figure::getBorderColor() const {
+    return m_borderColor;
+}
+
+void Figure::setBorderColor(const MyRgb &mBorderColor) {
+    m_borderColor = mBorderColor;
+}
+
+const MyRgb &Figure::getFillColor() const {
+    return m_fillColor;
+}
+
+void Figure::setFillColor(const MyRgb &mFillColor) {
+    m_fillColor = mFillColor;
+}
+
+bool Figure::isTransparent() const {
+    return m_isTransparent;
+}
+
+void Figure::setIsTransparent(bool mIsTransparent) {
+    m_isTransparent = mIsTransparent;
+}
+

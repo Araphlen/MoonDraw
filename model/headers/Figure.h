@@ -7,15 +7,17 @@
 
 #include <string>
 #include "Point.h"
+#include "MyRgb.h"
 
 
 class Figure {
 public:
-    Figure();
+//    Figure();
+    Figure(int mShape, const MyRgb &mBorderColor, const MyRgb &mFillColor, int mPenSize,bool isTransparent);
 
     int getPenSize() const;
 
-    Figure(const int shape,const std::string& penColor,const std::string& brushColor,int penSize);
+//    Figure(const int shape,const MyRgb penColor,const MyRgb brushColor,int penSize);
 
     int getShape();
 
@@ -46,19 +48,26 @@ public:
     virtual Point getPoint(int p){return Point();};
 
     void setShape(int mShape);
-    void SetBorderColor(const std::string &color);
-    void SetFillColor(const std::string &fillColor);
 
-    std::string GetBorderColor() const;
-    std::string GetFillColor() const ;
+    const MyRgb &getBorderColor() const;
 
+    void setBorderColor(const MyRgb &mBorderColor);
+
+    const MyRgb &getFillColor() const;
+
+    void setFillColor(const MyRgb &mFillColor);
+
+    bool isTransparent() const;
+
+    void setIsTransparent(bool mIsTransparent);
 
 protected:
     std::string * m_label;
     int m_shape;
-    std::string * m_borderColor;
-    std::string * m_fillColor;
+    MyRgb m_borderColor;
+    MyRgb m_fillColor;
     int m_penSize;
+    bool m_isTransparent;
 };
 
 

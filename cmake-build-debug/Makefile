@@ -277,6 +277,33 @@ model/Figure.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/Figure.cpp.s
 .PHONY : model/Figure.cpp.s
 
+model/MyRgb.o: model/MyRgb.cpp.o
+
+.PHONY : model/MyRgb.o
+
+# target to build an object file
+model/MyRgb.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyRgb.cpp.o
+.PHONY : model/MyRgb.cpp.o
+
+model/MyRgb.i: model/MyRgb.cpp.i
+
+.PHONY : model/MyRgb.i
+
+# target to preprocess a source file
+model/MyRgb.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyRgb.cpp.i
+.PHONY : model/MyRgb.cpp.i
+
+model/MyRgb.s: model/MyRgb.cpp.s
+
+.PHONY : model/MyRgb.s
+
+# target to generate assembly for a file
+model/MyRgb.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/model/MyRgb.cpp.s
+.PHONY : model/MyRgb.cpp.s
+
 model/Point.o: model/Point.cpp.o
 
 .PHONY : model/Point.o
@@ -490,6 +517,9 @@ help:
 	@echo "... model/Figure.o"
 	@echo "... model/Figure.i"
 	@echo "... model/Figure.s"
+	@echo "... model/MyRgb.o"
+	@echo "... model/MyRgb.i"
+	@echo "... model/MyRgb.s"
 	@echo "... model/Point.o"
 	@echo "... model/Point.i"
 	@echo "... model/Point.s"

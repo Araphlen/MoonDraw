@@ -5,6 +5,7 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp
 CMakeFiles/main.dir/main.cpp.o: ../model/headers/Circle.h
 CMakeFiles/main.dir/main.cpp.o: ../model/headers/Drawing.h
 CMakeFiles/main.dir/main.cpp.o: ../model/headers/Figure.h
+CMakeFiles/main.dir/main.cpp.o: ../model/headers/MyRgb.h
 CMakeFiles/main.dir/main.cpp.o: ../model/headers/Point.h
 CMakeFiles/main.dir/main.cpp.o: ../model/headers/Rectangle.h
 CMakeFiles/main.dir/main.cpp.o: ../vue/headers/MyApp.h
@@ -258,6 +259,7 @@ CMakeFiles/main.dir/main.cpp.o: /usr/local/lib/wx/include/gtk3-unicode-static-3.
 CMakeFiles/main.dir/model/Circle.cpp.o: ../model/Circle.cpp
 CMakeFiles/main.dir/model/Circle.cpp.o: ../model/headers/Circle.h
 CMakeFiles/main.dir/model/Circle.cpp.o: ../model/headers/Figure.h
+CMakeFiles/main.dir/model/Circle.cpp.o: ../model/headers/MyRgb.h
 CMakeFiles/main.dir/model/Circle.cpp.o: ../model/headers/Point.h
 CMakeFiles/main.dir/model/Circle.cpp.o: /usr/local/include/wx-3.0/wx/afterstd.h
 CMakeFiles/main.dir/model/Circle.cpp.o: /usr/local/include/wx-3.0/wx/any.h
@@ -332,6 +334,7 @@ CMakeFiles/main.dir/model/Drawing.cpp.o: ../model/Drawing.cpp
 CMakeFiles/main.dir/model/Drawing.cpp.o: ../model/headers/Circle.h
 CMakeFiles/main.dir/model/Drawing.cpp.o: ../model/headers/Drawing.h
 CMakeFiles/main.dir/model/Drawing.cpp.o: ../model/headers/Figure.h
+CMakeFiles/main.dir/model/Drawing.cpp.o: ../model/headers/MyRgb.h
 CMakeFiles/main.dir/model/Drawing.cpp.o: ../model/headers/Point.h
 CMakeFiles/main.dir/model/Drawing.cpp.o: ../model/headers/Rectangle.h
 CMakeFiles/main.dir/model/Drawing.cpp.o: /usr/local/include/wx-3.0/wx/affinematrix2d.h
@@ -447,6 +450,7 @@ CMakeFiles/main.dir/model/Drawing.cpp.o: /usr/local/lib/wx/include/gtk3-unicode-
 CMakeFiles/main.dir/model/Ellipse.cpp.o: ../model/Ellipse.cpp
 CMakeFiles/main.dir/model/Ellipse.cpp.o: ../model/headers/Ellipse.h
 CMakeFiles/main.dir/model/Ellipse.cpp.o: ../model/headers/Figure.h
+CMakeFiles/main.dir/model/Ellipse.cpp.o: ../model/headers/MyRgb.h
 CMakeFiles/main.dir/model/Ellipse.cpp.o: ../model/headers/Point.h
 CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/afterstd.h
 CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/include/wx-3.0/wx/any.h
@@ -519,6 +523,7 @@ CMakeFiles/main.dir/model/Ellipse.cpp.o: /usr/local/lib/wx/include/gtk3-unicode-
 
 CMakeFiles/main.dir/model/Figure.cpp.o: ../model/Figure.cpp
 CMakeFiles/main.dir/model/Figure.cpp.o: ../model/headers/Figure.h
+CMakeFiles/main.dir/model/Figure.cpp.o: ../model/headers/MyRgb.h
 CMakeFiles/main.dir/model/Figure.cpp.o: ../model/headers/Point.h
 CMakeFiles/main.dir/model/Figure.cpp.o: /usr/local/include/wx-3.0/wx/afterstd.h
 CMakeFiles/main.dir/model/Figure.cpp.o: /usr/local/include/wx-3.0/wx/any.h
@@ -588,6 +593,9 @@ CMakeFiles/main.dir/model/Figure.cpp.o: /usr/local/include/wx-3.0/wx/xtihandler.
 CMakeFiles/main.dir/model/Figure.cpp.o: /usr/local/include/wx-3.0/wx/xtiprop.h
 CMakeFiles/main.dir/model/Figure.cpp.o: /usr/local/include/wx-3.0/wx/xtitypes.h
 CMakeFiles/main.dir/model/Figure.cpp.o: /usr/local/lib/wx/include/gtk3-unicode-static-3.0/wx/setup.h
+
+CMakeFiles/main.dir/model/MyRgb.cpp.o: ../model/MyRgb.cpp
+CMakeFiles/main.dir/model/MyRgb.cpp.o: ../model/headers/MyRgb.h
 
 CMakeFiles/main.dir/model/Point.cpp.o: ../model/Point.cpp
 CMakeFiles/main.dir/model/Point.cpp.o: ../model/headers/Point.h
@@ -662,6 +670,7 @@ CMakeFiles/main.dir/model/Point.cpp.o: /usr/local/lib/wx/include/gtk3-unicode-st
 
 CMakeFiles/main.dir/model/Polygon.cpp.o: ../model/Polygon.cpp
 CMakeFiles/main.dir/model/Polygon.cpp.o: ../model/headers/Figure.h
+CMakeFiles/main.dir/model/Polygon.cpp.o: ../model/headers/MyRgb.h
 CMakeFiles/main.dir/model/Polygon.cpp.o: ../model/headers/Point.h
 CMakeFiles/main.dir/model/Polygon.cpp.o: ../model/headers/Polygon.h
 CMakeFiles/main.dir/model/Polygon.cpp.o: /usr/local/include/wx-3.0/wx/afterstd.h
@@ -735,6 +744,7 @@ CMakeFiles/main.dir/model/Polygon.cpp.o: /usr/local/lib/wx/include/gtk3-unicode-
 
 CMakeFiles/main.dir/model/Rectangle.cpp.o: ../model/Rectangle.cpp
 CMakeFiles/main.dir/model/Rectangle.cpp.o: ../model/headers/Figure.h
+CMakeFiles/main.dir/model/Rectangle.cpp.o: ../model/headers/MyRgb.h
 CMakeFiles/main.dir/model/Rectangle.cpp.o: ../model/headers/Point.h
 CMakeFiles/main.dir/model/Rectangle.cpp.o: ../model/headers/Rectangle.h
 CMakeFiles/main.dir/model/Rectangle.cpp.o: /usr/local/include/wx-3.0/wx/afterstd.h
@@ -809,6 +819,7 @@ CMakeFiles/main.dir/model/Rectangle.cpp.o: /usr/local/lib/wx/include/gtk3-unicod
 CMakeFiles/main.dir/vue/MyApp.cpp.o: ../model/headers/Circle.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: ../model/headers/Drawing.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: ../model/headers/Figure.h
+CMakeFiles/main.dir/vue/MyApp.cpp.o: ../model/headers/MyRgb.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: ../model/headers/Point.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: ../model/headers/Rectangle.h
 CMakeFiles/main.dir/vue/MyApp.cpp.o: ../vue/MyApp.cpp
@@ -1063,6 +1074,7 @@ CMakeFiles/main.dir/vue/MyApp.cpp.o: /usr/local/lib/wx/include/gtk3-unicode-stat
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: ../model/headers/Circle.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: ../model/headers/Drawing.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: ../model/headers/Figure.h
+CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: ../model/headers/MyRgb.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: ../model/headers/Point.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: ../model/headers/Rectangle.h
 CMakeFiles/main.dir/vue/MyControlPanel.cpp.o: ../vue/MyControlPanel.cpp
@@ -1317,6 +1329,7 @@ CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Circle.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Drawing.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Ellipse.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Figure.h
+CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/MyRgb.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Point.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Polygon.h
 CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: ../model/headers/Rectangle.h
@@ -1571,6 +1584,7 @@ CMakeFiles/main.dir/vue/MyDrawingPanel.cpp.o: /usr/local/lib/wx/include/gtk3-uni
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../model/headers/Circle.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../model/headers/Drawing.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../model/headers/Figure.h
+CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../model/headers/MyRgb.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../model/headers/Point.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../model/headers/Rectangle.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../vue/MyFrame.cpp

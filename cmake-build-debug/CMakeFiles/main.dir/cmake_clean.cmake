@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/model/Drawing.cpp.o"
   "CMakeFiles/main.dir/model/Ellipse.cpp.o"
   "CMakeFiles/main.dir/model/Figure.cpp.o"
+  "CMakeFiles/main.dir/model/MyRgb.cpp.o"
   "CMakeFiles/main.dir/model/Point.cpp.o"
   "CMakeFiles/main.dir/model/Polygon.cpp.o"
   "CMakeFiles/main.dir/model/Rectangle.cpp.o"

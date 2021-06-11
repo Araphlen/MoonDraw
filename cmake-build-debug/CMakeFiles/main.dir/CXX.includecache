@@ -24,15 +24,33 @@ Rectangle.h
 Circle.h
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Circle.h
 
+/home/araphlen/CLionProjects/MoonDraw/model/headers/Ellipse.h
+Point.h
+/home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
+Figure.h
+/home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
+
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
 string
 -
 Point.h
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
+MyRgb.h
+/home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
+
+/home/araphlen/CLionProjects/MoonDraw/model/headers/MyRgb.h
 
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
 wx/gdicmn.h
 -
+
+/home/araphlen/CLionProjects/MoonDraw/model/headers/Polygon.h
+vector
+-
+Point.h
+/home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
+Figure.h
+/home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
 
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Rectangle.h
 Figure.h
@@ -49,6 +67,24 @@ headers/MyFrame.h
 /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
 headers/MyDrawingPanel.h
 /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyDrawingPanel.h
+
+/home/araphlen/CLionProjects/MoonDraw/vue/MyDrawingPanel.cpp
+langinfo.h
+-
+headers/MyDrawingPanel.h
+/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyDrawingPanel.h
+headers/MyFrame.h
+/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
+../model/headers/Ellipse.h
+/home/araphlen/CLionProjects/MoonDraw/model/headers/Ellipse.h
+../model/headers/Polygon.h
+/home/araphlen/CLionProjects/MoonDraw/model/headers/Polygon.h
+iostream
+-
+expat.h
+-
+search.h
+-
 
 /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyControlPanel.h
 wx/wxprec.h

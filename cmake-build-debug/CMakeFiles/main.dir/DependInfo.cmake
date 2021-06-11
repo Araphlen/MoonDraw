@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/araphlen/CLionProjects/MoonDraw/model/Drawing.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Drawing.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/model/Ellipse.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Ellipse.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/model/Figure.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Figure.cpp.o"
+  "/home/araphlen/CLionProjects/MoonDraw/model/MyRgb.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/MyRgb.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/model/Point.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Point.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/model/Polygon.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Polygon.cpp.o"
   "/home/araphlen/CLionProjects/MoonDraw/model/Rectangle.cpp" "/home/araphlen/CLionProjects/MoonDraw/cmake-build-debug/CMakeFiles/main.dir/model/Rectangle.cpp.o"
