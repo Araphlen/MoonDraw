@@ -60,6 +60,10 @@ Figure.h
 Point.h
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
 
+/home/araphlen/CLionProjects/MoonDraw/vue/MyApp.cpp
+headers/MyApp.h
+/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyApp.h
+
 /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyApp.h
 wx/wxprec.h
 /home/araphlen/CLionProjects/MoonDraw/vue/headers/wx/wxprec.h

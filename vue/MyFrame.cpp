@@ -64,7 +64,7 @@ void MyFrame::OnClose(wxCloseEvent& event)
 void MyFrame::OnAbout(wxCommandEvent& WXUNUSED(event))
 //------------------------------------------------------------------------
 {
-    wxMessageBox(wxT("How to .. \n\n- use 2 panels (one for controls, one for drawings)\n- manage basic events (so that controls impact drawings)\n\n... with wxWidgets (3.0.2)\n\nPascal Bertolino UGA - GIPSA-lab, Grenoble - France\npascal.bertolino@gipsa-lab.fr"),
+    wxMessageBox(wxT("How to .. \n\n- use 2 panels (one for controls, one for drawings)\n- manage basic events (so that controls impact drawings)\n\n... with wxWidgets (3.0.2)\n\nMARTIN Mickael : DUT info AS \n\tpro.martin.mickael@gmail.com\n\nTULLI Eliot : DUT info AS\n\teliot.tulli@netcourrier.com"),
                  wxT(APP_NAME), wxOK | wxICON_INFORMATION ) ;
 }
 
