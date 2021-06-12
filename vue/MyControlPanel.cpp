@@ -121,7 +121,7 @@ void MyControlPanel::OnButtonRectangle(wxCommandEvent &event) {
     MyFrame* frame = (MyFrame*)GetParent() ;
     frame->GetDrawingPanel()->setMode(MODE_DRAW);
     frame->GetDrawingPanel()->setStatus(STATUS_RECTANGLE);
-    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR());
+    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR()+"                    Shape : Rectangle");
     frame->GetDrawingPanel()->Refresh();
 
 }
@@ -131,7 +131,7 @@ void MyControlPanel::OnButtonCircle(wxCommandEvent &event) {
     MyFrame* frame = (MyFrame*)GetParent();
     frame->GetDrawingPanel()->setMode(MODE_DRAW);
     frame->GetDrawingPanel()->setStatus(STATUS_CIRCLE);
-    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR());
+    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR()+"                   Shape : Circle");
 
 }
 
@@ -141,7 +141,7 @@ void MyControlPanel::OnButtonSquare(wxCommandEvent &event) {
     MyFrame* frame = (MyFrame*)GetParent();
     frame->GetDrawingPanel()->setMode(MODE_DRAW);
     frame->GetDrawingPanel()->setStatus(STATUS_SQUARE);
-    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR());
+    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR()+"                   Shape : Squarre");
 
 
 }
@@ -152,7 +152,7 @@ void MyControlPanel::OnButtonElipse(wxCommandEvent &event) {
     MyFrame* frame = (MyFrame*)GetParent();
     frame->GetDrawingPanel()->setMode(MODE_DRAW);
     frame->GetDrawingPanel()->setStatus(STATUS_ELLIPSE);
-    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR());
+    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR()+"                   Shape : Ellipse");
 
 }
 
@@ -162,7 +162,7 @@ void MyControlPanel::OnButtonPolygon(wxCommandEvent &event) {
     MyFrame* frame = (MyFrame*)GetParent();
     frame->GetDrawingPanel()->setMode(MODE_DRAW);
     frame->GetDrawingPanel()->setStatus(STATUS_POLYGON);
-    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR());
+    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR()+"                   Shape : Polygon /_\\ DBLLEFTCLICK TO CONFIRM THE POLYGON");
 
 
 }
