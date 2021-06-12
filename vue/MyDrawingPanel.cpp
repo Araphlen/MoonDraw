@@ -37,23 +37,22 @@ MyDrawingPanel::MyDrawingPanel(wxWindow *parent) : wxPanel(parent)
     Bind(wxEVT_MOTION, &MyDrawingPanel::OnMouseMove, this);
     Bind(wxEVT_LEFT_DOWN, &MyDrawingPanel::OnMouseLeftDown, this);
     Bind(wxEVT_LEFT_DCLICK, &MyDrawingPanel::OnMouseLeftDClick,this);
+    Bind(wxEVT_MIDDLE_DOWN, &MyDrawingPanel::OnMouseMiddleDown,this);
     Bind(wxEVT_LEFT_UP, &MyDrawingPanel::OnMouseLeftUp,this);
     Bind(wxEVT_PAINT, &MyDrawingPanel::OnPaint, this) ;
     m_onePoint.x = (w-WIDGET_PANEL_WIDTH)/2 ;
     m_onePoint.y = h/2 ;
-    m_mousePoint = m_onePoint ;
     m_status = STATUS_RECTANGLE;
     m_drawing = Drawing();
     m_currentIndexFigure=0;
     m_isdrawing =false;
     m_mode=MODE_SELECT;
-    MyFrame* frame = (MyFrame*)GetParent() ;
-    frame->GetControlPanel()->SetModeLabel(this->getModeSTR());
 
 }
 
-
 void MyDrawingPanel::OnMouseLeftDClick(wxMouseEvent &event) {
+    MyFrame* frame = (MyFrame*)GetParent() ;
+
     switch (m_mode) {
         case MODE_DRAW:
             switch (m_status) {
@@ -61,38 +60,53 @@ void MyDrawingPanel::OnMouseLeftDClick(wxMouseEvent &event) {
                     if (m_isdrawing) {
                         m_currentIndexFigure++;
                         m_isdrawing = false;
-                        Refresh();
                     }
                     break;
             }
             break;
         case MODE_SELECT:
             if (!m_drawing.isEmpty()) {
-                std::cout<<"-1"<<std::endl;
-                int figindex = m_drawing.nbFigures();
-                Figure* figure = m_drawing[figindex-1];
-                while (figindex >= 0 && !figure->areCoorInFigure(event.m_x, event.m_y)) {
-                    std::cout<<"0"<<std::endl;
+                int figindex = m_drawing.nbFigures()-1;
+                Figure* figure=m_drawing[figindex] ;
+                 while (figindex >= 0 && !figure->areCoorInFigure(event.m_x, event.m_y))
+                {
                     --figindex;
-                    figure = m_drawing[figindex];
+                    figure= m_drawing[figindex];
                 }
                 if (figindex >= 0) {
-                    std::cout<<"1"<<std::endl;
-                    this->setMode(MODE_EDIT);
+                    std::cout<<"Onsélèction un rectangle"<<std::endl;
+                    setMode(MODE_EDIT);
+                    setStatus(figure->getShape());
+                    frame->SetStatusText(getModeSTR());
                     figure->setSelect(true);
                     //We set the current figure to be able to edit it easily
+                    m_currentIndexFigure = figindex;
                     m_currentFigure= figure;
-                    Refresh();
                 } else {
-                    std::cout<<"2"<<std::endl;
                     m_drawing.unSelectAll();
                 }
-
             }
             break;
     }
+    Refresh();
 }
 
+
+void MyDrawingPanel::OnMouseMiddleDown(wxMouseEvent &event) {
+    if (m_mode==MODE_EDIT){
+        switch (m_status) {
+            case RECT_SHAPE:
+                m_currentFigure =m_currentFigure->copyTo(event.m_x,event.m_y);
+                m_drawing.addFigure(m_currentFigure);
+                m_drawing.unSelectAll();
+                m_currentIndexFigure = m_drawing.nbFigures()-1;
+                m_currentFigure = m_drawing[m_currentIndexFigure];
+                m_currentFigure->setSelect(true);
+                break;
+        }
+    }
+    Refresh();
+}
 //------------------------------------------------------------------------
 void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
 //------------------------------------------------------------------------
@@ -170,40 +184,37 @@ void MyDrawingPanel::OnMouseLeftDown(wxMouseEvent &event)
             break;
         case MODE_EDIT:
             switch (m_status) {
-                case STATUS_RECTANGLE:
+                case RECT_SHAPE:
                     tmpTopleft = m_currentFigure->getTopLeft();
                     tmpBottomRight = m_currentFigure->getBottomRight();
-                    if (event.m_x<tmpTopleft.getX()+10 && event.m_x>tmpTopleft.getX()-10 && event.m_y<tmpTopleft.getY()+10 && event.m_x>tmpTopleft.getY()-10){
+                    if (event.m_x<tmpTopleft.getX()+10 && event.m_x>tmpTopleft.getX()-10 && event.m_y<tmpTopleft.getY()+10 && event.m_y>tmpTopleft.getY()-10){
                         m_currentFigure->setEditTopLeft(true);
                     }
-                    if (event.m_x<tmpBottomRight.getX()+10 && event.m_x>tmpBottomRight.getX()-10 && event.m_y<tmpBottomRight.getY()+10 && event.m_x>tmpBottomRight.getY()-10){
+                    else if (event.m_x<tmpBottomRight.getX()+10 && event.m_x>tmpBottomRight.getX()-10 && event.m_y<tmpBottomRight.getY()+10 && event.m_y>tmpBottomRight.getY()-10){
                         m_currentFigure->setEditBottomRight(true);
+                    }
+                    else if (m_currentFigure->areCoorInFigure(event.m_x,event.m_y)){
+                        m_currentFigure->setIsMoving(true);
                     }
 
                     break;
-                case STATUS_CIRCLE:
+                case CIRCLE_SHAPE:
                     if (m_isdrawing == false) {
+                        //TODO
                         Refresh();
                     }
                     break;
-                case STATUS_SQUARE:
+
+                case POLYGONE_SHAPE:
                     if (m_isdrawing == false) {
-                        Refresh();
-                    }
-                    break;
-                case STATUS_ELLIPSE:
-                    if (m_isdrawing == false) {
-                        Refresh();
-                    }
-                    break;
-                case STATUS_POLYGON:
-                    if (m_isdrawing == false) {
+                        //TODO
                         Refresh();
                     }
                     break;
             }
             break;
         default:
+            //Do nothing if mode != DRAW or EDIT
             break;
     }
 }
@@ -258,12 +269,14 @@ void MyDrawingPanel::OnMouseMove(wxMouseEvent &event)
             switch (m_currentFigure->getShape()) {
                 case RECT_SHAPE:
                     if (m_currentFigure->isBottomRightEditable()) {
-                        m_drawing.setCurrentRectangleBR(m_currentIndexFigure-1, event.m_x, event.m_y);
-                        Refresh();
+                        m_drawing.setCurrentRectangleBR(m_currentIndexFigure, event.m_x, event.m_y);
                     } else if (m_currentFigure->isTopLeftEditable()) {
-                        m_drawing.setCurrentRectangleTL(m_currentIndexFigure-1, event.m_x, event.m_y);
-                        Refresh();
+                        m_drawing.setCurrentRectangleTL(m_currentIndexFigure, event.m_x, event.m_y);
                     }
+                    else if(m_currentFigure->isMoving()){
+                        m_currentFigure->moveTo(event.m_x,event.m_y);
+                    }
+                    Refresh();
                     break;
             }
 
@@ -283,12 +296,12 @@ void MyDrawingPanel::OnMouseLeftUp(wxMouseEvent &event)
                 Refresh();
             }
         }
-
-
         if (m_currentFigure->isTopLeftEditable()) {
             m_currentFigure->setEditTopLeft(false);
         } else if (m_currentFigure->isBottomRightEditable()) {
             m_currentFigure->setEditBottomRight(false);
+        } else if (m_currentFigure->isMoving()){
+            m_currentFigure->setIsMoving(false);
         }
     }
 }
@@ -303,142 +316,106 @@ void MyDrawingPanel::OnPaint(wxPaintEvent &event)
 // You have to call OnPaint with Refresh() when you need to update the panel content
 {
     // read the control values
-    MyFrame* frame =  (MyFrame*)GetParent() ;
+    MyFrame *frame = (MyFrame *) GetParent();
     Point tmpTopleft;
     Point tmpBottomRight = Point();
-    Point tmpCenterPoint= Point();
-    Point tmpCirclePoint= Point();
+    Point tmpCenterPoint = Point();
+    Point tmpCirclePoint = Point();
 
     // then paint
     wxPaintDC dc(this);
-/*
-//            for (int i = 0; i < m_drawing.nbFigures(); ++i) {
-//                Figure *figToPaint = m_drawing[i];
-//
-//                wxColour penColor = wxColour(figToPaint->getBorderColor().getR(),figToPaint->getBorderColor().getG(),figToPaint->getBorderColor().getB());
-//                dc.SetPen(wxPen(penColor,figToPaint->getPenSize() ));
-//
-//                wxColour brushColor;
-//                if (figToPaint->isTransparent()){
-//                    dc.SetBrush(*wxTRANSPARENT_BRUSH);
-//                } else{
-//                    brushColor = wxColour(figToPaint->getFillColor().getR(),figToPaint->getFillColor().getG(),figToPaint->getFillColor().getB());
-//                    dc.SetBrush(wxBrush(brushColor));
-//                }
-//
-//                switch (figToPaint->getShape()) {
-//                    case RECT_SHAPE:
-//                        dc.DrawRectangle(wxRect(wxPoint(figToPaint->getTopLeft().getX(), figToPaint->getTopLeft().getY()), wxPoint(
-//                                figToPaint->getBottomRight().getX(),
-//                                figToPaint->getBottomRight().getY())));
-//                        break;
-//                    case CIRCLE_SHAPE:
-//                        dc.DrawCircle(wxPoint(figToPaint->getCenter().getX(), figToPaint->getCenter().getY()),
-//                                      wxCoord(figToPaint->getRay()));
-//                        break;
-//                    case ELLIPSE_SHAPE:
-//                        dc.DrawEllipse(wxRect(wxPoint(figToPaint->getTopLeft().getX(), figToPaint->getTopLeft().getY()), wxPoint(
-//                                figToPaint->getBottomRight().getX(),
-//                                figToPaint->getBottomRight().getY())));
-//                        break;
-//                    case POLYGONE_SHAPE:
-//                        if (figToPaint->getNbPoints()>1) {
-//                            for (int p = 1; p < figToPaint->getNbPoints(); ++p) {
-//                                dc.DrawLine(wxPoint(figToPaint->getPoint(p-1).getX(), figToPaint->getPoint(p-1).getY()),wxPoint(figToPaint->getPoint(p).getX(), figToPaint->getPoint(p).getY()));
-//                            }
-//                            dc.DrawLine(wxPoint(figToPaint->getPoint(0).getX(), figToPaint->getPoint(0).getY()),wxPoint(figToPaint->getPoint(figToPaint->getNbPoints()-1).getX(), figToPaint->getPoint(figToPaint->getNbPoints()-1).getY()));
-//                        }
-//                        break;
-//                }
-//            }
-*/
-            for (int i = 0; i < m_drawing.nbFigures(); ++i) {
-                Figure *figToPaint = m_drawing[i];
 
-                wxColour penColor = wxColour(figToPaint->getBorderColor().getR(),figToPaint->getBorderColor().getG(),figToPaint->getBorderColor().getB());
-                dc.SetPen(wxPen(penColor,figToPaint->getPenSize() ));
+    for (int i = 0; i < m_drawing.nbFigures(); ++i) {
+        Figure *figToPaint = m_drawing[i];
 
-                wxColour brushColor;
-                if (figToPaint->isTransparent()){
-                    dc.SetBrush(*wxTRANSPARENT_BRUSH);
-                } else{
-                    brushColor = wxColour(figToPaint->getFillColor().getR(),figToPaint->getFillColor().getG(),figToPaint->getFillColor().getB());
-                    dc.SetBrush(wxBrush(brushColor));
-                }
+        wxColour penColor = wxColour(figToPaint->getBorderColor().getR(), figToPaint->getBorderColor().getG(),
+                                     figToPaint->getBorderColor().getB());
+        dc.SetPen(wxPen(penColor, figToPaint->getPenSize()));
 
-                switch (figToPaint->getShape()) {
-                    case RECT_SHAPE:
-                        dc.DrawRectangle(wxRect(wxPoint(figToPaint->getTopLeft().getX(), figToPaint->getTopLeft().getY()), wxPoint(
+        wxColour brushColor;
+        if (figToPaint->isTransparent()) {
+            dc.SetBrush(*wxTRANSPARENT_BRUSH);
+        } else {
+            brushColor = wxColour(figToPaint->getFillColor().getR(), figToPaint->getFillColor().getG(),
+                                  figToPaint->getFillColor().getB());
+            dc.SetBrush(wxBrush(brushColor));
+        }
+
+        switch (figToPaint->getShape()) {
+            case RECT_SHAPE:
+                dc.DrawRectangle(
+                        wxRect(wxPoint(figToPaint->getTopLeft().getX(), figToPaint->getTopLeft().getY()), wxPoint(
                                 figToPaint->getBottomRight().getX(),
                                 figToPaint->getBottomRight().getY())));
 
-                        if (figToPaint->isSelected()) {
-                            tmpTopleft= figToPaint->getTopLeft();
-                            tmpBottomRight = figToPaint->getBottomRight();
-                        }
+                if (figToPaint->isSelected()) {
+                    tmpTopleft = figToPaint->getTopLeft();
+                    tmpBottomRight = figToPaint->getBottomRight();
+                }
 
-                        break;
+                break;
 
-                    case CIRCLE_SHAPE:
-                        dc.DrawCircle(wxPoint(figToPaint->getCenter().getX(), figToPaint->getCenter().getY()),
-                                      wxCoord(figToPaint->getRay()));
+            case CIRCLE_SHAPE:
+                dc.DrawCircle(wxPoint(figToPaint->getCenter().getX(), figToPaint->getCenter().getY()),
+                              wxCoord(figToPaint->getRay()));
 
-                        if (figToPaint->isSelected()) {
-                            tmpCenterPoint = figToPaint->getCenter();
-                        }
+                if (figToPaint->isSelected()) {
+                    tmpCenterPoint = figToPaint->getCenter();
+                }
+                break;
 
-                        break;
-
-                    case ELLIPSE_SHAPE:
-                        dc.DrawEllipse(wxRect(wxPoint(figToPaint->getTopLeft().getX(), figToPaint->getTopLeft().getY()), wxPoint(
+            case ELLIPSE_SHAPE:
+                dc.DrawEllipse(
+                        wxRect(wxPoint(figToPaint->getTopLeft().getX(), figToPaint->getTopLeft().getY()), wxPoint(
                                 figToPaint->getBottomRight().getX(),
                                 figToPaint->getBottomRight().getY())));
 
-                        if (figToPaint->isSelected()) {
-                            tmpTopleft= figToPaint->getTopLeft();
-                            tmpBottomRight = figToPaint->getBottomRight();
-                        }
-
-                        break;
-
-                    case POLYGONE_SHAPE:
-                        if (figToPaint->getNbPoints()>1) {
-                            for (int p = 1; p < figToPaint->getNbPoints(); ++p) {
-                                dc.DrawLine(wxPoint(figToPaint->getPoint(p-1).getX(), figToPaint->getPoint(p-1).getY()),wxPoint(figToPaint->getPoint(p).getX(), figToPaint->getPoint(p).getY()));
-                                dc.SetPen(wxPen(*wxRED,5));
-                                dc.DrawCircle(wxPoint(figToPaint->getPoint(p).getX(), figToPaint->getPoint(p).getY()),wxCoord(2));
-                            }
-                            if (figToPaint->isSelected()) {
-                                dc.DrawLine(wxPoint(figToPaint->getPoint(0).getX(), figToPaint->getPoint(0).getY()),
-                                            wxPoint(figToPaint->getPoint(figToPaint->getNbPoints() - 1).getX(),
-                                                    figToPaint->getPoint(figToPaint->getNbPoints() - 1).getY()));
-                                dc.SetPen(wxPen(*wxRED, 5));
-                                dc.DrawCircle(wxPoint(figToPaint->getPoint(0).getX(), figToPaint->getPoint(0).getY()),
-                                              wxCoord(2));
-                            }
-                        }
-                        break;
+                if (figToPaint->isSelected()) {
+                    tmpTopleft = figToPaint->getTopLeft();
+                    tmpBottomRight = figToPaint->getBottomRight();
                 }
+                break;
 
-            }
-
+            case POLYGONE_SHAPE:
+                if (figToPaint->getNbPoints() > 1) {
+                    for (int p = 1; p < figToPaint->getNbPoints(); ++p) {
+                        dc.DrawLine(wxPoint(figToPaint->getPoint(p - 1).getX(),
+                                            figToPaint->getPoint(p - 1).getY()),
+                                    wxPoint(figToPaint->getPoint(p).getX(),
+                                            figToPaint->getPoint(p).getY()));
+                    }
+                    dc.DrawLine(wxPoint(figToPaint->getPoint(0).getX(), figToPaint->getPoint(0).getY()),
+                                wxPoint(figToPaint->getPoint(figToPaint->getNbPoints() - 1).getX(),
+                                        figToPaint->getPoint(figToPaint->getNbPoints() - 1).getY()));
+                }
+                if (figToPaint->isSelected()) {
+                    dc.DrawLine(wxPoint(figToPaint->getPoint(0).getX(), figToPaint->getPoint(0).getY()),
+                                wxPoint(figToPaint->getPoint(figToPaint->getNbPoints() - 1).getX(),
+                                        figToPaint->getPoint(figToPaint->getNbPoints() - 1).getY()));
+                    dc.SetPen(wxPen(*wxRED, 5));
+                    dc.DrawCircle(wxPoint(figToPaint->getPoint(0).getX(), figToPaint->getPoint(0).getY()),
+                                  wxCoord(2));
+                }
+                break;
+        }
+    }
     dc.SetPen(wxPen(*wxRED, 5));
 
-    if (tmpTopleft.getX()!=-1){
+    if (tmpTopleft.getX() != -1) {
         dc.DrawCircle(wxPoint(tmpTopleft.getX(), tmpTopleft.getY()),
                       wxCoord(2));
     }
-    if (tmpBottomRight.getX()!=-1){
+    if (tmpBottomRight.getX() != -1) {
         dc.DrawCircle(
                 wxPoint(tmpBottomRight.getX(), tmpBottomRight.getY()),
                 wxCoord(2));
     }
-    if (tmpCenterPoint.getX()!=-1){
+    if (tmpCenterPoint.getX() != -1) {
         dc.DrawCircle(
                 wxPoint(tmpCenterPoint.getX(), tmpCenterPoint.getY()),
                 wxCoord(2));
     }
-    if (tmpCirclePoint.getX()!=-1){
+    if (tmpCirclePoint.getX() != -1) {
         dc.DrawCircle(
                 wxPoint(tmpCirclePoint.getX(), tmpCirclePoint.getY()),
                 wxCoord(2));
@@ -477,8 +454,6 @@ void MyDrawingPanel::SaveFile(wxString fileName)
 
 void MyDrawingPanel::setStatus(int mStatus) {
     m_status = mStatus;
-    m_drawing.unSelectAll();
-    m_mode = MODE_DRAW;
 }
 
 void MyDrawingPanel::setCurrentIndexTempsPoint(int mCurrentIndexTempsPoint) {
@@ -506,19 +481,26 @@ void MyDrawingPanel::redo() {
 }
 
 void MyDrawingPanel::setMode(int mMode) {
+    if (mMode== MODE_SELECT || mMode==MODE_DRAW){
+        m_drawing.unSelectAll();
+        if (!m_drawing.isEmpty()) {
+            m_currentIndexFigure = m_drawing.nbFigures();
+            m_currentFigure = m_drawing[m_currentIndexFigure];
+        }
+    }
     m_mode = mMode;
 }
 
 std::string MyDrawingPanel::getModeSTR() {
     switch (m_mode) {
         case MODE_EDIT:
-            return "edition";
+            return "Mode edition         Resize : Drag the red point on the shape      Paste : scrool click to copy paste the selected element on the pointer location";
             break;
         case MODE_DRAW:
-            return "draw";
+            return "Mode draw            press the left button then drag to size the shape as yo want";
             break;
         case MODE_SELECT:
-            return "select";
+            return "Mode select          Selection : double left click on the shape you want";
             break;
     }
 }

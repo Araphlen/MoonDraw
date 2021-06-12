@@ -165,6 +165,9 @@
 		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyInfoPanel.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

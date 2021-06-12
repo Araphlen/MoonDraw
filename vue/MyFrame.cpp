@@ -3,6 +3,7 @@
 //
 
 #include "headers/MyFrame.h"
+#include "headers/MyInfoPanel.h"
 
 //************************************************************************
 //************************************************************************
@@ -32,7 +33,6 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     Bind(wxEVT_MENU, &MyFrame::OnAbout, this, ID_ABOUT);
     Bind(wxEVT_CLOSE_WINDOW, &MyFrame::OnClose, this);
     Bind(wxEVT_SIZE, &MyFrame::OnSize, this);
-
     SetMenuBar( menuBar );
 
 // create the panel that will contain the controls
@@ -40,7 +40,7 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
 // create the panel that will display the graphics
     m_drawingPanel = new MyDrawingPanel(this);
     CreateStatusBar() ;
-    SetStatusText(wxT("click in the right panel and tune the controls of the left panel. Visit the File menu!")) ;
+    SetStatusText(m_drawingPanel->getModeSTR()) ;
     Centre() ; // Guess what it does ;-)
 }
 

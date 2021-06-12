@@ -49,9 +49,9 @@ private:
     void OnMouseMove(wxMouseEvent &event) ;
     void OnMouseLeftDClick(wxMouseEvent &event);
     void OnMouseLeftDown(wxMouseEvent &event) ;
+    void OnMouseMiddleDown(wxMouseEvent &event) ;
     void OnMouseLeftUp(wxMouseEvent &event);
     void OnPaint(wxPaintEvent &event) ;
-    wxPoint m_mousePoint ;
     wxPoint m_onePoint ;
     int m_status;
     Drawing m_drawing;

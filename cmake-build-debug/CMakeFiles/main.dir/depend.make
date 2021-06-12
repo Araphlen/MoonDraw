@@ -1591,6 +1591,7 @@ CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../vue/MyFrame.cpp
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../vue/headers/MyControlPanel.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../vue/headers/MyDrawingPanel.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../vue/headers/MyFrame.h
+CMakeFiles/main.dir/vue/MyFrame.cpp.o: ../vue/headers/MyInfoPanel.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/accel.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/access.h
 CMakeFiles/main.dir/vue/MyFrame.cpp.o: /usr/local/include/wx-3.0/wx/affinematrix2d.h

@@ -1592,6 +1592,7 @@ CMakeFiles/main.dir/vue/MyFrame.cpp.o
  /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyControlPanel.h
  /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyDrawingPanel.h
  /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
+ /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyInfoPanel.h
  /usr/local/include/wx-3.0/wx/accel.h
  /usr/local/include/wx-3.0/wx/access.h
  /usr/local/include/wx-3.0/wx/affinematrix2d.h

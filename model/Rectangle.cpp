@@ -11,6 +11,8 @@ Rectangle::Rectangle() :Figure(RECT_SHAPE,MyRgb(0,0,0),MyRgb(255,255,255),1, fal
     m_h=10;
     m_w=20;
     m_bottomRight = Point(m_w+ m_topLeft.getX(), m_h + m_topLeft.getY());
+    m_TLEditable= false;
+    m_BREditable=false;
 }
 
 Rectangle::Rectangle(const Point &topLeft, int h, int w,const MyRgb &penColor, const MyRgb &brushColor,int penSize, bool isTransparent) :Figure(RECT_SHAPE,penColor,brushColor,penSize,isTransparent) {
@@ -18,12 +20,16 @@ Rectangle::Rectangle(const Point &topLeft, int h, int w,const MyRgb &penColor, c
     m_h = h;
     m_w = w;
     m_bottomRight = Point(m_w+ m_topLeft.getX(), m_h + m_topLeft.getY());
+    m_TLEditable= false;
+    m_BREditable=false;
 }
 Rectangle::Rectangle(const Point &topLeft, const Point &bottomRight,const MyRgb &penColor, const MyRgb &brushColor,int penSize,bool isTransparent) :Figure(RECT_SHAPE,penColor,brushColor,penSize,isTransparent) {
     m_topLeft = topLeft;
     m_bottomRight =bottomRight;
     m_h = m_bottomRight.getY() - m_topLeft.getY();
     m_w = m_bottomRight.getX() - m_topLeft.getX();
+    m_TLEditable= false;
+    m_BREditable=false;
 
 }
 
@@ -73,11 +79,11 @@ bool Rectangle::areCoorInFigure(int mousex, int mousey) const {
 }
 
 void Rectangle::setEditBottomRight(bool isEditable) {
-    m_TLEditable = isEditable;
+    m_BREditable = isEditable;
 }
 
 void Rectangle::setEditTopLeft(bool isEditable) {
-    m_BREditable = isEditable;
+    m_TLEditable = isEditable;
 }
 
 bool Rectangle::isBottomRightEditable(){
@@ -88,8 +94,18 @@ bool Rectangle::isTopLeftEditable() {
     return m_TLEditable;
 }
 
+void Rectangle::moveTo(int x, int y) {
+    int tmph =m_h;
+    int tmpw = m_w;
+    setTopLeft(x-(tmpw/2),y-(tmph/2));
+    setW(tmpw);
+    setH(tmph);
+}
 
 
+Figure * Rectangle::copyTo(int x, int y) {
+    return new Rectangle(Point(x-(m_w/2),y-(m_w/2)),m_h,m_w,m_borderColor,m_fillColor,m_penSize,m_isTransparent);
+}
 
 
 

@@ -33,6 +33,9 @@ public:
 
     bool isBottomRightEditable();
     bool isTopLeftEditable();
+
+    void moveTo(int x, int y);
+    Figure *copyTo(int x, int y);
 private:
     Point m_topLeft;
     Point m_bottomRight;
@@ -40,7 +43,6 @@ private:
     int m_w;
     bool m_TLEditable;
     bool m_BREditable;
-
 };
 
 

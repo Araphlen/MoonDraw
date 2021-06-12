@@ -52,6 +52,14 @@ void Figure::setSelect(bool isSelected) {
     m_isSelected=isSelected;
 }
 
+bool Figure::isMoving() const {
+    return m_isMoving;
+}
+
+void Figure::setIsMoving(bool mIsMoving) {
+    m_isMoving = mIsMoving;
+}
+
 
 
 

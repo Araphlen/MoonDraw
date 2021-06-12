@@ -72,6 +72,11 @@ public:
     virtual bool isTopLeftEditable(){return false;};
 
 
+    virtual void moveTo(int x, int y){};
+    virtual Figure* copyTo(int x, int y){ return nullptr; };
+
+    bool isMoving() const;
+    void setIsMoving(bool mIsMoving);
 
 protected:
     std::string * m_label;
@@ -81,6 +86,7 @@ protected:
     int m_penSize;
     bool m_isTransparent;
     bool m_isSelected;
+    bool m_isMoving;
 };
 
 

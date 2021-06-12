@@ -8,13 +8,12 @@
 #include "headers/MyDrawingPanel.h"
 
 
-#define STATUS_SELECT 0
 #define STATUS_RECTANGLE 1
 #define STATUS_CIRCLE 2
 #define STATUS_SQUARE 3
 #define STATUS_ELLIPSE 4
 #define STATUS_POLYGON 5
-#define EDIT_STATUS 99
+
 
 //************************************************************************
 //************************************************************************
@@ -84,8 +83,6 @@ MyControlPanel::MyControlPanel(wxWindow *parent) : wxPanel(parent)
     m_brushColourPicker = new wxColourPickerCtrl(this, ID_BRUSHCOLORPICKER, wxColor(255, 255, 255), wxPoint(100, y));
     Bind(wxEVT_COLOURPICKER_CHANGED, &MyControlPanel::OnBrushColorPicker, this, ID_BRUSHCOLORPICKER);
 
-    y+= WIDGET_Y_STEP;
-    m_currentMode = new wxStaticText(this,ID_CURRENTMODE, wxT("Mode : ") ,wxPoint(10,y));
 }
 
 //------------------------------------------------------------------------
@@ -122,34 +119,51 @@ void MyControlPanel::OnCheckBox(wxCommandEvent &event)
 void MyControlPanel::OnButtonRectangle(wxCommandEvent &event) {
 //------------------------------------------------------------------------
     MyFrame* frame = (MyFrame*)GetParent() ;
+    frame->GetDrawingPanel()->setMode(MODE_DRAW);
     frame->GetDrawingPanel()->setStatus(STATUS_RECTANGLE);
+    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR());
+    frame->GetDrawingPanel()->Refresh();
+
 }
 //------------------------------------------------------------------------
 void MyControlPanel::OnButtonCircle(wxCommandEvent &event) {
 //------------------------------------------------------------------------
     MyFrame* frame = (MyFrame*)GetParent();
+    frame->GetDrawingPanel()->setMode(MODE_DRAW);
     frame->GetDrawingPanel()->setStatus(STATUS_CIRCLE);
+    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR());
+
 }
 
 //------------------------------------------------------------------------
 void MyControlPanel::OnButtonSquare(wxCommandEvent &event) {
 //------------------------------------------------------------------------
     MyFrame* frame = (MyFrame*)GetParent();
+    frame->GetDrawingPanel()->setMode(MODE_DRAW);
     frame->GetDrawingPanel()->setStatus(STATUS_SQUARE);
+    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR());
+
+
 }
 
 //------------------------------------------------------------------------
 void MyControlPanel::OnButtonElipse(wxCommandEvent &event) {
 //------------------------------------------------------------------------
     MyFrame* frame = (MyFrame*)GetParent();
+    frame->GetDrawingPanel()->setMode(MODE_DRAW);
     frame->GetDrawingPanel()->setStatus(STATUS_ELLIPSE);
+    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR());
+
 }
 
 //------------------------------------------------------------------------
 void MyControlPanel::OnButtonPolygon(wxCommandEvent &event) {
 //------------------------------------------------------------------------
     MyFrame* frame = (MyFrame*)GetParent();
+    frame->GetDrawingPanel()->setMode(MODE_DRAW);
     frame->GetDrawingPanel()->setStatus(STATUS_POLYGON);
+    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR());
+
 
 }
 
@@ -169,11 +183,11 @@ void MyControlPanel::OnPenColorPicker(wxColourPickerEvent &event) {
 void MyControlPanel::OnButtonSelect(wxCommandEvent &event) {
     MyFrame* frame = (MyFrame*)GetParent();
     frame->GetDrawingPanel()->setMode(MODE_SELECT);
+    frame->SetStatusText(frame->GetDrawingPanel()->getModeSTR());
+
 }
 
-void MyControlPanel::SetModeLabel(std::string modestr) {
-    m_currentMode->SetLabel(wxString("Mode : "+modestr));
-}
+
 
 
 

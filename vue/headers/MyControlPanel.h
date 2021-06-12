@@ -31,7 +31,6 @@ ID_RECTBUTTON,
 ID_CIRCLEBUTTON,
 ID_SQUAREBUTTON,
 ID_ELIPSEBUTTON,
-ID_CURRENTMODE,
 ID_POLYGONBUTTON,
 ID_BRUSHCOLORPICKER,
 ID_PENLEGEND,
@@ -49,7 +48,7 @@ public:
     bool GetCheckBoxValue() {return m_checkBox->GetValue() ;} ;
     wxColour GetPenColour() {return m_penColourPicker->GetColour();};
     wxColour GetBrushColour() {return m_brushColourPicker->GetColour();};
-    void SetModeLabel(std::string modestr);
+
 
 private:
     void OnButtonUndo(wxCommandEvent &event) ;
@@ -81,7 +80,6 @@ private:
     wxStaticText* m_brushLegend;
     wxColourPickerCtrl* m_brushColourPicker;
     wxCheckBox* m_checkBox ;
-    wxStaticText* m_currentMode ;
 
 };
 
