@@ -142,32 +142,32 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-main.o: main.cpp.o
+controler/main.o: controler/main.cpp.o
 
-.PHONY : main.o
+.PHONY : controler/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
+controler/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/controler/main.cpp.o
+.PHONY : controler/main.cpp.o
 
-main.i: main.cpp.i
+controler/main.i: controler/main.cpp.i
 
-.PHONY : main.i
+.PHONY : controler/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+controler/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/controler/main.cpp.i
+.PHONY : controler/main.cpp.i
 
-main.s: main.cpp.s
+controler/main.s: controler/main.cpp.s
 
-.PHONY : main.s
+.PHONY : controler/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+controler/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/controler/main.cpp.s
+.PHONY : controler/main.cpp.s
 
 model/Circle.o: model/Circle.cpp.o
 
@@ -502,9 +502,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... controler/main.o"
+	@echo "... controler/main.i"
+	@echo "... controler/main.s"
 	@echo "... model/Circle.o"
 	@echo "... model/Circle.i"
 	@echo "... model/Circle.s"

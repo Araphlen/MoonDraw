@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/main.dir/main.cpp.o"
+  "CMakeFiles/main.dir/controler/main.cpp.o"
   "CMakeFiles/main.dir/model/Circle.cpp.o"
   "CMakeFiles/main.dir/model/Drawing.cpp.o"
   "CMakeFiles/main.dir/model/Ellipse.cpp.o"

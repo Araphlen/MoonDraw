@@ -90,7 +90,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/main.cpp">
+		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/controler/main.cpp">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/home/araphlen/CLionProjects/MoonDraw/model/Circle.cpp">

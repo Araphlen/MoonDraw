@@ -36,7 +36,7 @@
 #include <wx/file.h>
 #include <wx/bitmap.h>
 
-#include "vue/headers/MyApp.h"
+#include "../vue/headers/MyApp.h"
 //------------------------------------------------------------------------
 // The class declarations
 //------------------------------------------------------------------------

@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/araphlen/CLionProjects/MoonDraw/controler/main.cpp
+wx/wxprec.h
+/home/araphlen/CLionProjects/MoonDraw/controler/wx/wxprec.h
+wx/wx.h
+/home/araphlen/CLionProjects/MoonDraw/controler/wx/wx.h
+wx/filedlg.h
+-
+wx/image.h
+-
+wx/file.h
+-
+wx/bitmap.h
+-
+../vue/headers/MyApp.h
+/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyApp.h
+
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Circle.h
 Figure.h
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
@@ -24,12 +40,6 @@ Rectangle.h
 Circle.h
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Circle.h
 
-/home/araphlen/CLionProjects/MoonDraw/model/headers/Ellipse.h
-Point.h
-/home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
-Figure.h
-/home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
-
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
 string
 -
@@ -44,37 +54,27 @@ MyRgb.h
 wx/gdicmn.h
 -
 
-/home/araphlen/CLionProjects/MoonDraw/model/headers/Polygon.h
-vector
--
-Point.h
-/home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
-Figure.h
-/home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
-
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Rectangle.h
 Figure.h
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Figure.h
 Point.h
 /home/araphlen/CLionProjects/MoonDraw/model/headers/Point.h
 
-/home/araphlen/CLionProjects/MoonDraw/vue/MyDrawingPanel.cpp
-langinfo.h
+/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyApp.h
+wx/wxprec.h
+/home/araphlen/CLionProjects/MoonDraw/vue/headers/wx/wxprec.h
+wx/wx.h
+/home/araphlen/CLionProjects/MoonDraw/vue/headers/wx/wx.h
+wx/filedlg.h
 -
-headers/MyDrawingPanel.h
-/home/araphlen/CLionProjects/MoonDraw/vue/headers/MyDrawingPanel.h
-headers/MyFrame.h
+wx/image.h
+-
+wx/file.h
+-
+wx/bitmap.h
+-
+MyFrame.h
 /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyFrame.h
-../model/headers/Ellipse.h
-/home/araphlen/CLionProjects/MoonDraw/model/headers/Ellipse.h
-../model/headers/Polygon.h
-/home/araphlen/CLionProjects/MoonDraw/model/headers/Polygon.h
-iostream
--
-expat.h
--
-search.h
--
 
 /home/araphlen/CLionProjects/MoonDraw/vue/headers/MyControlPanel.h
 wx/wxprec.h
